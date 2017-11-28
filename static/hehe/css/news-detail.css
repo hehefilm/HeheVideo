@@ -1,0 +1,246 @@
+.news {
+	width: 100%;
+	background-color: white;
+	margin-top: 500px;
+}
+
+.news-container {
+	color: #646464;
+	max-width: 1020px;
+	width:100%;
+	margin: 0 auto;
+	padding: 100px 20px 0 20px;
+}
+
+.news-title-en {
+	color: #FFFFFF;
+	opacity: 0.6;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 25px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+.news-title-cn {
+	color: #FFFFFF;
+	opacity: 0.6;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 24px;
+    margin-bottom: 29px;
+    text-align: center;
+}
+
+.news-time {
+	color: #646464;	
+	font-size: 18px;	
+	font-weight: 300;	
+	letter-spacing: 1px;	
+	line-height: 22px;	
+	text-align: center;
+	width: 100%;
+}
+
+.news-img {
+	width: 100%;
+	max-width: 980px;
+	margin: 45px 0 0 0;
+}
+
+.news-video {
+	position: relative;
+	width: 100%;
+	padding-top: 42%;
+	margin:45px 0 0 0;
+	background: url(../images/laboratorys-logo-zx.jpg) no-repeat;
+	background-size: cover;
+}
+
+.news-video-play {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 45px;
+    width: 45px;
+    transition: all .2s linear;
+}
+
+.news-video:hover > .news-video-play {
+    transform: scale(1.2);
+}
+
+.news-video:hover {
+	cursor: pointer;
+}
+
+.fs-video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+}
+
+.fs-video-player {
+	width: 60%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    
+}
+
+.fs-video-close {
+	position: absolute;
+	top: 32px;
+	right: 32px;
+	height: 40px;
+	width: 40px;
+	color: white;
+	font-size: 40px;
+	cursor: pointer;
+}
+
+.fs-video-arrow-left {
+	position: absolute;
+	left: 10%;
+	top: 0;
+	bottom: 0;
+	width: 12px;
+	margin: auto;
+	cursor: pointer;
+}
+.fs-video-arrow-right {
+	position: absolute;
+	right: 10%;
+	top: 0;
+	bottom: 0;
+	width: 12px;
+	margin: auto;
+	cursor: pointer;
+}
+
+.news-content {
+	color: #646464;		
+	font-size: 16px;	
+	font-weight: 300;	
+	line-height: 36px;	
+	text-align: justify;
+	margin-top: 40px;
+}
+
+.news-edit {
+	margin: 100px 0 0 0;
+	padding-bottom: 30px;
+	display: flex;
+	width: 100%;
+	cursor: pointer;
+}
+
+.news-edit a {
+	color: #646464;
+	font-size: 14px;	
+	font-weight: 300;	
+	line-height: 19px;	
+	text-align: center;
+	border-bottom: 1px solid transparent;
+	
+}
+
+.news-edit a:hover {
+	color: rgb(102,187,245);
+	border-bottom: 1px solid rgb(102,187,245);
+}
+
+.news-edit img {
+	width: 8px;
+	height: 14px;	
+}
+
+.news-title {
+	color: #646464;		
+	font-size: 24px;	
+	font-weight: 500;	
+	line-height: 33px;	
+	text-align: center;
+	width: 100%;
+	margin-top: 10px;
+}
+
+.news-bak {
+	background-image: url(http://qnp.shanxiaxuetang.com/news-head-pc.jpg);
+	position: fixed;
+	left: 0;
+    top: 0;
+    right: 0;
+    z-index: -1;
+	height: 500px;
+	background-size: cover;
+    padding-top: 110px;
+}
+
+
+
+/*手机版本*/
+@media (max-width: 768px) {
+	.news-container img {
+		width: 100% !important;
+		height: 100% !important;
+	}
+	#pc-time,.news-title-en,.news-title-cn,.news-edit,footer {
+		display: none;
+	}
+	.news-bak {
+		height: 202px;
+		background-image: url(http://qnp.shanxiaxuetang.com/news-head-phone.jpg);
+	}
+	.news {
+		margin-top: 202px;
+	}
+	
+	.news-container {
+		padding-top: 20px;
+	}
+	
+	.news-time {
+		font-size: 8px;	
+		line-height: 10px;
+	}
+	
+	.news-title {
+		font-size: 16px;
+		line-height: 22px;
+		margin-top: 3px;
+	}
+	
+	.news-img,.news-video  {
+		margin-top: 20px;
+	}
+	
+	.news-content {
+		margin-top: 20px;
+		font-size: 13px;
+		line-height: 24px;
+		margin-bottom: 50px;
+	}
+	
+	.fs-video-player {
+		width: 80%;
+	}
+	
+	
+}
+
+/*pc版本*/
+@media (min-width: 769px) {
+	#phone-time {
+		display: none;
+	}
+}

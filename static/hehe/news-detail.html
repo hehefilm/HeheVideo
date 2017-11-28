@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="zh-CN" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="zh-CN" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="zh-CN" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="zh-CN" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+    <meta name="author" content="wangyali"/>
+    <meta name="keywords" content=""> <!-- 关键词，搜索什么能看到 -->
+    <meta name="description" content=""/> <!-- 内容描述 -->
+    <meta name="theme-color" content="#861519">
+    <meta name="msapplication-navbutton-color" content="#861519">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#861519">
+
+
+    <title>山下新闻</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/news-detail.css"/>
+    <link rel="stylesheet" href="css/respond.css"/>
+    <link rel="shortcut icon" href="images/icon.png"/>
+
+
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top nav-out" role="navigation">
+
+    <div class="nav-wai">
+    	<div id="phone-topright" class="nav-menu" data-is-active="false" onclick="pushNav(this)">
+    		<div class="nav-menu-wrapper"> 
+    			<span></span> 
+    			<span></span> 
+    			<span></span>
+    		</div>
+    	</div>
+    	<a id="phoneLogo" class="nav-brand-phone" href="index.html#slider-the"></a>
+    	
+        <a id="pcLogo" class="nav-brand" href="index.html#slider-the"></a>
+        <ul class='nav-ul'>
+            <li id='nav-about'>
+                <a href='index.html#about-the' title='关于山下'>关于山下</a>
+            </li>
+
+            <li id='nav-channel' class='dropdown'>
+                <a href='index.html#course-the' title='山下学堂'>山下学堂</a>
+            </li>
+
+            <li id='nav-channel' class='dropdown'>
+                <a href="index.html#ask-the" title='报名咨询'>报名咨询</a>
+            </li>
+
+            <li id='nav-channel' class='dropdown'>
+                <a href="index.html#news-the" title='山下新闻'>山下新闻</a>
+            </li>
+
+            <li id='nav-news'>
+                <a href='index.html#video-the' title='山下视频'>山下视频</a>
+            </li>
+
+            <li id='nav-blog' class='dropdown'>
+                <a href='index.html#laboratory-the' title='山下实验室'>山下实验室</a>
+            </li>
+
+        </ul>
+        <ul class='nav-login'>
+
+            <li id='nav-news'>
+                <a title='登录' onclick="signup()">登录</a>
+            </li>
+
+        </ul>
+
+        <a class="nav-avatar"></a>
+    </div>
+
+</nav>
+
+<div id="phone-navbar" class="nav-wai-phone" data-is-active="first">
+    <ul id="phone-ul" class="nav-phone-ul" data-is-active="">
+        <li id='nav-about'>
+            <a href='about.html' title='关于山下'>关于山下</a>
+        </li>
+
+        <li id='nav-channel'>
+            <a href="course.html" title='山下学堂'>山下学堂</a>
+        </li>
+
+        <li id='nav-channel'>
+            <a href="questions.html" title='报名咨询'>报名咨询</a>
+        </li>
+
+        <li id='nav-news'>
+            <a href='videos.html' title='山下视频'>山下视频</a>
+        </li>
+
+        <li id='nav-news'>
+            <a href='news.html' title='山下新闻'>山下新闻</a>
+        </li>
+
+        <li id='nav-blog'>
+            <a href="lab.html" title='山下实验室'>山下实验室</a>
+        </li>
+    </ul>
+    <!--<div id="phone-sign" class="nav-phone-dlzc" data-is-active="">
+        <a class="phone-signup">注册</a>
+        <a class="phone-signup">登录</a>
+    </div>-->
+    <a class="phone-signup" href="course.html">我要报名</a>
+</div>
+
+
+<div class="news-bak">
+	<!--<p class="news-title-en">SHANGXIA NEWS</p>-->
+    <!--<p class="news-title-cn">山下新闻</p>-->
+</div>
+
+<div class="news">
+    <div id="news-detail" class="news-container">
+		
+		<div class="news-edit">
+			<a id="top-list" style="margin: 0 auto 0 0;" onclick="topNews()">< 返回新闻列表</a>
+			<a id="next-list" style="margin: 0 0 0 auto;" onclick="nextNews()">下一条 ></a>
+		</div>
+    </div>
+</div>
+
+<div class="fs-video-container" style="display:none;">
+    <video class="fs-video-player" preload="preload" controls="controls"
+           onclick="pauseVideo()"></video>
+    <img class="fs-video-close" src="images/close.png" onclick="hideVideo()">
+</div>
+
+<!-- Footer -->
+<footer style="background-color: #f6f6f5 !important;" class="no-phone">
+    <!-- Page Content -->
+    <div id="pc-footer" class="footer-bottom">
+        <div class="footer-bottom-qr-view">
+            <div class="footer-bottom-qr-container">
+                <img class="footer-show-er" src="/images/sx-wx.jpg"/>
+                <!--<p>官方微信公众平台</p>-->
+            </div>
+            <!--<div class="footer-bottom-qr-container fonter-qr-right">-->
+                <!--<img class="footer-show-er" src="../../static/hehe/images/sx-wb.jpg"/>-->
+                <!--&lt;!&ndash;<p>官方微信公众平台</p>&ndash;&gt;-->
+            <!--</div>-->
+        </div>
+
+        <div class="footer-bottom-div">
+            <!--<img src="../../static/hehe/images/demo_footer2.png"/>-->
+            <!--<img src="../../static/hehe/images/demo_footer1.png"/>-->
+            <div>
+                <div class="footer-bottom-icon-view">
+                    <img src="/images/email-icon.png" class="email-icon">
+                    <p class="footer-bottom-email">
+                        <!--<span style="color: #66BBFF;">-->
+                        <a href="mailto:shanxia@shanxiaxuetang.com" style="color: #646464;">
+                            shanxia@shanxiaxuetang.com</a>
+                        <!--</span>-->
+                    </p>
+                    <img src="/images/wx-icon.png" class="wx-icon">
+                    <p class="footer-bottom-email">
+                        山下学堂
+                    </p>
+                    <!--<img src="../../static/hehe/images/wb-icon.png" class="wb-icon">-->
+                    <!--<p class="footer-bottom-email">-->
+                        <!--<a href="http://weibo.com/u/6342283271" style="color: #646464;">@山下学堂</a>-->
+                    <!--</p>-->
+                </div>
+                <hr/>
+                <div style="width: 100%; display: flex; justify-content: space-between; flex-wrap: wrap;">
+                    <span class="footer-bottom-address">版权所有: 北京山下艺术中心有限公司 &nbsp;京ICP备17055698号</span>
+                    <span class="footer-bottom-copyright">CopyRight © 2017 The Dome Studio,All Rights Reserved</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+
+
+<!--JS-->
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script type="text/javascript" src="js/wxopen-1.0.0.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/respond.js"></script>
+<script type="text/javascript" src="js/news-detail.js"></script>
+<script>
+	
+    
+</script>
+
+</body>
+</html>

@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="zh-CN" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="zh-CN" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="zh-CN" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="zh-CN" class="no-js" id="hp"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+    <meta name="author" content="wangyali"/>
+    <meta name="keywords" content="山下，山下学堂，山下报名，陈坤，周迅，陈国富"> <!-- 关键词，搜索什么能看到 -->
+    <meta name="description" content="为了分享，为了再创造，为了往下一站出发，陈国富、周迅、陈坤于2017年共同创办山下学堂。"/> <!-- 内容描述 -->
+    <meta name="theme-color" content="#861519">
+    <meta name="msapplication-navbutton-color" content="#861519">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#861519">
+
+
+    <title>山下学堂</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="../../static/hehe/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../static/hehe/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../static/hehe/css/reset.css"/>
+    <link rel="stylesheet" href="../../static/hehe/css/style.css"/>
+    <link rel="stylesheet" href="../../static/hehe/css/index.css"/>
+    <link rel="stylesheet" href="../../static/hehe/css/respond.css"/>
+    <link rel="shortcut icon" href="../../static/hehe/images/icon.png"/>
+
+    <link rel="stylesheet" href="../../static/hehe/css/videojs.css">
+    <link rel="stylesheet" href="../../static/hehe/css/videojs-theme.css"/>
+
+    <!-- If you'd like to support IE8 -->
+    <script src="../../static/hehe/js/videojs-ie8.min.js"></script>
+</head>
+<body>
+<div class="loading">
+    <img src="../../static/hehe/images/loading.png"/>
+</div>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top nav-out" role="navigation">
+
+    <div class="nav-wai">
+        <div id="phone-topright" class="nav-menu" data-is-active="false" onclick="pushNav(this)">
+            <div class="nav-menu-wrapper">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <a id="phoneLogo" class="nav-brand-phone" href="#Slider"></a>
+
+        <a id="pcLogo" class="nav-brand" href="#Slider" class="sxScroll"></a>
+        <ul class='nav-ul'>
+            <li id='nav-about'>
+                <a href='#aboutus' title='关于山下' class="sxScroll">关于山下</a>
+            </li>
+
+            <li id='nav-channel' class='dropdown'>
+                <a href="#sxxt" title='山下学堂' class="sxScroll">山下学堂</a>
+            </li>
+
+            <li id='nav-channel' class='dropdown'>
+                <a href="#bmzx" title='报名咨询' class="sxScroll">报名咨询</a>
+            </li>
+
+            <li id='nav-channel' class='dropdown'>
+                <a href="#sxxw" title='山下新闻' class="sxScroll">山下新闻</a>
+            </li>
+
+            <li id='nav-news'>
+                <a href='#sxsp' class="sxScroll" title='山下视频'>山下视频</a>
+            </li>
+
+            <li id='nav-blog' class='dropdown'>
+                <a href='#laboratory' title='山下实验室' class="sxScroll">山下实验室</a>
+            </li>
+
+        </ul>
+        <ul class='nav-login'>
+
+            <li id='nav-news'>
+                <a title='登录' onclick="signup()">登录</a>
+            </li>
+
+        </ul>
+
+        <a class="nav-avatar"></a>
+    </div>
+
+</nav>
+
+<div id="phone-navbar" class="nav-wai-phone" data-is-active="first" onclick="pushNav(this)">
+    <ul id="phone-ul" class="nav-phone-ul" data-is-active="">
+        <li id='nav-about'>
+            <a href='../../static/hehe/about.html' title='关于山下'>关于山下</a>
+        </li>
+
+        <li id='nav-channel'>
+            <a href="../../static/hehe/course.html" title='山下学堂'>山下学堂</a>
+        </li>
+
+        <li id='nav-channel'>
+            <a href="../../static/hehe/questions.html" title='报名咨询'>报名咨询</a>
+        </li>
+
+        <li id='nav-news'>
+            <a href='../../static/hehe/videos.html' title='山下视频'>山下视频</a>
+        </li>
+
+        <li id='nav-news'>
+            <a href='../../static/hehe/news.html' title='山下新闻'>山下新闻</a>
+        </li>
+
+        <li id='nav-blog'>
+            <a href="../../static/hehe/lab.html" title='山下实验室'>山下实验室</a>
+        </li>
+    </ul>
+    <!--<div id="phone-sign" class="nav-phone-dlzc" data-is-active="">
+        <a class="phone-signup">注册</a>
+        <a class="phone-signup">登录</a>
+    </div>-->
+    <a class="phone-signup" href="../../static/hehe/course.html">我要报名</a>
+</div>
+
+<a id="slider-the"></a>
+<div id="Slider" class="carousel slide">
+    <div id="arrow-container">
+        <a id="pcArrow"><img class="arrow" src="../../static/hehe/images/arrow.png"/></a>
+    </div>
+    <a id="phoneArrow"><img class="arrow" style="bottom: 31px;" src="../../static/hehe/images/arrow.png"/></a>
+
+    <!-- Indicators -->
+    <ol id="indicators" class="carousel-indicators">
+    </ol>
+
+    <div id="pc-inner" class="carousel-inner">
+    </div>
+
+    <div id="phone-inner" class="carousel-inner">
+        <div class="active">
+            <a href="javascript:void(0);">
+                <div class="fill" id="fill">
+                </div>
+            </a>
+        </div>
+    </div>
+
+</div><!--Slider END-->
+
+
+<div class="fs-video-container" style="display:none;" onclick="hideVideo()">
+    <!-- <video class="fs-video-player" src="http://qnp.shanxiaxuetang.com/about.mp4" preload
+    " controls="controls"
+    onclick="pauseVideo()"></video> -->
+    <div class="fs-video-player" onclick="stopBubble()">
+        <video id="fs-videojs-player" class="video-js vjs-fluid" controls preload="auto"
+               data-setup="{}">
+            <source src="http://qnp.shanxiaxuetang.com/about.mp4" type='video/mp4'>
+            <p class="vjs-no-js">
+                要收看此视频，请开启JavaScript功能，或者升级您的浏览器至
+                <a href="http://videojs.com/html5-video-support/">支持HTML5视频标签的浏览器</a>
+            </p>
+        </video>
+    </div>
+    <img class="fs-video-close" src="../../static/hehe/images/close.png">
+</div>
+
+<a id="about-the"></a>
+<div id="aboutus" class="index-aboutus">
+    <div class="index-aboutus-container">
+        <div class="index-aboutus-title-en">ABOUT THE DOME STUDIO</div>
+        <div class="index-aboutus-title-cn">关于山下</div>
+        <div class="pc-only">
+            <p class="index-aboutus-content">
+                山下学堂由陈国富、周迅、陈坤共同创办于2017年。
+            </p>
+            <p class="index-aboutus-content-last">
+                为了分享，为了再创造，为了往下一站出发......
+            </p>
+            <!-- <p class="index-aboutus-desc">
+                演员的心，必须干净通透；演员必须棱角鲜明，造型独特；演员最重要的，是准备随时被点燃；在山下接受淬炼，在山下休生养息。
+            </p>
+            <p class="index-aboutus-slogon">
+                在山下，见未来。
+            </p> -->
+        </div>
+        <div class="mobile-only">
+            <p class="index-aboutus-content">
+                山下学堂由陈国富、周迅、陈坤
+            </p>
+            <p class="index-aboutus-content">
+                共同创办于2017年。
+            </p>
+            <p class="index-aboutus-content">
+                为了分享，为了再创造，
+            </p>
+            <p class="index-aboutus-content-last">
+                为了往下一站出发......
+            </p>
+        </div>
+        <div class="promo" onclick="showVideo()">
+            <img src="../../static/hehe/images/sx_video_play.png" class="promo-play">
+        </div>
+
+        <div class="index-founder-title">创始人｜FOUNDERS</div>
+
+        <div class="index-founder-list">
+            <div class="index-founder-item">
+                <div class="index-founder-item-avatar">
+                    <img src="http://qnp.shanxiaxuetang.com/index-founder-chenkuofu.png">
+                </div>
+                <div class="index-founder-item-right">
+                    <div class="index-founder-item-name">陈国富</div>
+                </div>
+            </div>
+            <div class="index-founder-item">
+                <div class="index-founder-item-avatar">
+                    <img src="http://qnp.shanxiaxuetang.com/index-founder-zhouxun.png">
+                </div>
+                <div class="index-founder-item-right">
+                    <div class="index-founder-item-name">周迅</div>
+                </div>
+            </div>
+            <div class="index-founder-item">
+                <div class="index-founder-item-avatar">
+                    <img src="http://qnp.shanxiaxuetang.com/index-founder-chenkun.png">
+                </div>
+                <div class="index-founder-item-right">
+                    <div class="index-founder-item-name">陈坤</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--   山下学堂     -->
+<a id="course-the"></a>
+<div id="sxxt" class="sx-school-holl">
+    <div class="sx-content">
+        <div class="sx-school-title sx-font-gray60">
+            COURSES
+            <div class="sx-school-hint">山下学堂</div>
+        </div>
+        <div class="pc-only">
+            <div class="sx-font-content">
+                这是个独一无二的学堂，因为有独一无二的你。 不错过每一次好奇，不落下每一段成长。<br>
+                这是个为你而办的学堂，在这里我们一同探索、一同实验、一同成长。
+            </div>
+        </div>
+        <div class="mobile-only">
+            <div class="sx-font-content">
+                这是个独一无二的学堂，因为有独一无二的你。<br>
+                不错过每一次好奇，不落下每一段成长。<br>
+                这是个为你而办的学堂，在这里我们一同探索、<br>
+                一同实验、一同成长。
+            </div>
+        </div>
+        <div class="row sx-school-holl-div">
+            <ul>
+                <li class="sx-school-img-div col-md-4 col-sm-4 col-xs-6">
+                    <!-- <div class="yinying">
+                        <img src="../../static/hehe/images/sx-course-img.jpg"
+                             class="sx-school-holl-img"/>
+                        <img src="../../static/hehe/images/sx-course-phone-img1.png"
+                             class="sx-school-holl-img-phone"/>
+                        <p class="sx-school-holl-type">新人班</p>
+                    </div> -->
+                    <a href="../../static/hehe/course-new-detail.html">
+                        <div class="index-course-item-img">
+                            <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
+                            <div class="index-course-item-shadow">
+                                <p>新人班</p>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="sx-school-holl-content">
+                        <p class="font500 sx-school-holl-title">新人班</p>
+                        作为一位新人，我们引领你入门
+                    </div>
+                    <a href="../../static/hehe/course-new-detail.html">
+                        <p class="sx-school-holl-title-div-all">我要报名</p>
+                    </a>
+                </li>
+                <li class="sx-school-img-div col-md-4 col-sm-4 col-xs-6">
+                    <!-- <div class="yinying">
+                        <img src="../../static/hehe/images/sx-course-img.jpg"
+                             class="sx-school-holl-img"/>
+                        <img src="../../static/hehe/images/sx-course-phone-img1.png"
+                             class="sx-school-holl-img-phone"/>
+                        <p class="sx-school-holl-type">青年演员班</p>
+                    </div> -->
+                    <a href="../../static/hehe/course-youth-detail.html">
+                        <div class="index-course-item-img">
+                            <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-2.jpg">
+                            <div class="index-course-item-shadow">
+                                <p>职业演员班</p>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="sx-school-holl-content">
+                        <p class="font500 sx-school-holl-title">职业演员班</p>
+                        作为专业演员，我们邀你来分享、再创造
+                    </div>
+                    <a href="../../static/hehe/course-youth-detail.html">
+                        <p class="sx-school-holl-title-div">了解详情</p>
+                    </a>
+                </li>
+                <li class="sx-school-img-div col-md-4 col-sm-4 col-xs-6">
+                    <!-- <div class="yinying">
+                        <img src="../../static/hehe/images/sx-course-img.jpg"
+                             class="sx-school-holl-img"/>
+                        <img src="../../static/hehe/images/sx-course-phone-img1.png"
+                             class="sx-school-holl-img-phone"/>
+                        <p class="sx-school-holl-type">大师班</p>
+                    </div> -->
+                    <a href="../../static/hehe/course-detail.html">
+                        <div class="index-course-item-img">
+                            <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-3.jpg">
+                            <div class="index-course-item-shadow">
+                                <p>大师班</p>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="sx-school-holl-content">
+                        <p class="font500 sx-school-holl-title">大师班</p>
+                        作为同行同好，我们一同交流，相互提升
+                    </div>
+                    <a href="../../static/hehe/course-detail.html">
+                        <p class="sx-school-holl-title-div">了解详情</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--   报名咨询  -->
+<a id="ask-the"></a>
+<div id="bmzx" class="sx-video">
+    <div class="sx-video-content question-img"
+         onclick="toQuestion()">
+        <div class="sx-video-title-en">
+            Q&ampA<br>
+            <p class="sx-video-title-cn">报名咨询</p>
+        </div>
+        <div class="sx-consulting-more-div">
+            <a href="../../static/hehe/questions.html" class="sx-consulting-more">了解更多 <i
+                    class="icon-angle-right"></i></a>
+        </div>
+    </div>
+</div>
+
+
+<!-- 山下新闻电脑 -->
+<a id="news-the"></a>
+<div id="sxxw" class="index-news">
+    <div class="index-news-container">
+        <div class="index-news-title-en">NEWS</div>
+        <div class="index-news-title-cn">山下新闻</div>
+        <div id="news-list" class="index-news-list">
+            <script id="tpl-news-item" type="text/html">
+                <% for (var i = 0; i < list.length; i ++) { %>
+                <% var value =list[i]; %>
+                <% if (i < 3) { %>
+                <a href="../../static/hehe/news-detail.html?nid=<%=value.news_id%>">
+                    <div class="index-news-item">
+                        <div class="index-news-item-avatar">
+                            <img src="http://qnp.shanxiaxuetang.com/news-sample.png">
+                        </div>
+                        <div class="index-news-item-time"><%=value.ndate%></div>
+                        <div class="index-news-item-right">
+                            <div class="index-news-item-caption"><%=value.ntitle%></div>
+                            <div class="index-news-item-brief"><%=value.nsubtitle%></div>
+                        </div>
+                    </div>
+                </a>
+                <% } %>
+                <% } %>
+            </script>
+
+        </div>
+        <div class="index-news-more">
+            <a href="../../static/hehe/news.html">更多新闻 <i class="icon-angle-right"></i></a>
+        </div>
+    </div>
+</div>
+
+<!-- 山下视频  -->
+<a id="video-the"></a>
+<div id="sxsp" class="sx-video">
+    <div class="sx-video-content"
+         onclick="toVideo()">
+        <div class="sx-video-title-en">
+            VIDEOS<br>
+            <p class="sx-video-title-cn">山下视频</p>
+        </div>
+        <div class="sx-consulting-more-div">
+            <a href="../../static/hehe/videos.html" class="sx-consulting-more">了解更多 <i class="icon-angle-right"></i></a>
+        </div>
+    </div>
+</div>
+
+<!--   山下新闻 手机  -->
+<div class="sx-video sx-laboratory-phone">
+    <div class="sx-video-content"
+         style="background:url('http://qnp.shanxiaxuetang.com/index-news-phone.jpg') top; background-size: cover;"
+         onclick="toNews()">
+        <div class="sx-video-title-en">
+            NEWS<br>
+            <p class="sx-video-title-cn">山下新闻</p>
+        </div>
+        <div class="sx-consulting-more-div">
+            <a href="../../static/hehe/news.html" class="sx-consulting-more">了解更多 <i
+                    class="icon-angle-right"></i></a>
+        </div>
+    </div>
+</div>
+
+
+<!--山下实验室 pc-->
+<a id="laboratory-the"></a>
+<div id="laboratory" class="sx-laboratory">
+    <div class="sx-laboratory-view">
+        <div class="sx-school-title sx-font-gray60">
+            LABS
+            <p class="sx-school-hint">山下实验室</p>
+        </div>
+        <div class="row sx-lab-holl">
+            <div class=" col-md-6 col-sm-6 col-xs-12">
+                <!-- <div class="sx-yinying">
+                    <img id="jlp" src="../getFile/sx-ck.png" class="sx-laboratory-img">
+                    <p class="sx-labs-type">山下纪录片实验室</p>
+                </div> -->
+                <a class="sx-labs-more" href="../../static/hehe/laboratory.html">
+                    <div class="index-lab-item-img">
+                        <img id="jlp" src="http://qnp.shanxiaxuetang.com/laboratorys-logo-ck.jpg">
+                        <div class="index-lab-item-shadow">
+                            <p>山下纪录片实验室</p>
+                        </div>
+                    </div>
+                </a>
+                <div class="sx-laboratory-content">
+                    <p class="sx-laboratory-content-top">山下纪录片实验室</p>
+                    山下学堂创始人陈坤与FIRST青年电影展共同发起山下纪录片实验室，鼓励纪录片作者创作更多具备社会文化价值的作品。
+                </div>
+                <div class="sx-labs-more-div">
+                    <a class="sx-labs-more" href="../../static/hehe/laboratory.html">了解更多 <i
+                            class="icon-angle-right"></i></a>
+                    <!--<img  class="sx-right-more-img"/>-->
+                </div>
+            </div>
+
+            <div class=" col-md-6 col-sm-6 col-xs-12">
+                <!-- <div class="sx-yinying">
+                    <img id="zx" src="../getFile/sx-zhouxun.png" class="sx-laboratory-img ">
+                    <p class="sx-labs-type">COMING SOON</p>
+                </div> -->
+                <div class="index-lab-item-img">
+                    <img id="jlp" src="http://qnp.shanxiaxuetang.com/laboratorys-logo-zx.jpg">
+                    <div class="index-lab-item-shadow">
+                        <p>COMING SOON</p>
+                    </div>
+                </div>
+                <div class="sx-laboratory-content">
+                    <p class="sx-laboratory-content-top">山下短片实验室</p>
+                    敬请期待！
+                </div>
+                <div class="sx-labs-more-div">
+                    <a class="sx-labs-more">了解更多 <i class="icon-angle-right"></i></a>
+                    <!--<img src="../../static/hehe/images/right-more.png" class="sx-right-more">-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--   山下实验室 手机版  -->
+<div id="laboratory" class="sx-video sx-laboratory-phone">
+    <div class="sx-video-content"
+         style="background:url('http://qnp.shanxiaxuetang.com/index-lab-bg-phone.jpg') top; background-size: cover;"
+         onclick="toLab()">
+        <div class="sx-video-title-en">
+            LABS<br>
+            <p class="sx-video-title-cn">山下实验室</p>
+        </div>
+        <div class="sx-consulting-more-div">
+            <a href="../../static/hehe/lab.html" class="sx-consulting-more">了解更多 <i class="icon-angle-right"></i></a>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<!-- <a class="sxScroll" href="#Slider"><img class="top-arrow" src="../../static/hehe/images/top_arrow.png"/></a> -->
+
+<!-- Footer -->
+<footer style="display: flex !important;background-color: #f6f6f5 !important;">
+    <!-- Page Content -->
+    <div id="pc-footer" class="footer-bottom">
+        <div class="footer-bottom-qr-view">
+            <div class="footer-bottom-qr-container">
+                <img class="footer-show-er" src="../../static/hehe/images/sx-wx.jpg"/>
+                <!--<p>官方微信公众平台</p>-->
+            </div>
+            <!--<div class="footer-bottom-qr-container fonter-qr-right">-->
+                <!--<img class="footer-show-er" src="../../static/hehe/images/sx-wb.jpg"/>-->
+                <!--&lt;!&ndash;<p>官方微信公众平台</p>&ndash;&gt;-->
+            <!--</div>-->
+        </div>
+
+        <div class="footer-bottom-div">
+            <!--<img src="../../static/hehe/images/demo_footer2.png"/>-->
+            <!--<img src="../../static/hehe/images/demo_footer1.png"/>-->
+            <div>
+                <div class="footer-bottom-icon-view">
+                    <img src="../../static/hehe/images/email-icon.png" class="email-icon">
+                    <p class="footer-bottom-email">
+                        <!--<span style="color: #66BBFF;">-->
+                        <a href="mailto:shanxia@shanxiaxuetang.com" style="color: #646464;">
+                            shanxia@shanxiaxuetang.com</a>
+                        <!--</span>-->
+                    </p>
+                    <img src="../../static/hehe/images/wx-icon.png" class="wx-icon">
+                    <p class="footer-bottom-email">
+                        山下学堂
+                    </p>
+                    <!--<img src="../../static/hehe/images/wb-icon.png" class="wb-icon">-->
+                    <!--<p class="footer-bottom-email">-->
+                        <!--<a href="http://weibo.com/u/6342283271" style="color: #646464;">@山下学堂</a>-->
+                    <!--</p>-->
+                </div>
+                <hr/>
+                <div style="width: 100%; display: flex; justify-content: space-between; flex-wrap: wrap;">
+                    <span class="footer-bottom-address">版权所有: 北京山下艺术中心有限公司&nbsp; 京ICP备17055698号</span>
+                    <span class="footer-bottom-copyright">CopyRight © 2017 The Dome Studio,All Rights Reserved</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="phone-footer" class="footer-bottom-phone">
+
+        <div class="footer-bottom-qr-view">
+            <div class="footer-bottom-qr-container">
+                <img class="footer-show-er-phone" src="../../static/hehe/images/sx-wx.jpg"/>
+                <p>官方微信公众平台</p>
+            </div>
+            <!--<div class="footer-bottom-qr-container fonter-qr-right">-->
+                <!--<img class="footer-show-er-phone" src="../../static/hehe/images/sx-wb.jpg"/>-->
+                <!--<p>官方微博</p>-->
+            <!--</div>-->
+        </div>
+        <div class="footer-bottom-div">
+            <div class="footer-bottom-icon-view">
+                <img src="../../static/hehe/images/wx-icon.png" class="wx-icon">
+                <p class="footer-bottom-wb-phone">
+                        山下学堂
+                </p>
+                <!--<img src="../../static/hehe/images/wb-icon.png" class="wb-icon">-->
+                <!--<p class="footer-bottom-wb-phone">-->
+                    <!--<a href="http://weibo.com/u/6342283271" style="color: #646464;">-->
+                        <!--@山下学堂</a>-->
+                <!--</p>-->
+            </div>
+            <div class="footer-bottom-icon-view totop">
+                <img src="../../static/hehe/images/email-icon.png" class="email-icon">
+                <p class="footer-bottom-email-phone">
+                    <span style="color: #66BBFF;"><a href="mailto:shanxia@shanxiaxuetang.com" style="color: #646464;">
+            shanxia@shanxiaxuetang.com</a></span>
+                </p>
+            </div>
+            <hr/>
+            <p class="footer-bottom-address-phone">版权所有: 北京山下艺术中心有限公司 京ICP备17055698号</p>
+            <p class="footer-bottom-address-phone-num" style="line-height: 10px; margin-top: 2px;">CopyRight © 2017
+                The Dome Studio,All Rights Reserved</p>
+        </div>
+    </div>
+
+</footer>
+
+
+<!--JS-->
+<script type="text/javascript" src="../../static/hehe/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../../static/hehe/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script type="text/javascript" src="../../static/hehe/js/wxopen-1.0.0.js"></script>
+<script type="text/javascript" src="../../static/hehe/js/nav.js"></script>
+<script type="text/javascript" src="../../static/hehe/js/respond.js"></script>
+<script type="text/javascript" src="../../static/hehe/js/banner.js"></script>
+<script type="text/javascript" src="../../static/hehe/js/videojs.min.js"></script>
+<script type="text/javascript" src="../../static/hehe/js/template-web.js"></script>
+<script type="text/javascript" src="../../static/hehe/js/news.js"></script>
+
+<script>
+
+    window.onload=function(){
+        // $(".loading").fadeOut(400,function() {
+            $(".loading").hide();
+            setTimeout(function () {
+                $('#Slider').carousel({
+	                interval: 2000
+	            })
+	            loadingEnd();
+            }, 200);
+            
+        // });
+    }
+    var oldId = 'phoneAbout';
+
+    function showVideo(event) {
+        $(".fs-video-container").show();
+        stopBanner();
+        openMask();
+        var videoPlayer = videojs('fs-videojs-player');
+        videoPlayer.play();
+    }
+    
+	var height = $(window).height();
+	
+    function hideVideo(event) {
+        $(".fs-video-container").hide();
+        var t = document.documentElement.scrollTop || document.body.scrollTop;
+        if (t < height) {
+        		resumeBanner();
+        }
+        closeMask();
+        var videoPlayer = videojs('fs-videojs-player');
+        videoPlayer.pause();
+        videoPlayer.currentTime(0);
+    }
+
+    
+    window.onscroll = function () {
+        var t = document.documentElement.scrollTop || document.body.scrollTop;
+        if (t >= height) {
+            stopBanner();
+        } else {
+            resumeBanner();
+        }
+    }
+
+	if(wxopen.isWeiXin){
+		$.get("https://shanxiaxuetang.com/sign/get_ticket",{
+			url:window.location.href
+		},
+		function(data,status){
+			var jdata = $.parseJSON(data);
+			wxopen.shareData.appid = jdata.data.appid;
+			wxopen.timestamp = jdata.data.timestamp;
+			wxopen.nonceStr = jdata.data.noncestr;
+			wxopen.signature = jdata.data.signature;
+			wxopen.shareData.title = "陈国富、 周迅、 陈坤共同创办山下学堂";
+			wxopen.shareData.desc = "在这里我们一同探索、一同实验、 一同成长。";
+			wxopen.shareData.link = "https://shanxiaxuetang.com";
+			wxopen.shareData.imgUrl = "http://qnp.shanxiaxuetang.com/sx_logo.png"
+			wxopen.config();
+		});
+	}
+</script>
+
+
+</body>
+</html>

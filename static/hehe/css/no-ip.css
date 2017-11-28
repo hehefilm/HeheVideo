@@ -1,0 +1,10 @@
+.news-bak {
+	margin: auto auto;
+	width: 27.1%;
+}
+
+@media (max-width: 768px) {
+    .news-bak {
+        width: 59.2%;
+    }
+}

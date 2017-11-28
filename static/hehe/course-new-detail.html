@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="zh-CN" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="zh-CN" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="zh-CN" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="zh-CN" class="no-js" id="hp"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+    <meta name="author" content="wangyali"/>
+    <meta name="keywords" content=""> <!-- 关键词，搜索什么能看到 -->
+    <meta name="description" content=""/> <!-- 内容描述 -->
+    <meta name="theme-color" content="#861519">
+    <meta name="msapplication-navbutton-color" content="#861519">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#861519">
+
+    <title>山下学堂</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/respond.css"/>
+    <link rel="shortcut icon" href="images/icon.png"/>
+    <link rel="stylesheet" href="css/questions.css"/>
+    <link rel="stylesheet" href="css/videos.css">
+    <link rel="stylesheet" href="css/course-detail.css">
+
+
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top nav-out" role="navigation">
+
+    <div class="nav-wai">
+    	<div id="phone-topright" class="nav-menu" data-is-active="false" onclick="pushNav(this)">
+    		<div class="nav-menu-wrapper"> 
+    			<span></span> 
+    			<span></span> 
+    			<span></span>
+    		</div>
+    	</div>
+    	<a id="phoneLogo" class="nav-brand-phone" href="index.html#slider-the"></a>
+    	
+        <a id="pcLogo" class="nav-brand" href="index.html#slider-the"></a>
+        <ul class='nav-ul'>
+            <li id='nav-about'>
+                <a href='index.html#about-the' title='关于山下'>关于山下</a>
+            </li>
+
+            <li id='nav-channel' class='dropdown'>
+                <a href='index.html#course-the' title='山下学堂'>山下学堂</a>
+            </li>
+
+            <li id='nav-channel' class='dropdown'>
+                <a href="index.html#ask-the" title='报名咨询'>报名咨询</a>
+            </li>
+
+            <li id='nav-channel' class='dropdown'>
+                <a href="index.html#news-the" title='山下新闻'>山下新闻</a>
+            </li>
+
+            <li id='nav-news'>
+                <a href='index.html#video-the' title='山下视频'>山下视频</a>
+            </li>
+
+            <li id='nav-blog' class='dropdown'>
+                <a href='index.html#laboratory-the' title='山下实验室'>山下实验室</a>
+            </li>
+
+        </ul>
+        <ul class='nav-login'>
+
+            <li id='nav-news'>
+                <a title='登录' onclick="signup()">登录</a>
+            </li>
+
+        </ul>
+
+        <a class="nav-avatar"></a>
+    </div>
+
+</nav>
+
+<div id="phone-navbar" class="nav-wai-phone" data-is-active="first">
+    <ul id="phone-ul" class="nav-phone-ul" data-is-active="">
+        <li id='nav-about'>
+            <a href='about.html' title='关于山下'>关于山下</a>
+        </li>
+
+        <li id='nav-channel'>
+            <a href="course.html" title='山下学堂'>山下学堂</a>
+        </li>
+
+        <li id='nav-channel'>
+            <a href="questions.html" title='报名咨询'>报名咨询</a>
+        </li>
+
+        <li id='nav-news'>
+            <a href='videos.html' title='山下视频'>山下视频</a>
+        </li>
+
+        <li id='nav-news'>
+            <a href='news.html' title='山下新闻'>山下新闻</a>
+        </li>
+
+        <li id='nav-blog'>
+            <a href="lab.html" title='山下实验室'>山下实验室</a>
+        </li>
+    </ul>
+    <!--<div id="phone-sign" class="nav-phone-dlzc" data-is-active="">
+        <a class="phone-signup">注册</a>
+        <a class="phone-signup">登录</a>
+    </div>-->
+    <a class="phone-signup" href="course.html">我要报名</a>
+</div>
+
+<!--   top -->
+
+<div class="videos-head">
+    <!--<p class="videos-head-title-en">THE DOME STUDIOS</p>-->
+    <!--<p class="videos-head-title-cn">山下学堂</p>-->
+    <img class="pc-only" src="http://qnp.shanxiaxuetang.com/course-new-detail-bg.jpg">
+    <img class="mobile-only" src="http://qnp.shanxiaxuetang.com/course-new-detail-bg-phone.jpg">
+</div>
+<!--  center  -->
+
+<div class="sx-questions-center">
+    <div class="sx-course-content">
+        <p class="sx-course-title">2018年春季新人班</p>
+        <img class="sx-course-img" src="http://qnp.shanxiaxuetang.com/course-new-detail.jpg" style="object-fit: cover;" />
+
+
+
+        <!--<div class="sx-course-hint">-->
+            <!--<p>课程特色</p>-->
+        <!--</div>-->
+        <!--&lt;!&ndash;<div class="sx-course-feature">&ndash;&gt;-->
+            <!--<div class="sx-course-feature-in">-->
+                <!--<div>-->
+                    <!--<p class="sx-course-feature-in-title-top">灵性教育 —— 认识自己</p>-->
+                    <!--<p class="sx-course-feature-in-content">清空杂念，认知自己，开启感知，开发直觉力。包括：静心课，生命教育，感官游戏等。</p>-->
+                    <!--<p class="sx-course-feature-in-title">表演适性教育——认知表演</p>-->
+                    <!--<p class="sx-course-feature-in-content">依据学员个人特质差异实施个性化教育，找到开启“演员工具箱”的钥匙。包括：表演专题、演员的工具箱等。</p>-->
+                    <!--<p class="sx-course-feature-in-title">业界实践——认知行业</p>-->
+                    <!--<p class="sx-course-feature-in-content">通过一线从业人员的教学与分享，学习业界经验，传承行业精神，敬畏演员职业。<br>-->
+                        <!--包括：演员业态分析，演员与导演实验室，不同媒介的表演等。</p>-->
+                    <!--<p class="sx-course-feature-in-title">美学教育——认知世界</p>-->
+                    <!--<p class="sx-course-feature-in-content">培养学员认识美、爱好美和创造美的能力，提高学员的全面个人素养。包括：传统美学，艺术与生活等。</p>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--<div class="sx-course-hint">-->
+            <!--<p>师资介绍</p>-->
+        <!--</div>-->
+        <!--<div class="sx-course-feature-in">-->
+            <!--<p class="sx-course-feature-in-content">① 以人为本、专注灵性开发的静心引导师。</p>-->
+            <!--<p class="sx-course-feature-in-content">② 国内外一线从业人员，包括演员、导演、编剧、制片人、监制等。</p>-->
+            <!--<p class="sx-course-feature-in-content">③  传统艺术家、当代艺术家、美学家。</p>-->
+            <!--<p class="sx-course-feature-in-content">④表演流派大师，国内外一类艺术院校的表演教育专家。</p>-->
+        <!--</div>-->
+        <p class="sx-course-feature-in-title-top">这是山下的入门课程。</p>
+        <p class="sx-course-feature-in-content">来玩，来实验，来创造，用适性的方法，找到你的那把“钥匙”，开始进入表演的世界。</p>
+
+
+        <div class="sx-course-hint">
+            <p>招生计划</p>
+        </div>
+
+        <div class="sx-course-plan">
+            <div class="sx-course-plan-line"></div>
+            <div class="sx-course-plan-content-div">
+                <p class="sx-course-plan-content">招生人群</p>
+                <p class="sx-course-plan-content sx-course-plan-content-right">有志于从事影视表演，且无专业经验者</p>
+            </div>
+
+            <div class="sx-course-plan-line"></div>
+            <div class="sx-course-plan-content-div">
+                <p class="sx-course-plan-content">年龄要求</p>
+                <p class="sx-course-plan-content sx-course-plan-content-right">16岁以上</p>
+            </div>
+
+            <div class="sx-course-plan-line"></div>
+            <div class="sx-course-plan-content-div">
+                <p class="sx-course-plan-content">招生人数</p>
+                <p class="sx-course-plan-content sx-course-plan-content-right">20人／期</p>
+            </div>
+
+            <div class="sx-course-plan-line"></div>
+            <div class="sx-course-plan-content-div">
+                <p class="sx-course-plan-content">培训周期</p>
+                <p class="sx-course-plan-content sx-course-plan-content-right">1年</p>
+            </div>
+
+            <div class="sx-course-plan-line"></div>
+            <div class="sx-course-plan-content-div">
+                <p class="sx-course-plan-content">授课地点</p>
+                <p class="sx-course-plan-content sx-course-plan-content-right">北京</p>
+            </div>
+
+            <div class="sx-course-plan-line"></div>
+            <div class="sx-course-plan-content-div">
+                <p class="sx-course-plan-content">学费标准</p>
+                <p class="sx-course-plan-content sx-course-plan-content-right">
+                    80000元／期（学习期间食宿自理）</p>
+            </div>
+
+            <div class="sx-course-plan-line"></div>
+            <div class="sx-course-plan-content-div">
+                <p class="sx-course-plan-content">报名时间</p>
+                <p class="sx-course-plan-content sx-course-plan-content-right">2017年10月19日-12月20日</p>
+            </div>
+
+            <div class="sx-course-plan-line"></div>
+            <div class="sx-course-plan-content-div">
+                <p class="sx-course-plan-content">开课时间</p>
+                <p class="sx-course-plan-content sx-course-plan-content-right">2018年春季</p>
+            </div>
+            <div class="sx-course-plan-line"></div>
+
+
+        </div>
+
+        <div class="sx-course-hint">
+            <p>申请流程</p>
+        </div>
+        <div class="sx-course-flow">
+            <div class="sx-course-flow-left">
+                <div class="sx-course-flow-left-left">
+                    <p class="sx-course-flow-left-left-title">
+                        初选<br>
+                        <span class="sx-course-flow-left-right-text-bottom">网络报名</span></p>
+                </div>
+                <div class="line-column"></div>
+                <div class="sx-course-flow-left-right-text">
+                    <p>① 个人基本信息</p>
+                    <p class="sx-course-flow-left-right-text-center">② 五官清晰半身、全身照</p>
+                    <p>③ 命题视频</p>
+                </div>
+            </div>
+            <div class="sx-course-flow-left sx-course-flow-right">
+                <div class="sx-course-flow-left-left">
+                    <div class="sx-course-flow-left-left-title">
+                        复选<br>
+                        <span class="sx-course-flow-left-right-text-bottom">线下面试</span></p>
+                    </div>
+                </div>
+                <div class="line-column"></div>
+                <div class="sx-course-flow-left-right-text">
+                    通过初选后，将以电话、邮件形式<br>
+                    通知入选者，准备参加线下面试
+                </div>
+            </div>
+        </div>
+
+        <div class="sx-course-hint">
+            <p>助学政策</p>
+        </div>
+        <div class="sx-course-help">
+            <p><span class="font-500">① 助学贷款：</span>山下学堂可为学员提供无息助学贷款</p>
+            <p><span class="font-500">② 升级计划：</span>山下学堂为优秀结业者提供免费继续学习机会</p>
+        </div>
+
+        <div class="sx-course-help-pbone">
+            <p><span class="font-500">① 助学贷款：</span><br>
+                <p>山下学堂可为学员提供无息助学贷款</p>
+            </p>
+            <p><span class="font-500">② 升级计划：</span><br>
+                <p>山下学堂为优秀结业者提供免费继续学习机会</p>
+            </p>
+        </div>
+
+
+        <div class="sx-course-bottom-line-new"></div>
+        <a onclick="toCourse()" style="color: inherit;"><div class="sx-course-apply-new"><p id="course-sign">立即报名</p></div></a>
+
+        <div class="questions-more-div">
+            <p class="questions-more">☆ 更多问题，可浏览<a href="questions.html" style="color: #66BBFF;">报名咨询</a>页面</p>
+        </div>
+    </div>
+
+
+</div>
+
+
+<!-- Footer -->
+<footer style="background-color: #f6f6f5 !important;" class="no-phone">
+    <!-- Page Content -->
+    <div id="pc-footer" class="footer-bottom">
+        <div class="footer-bottom-qr-view">
+            <div class="footer-bottom-qr-container">
+                <img class="footer-show-er" src="http://qnp.shanxiaxuetang.com/sx-wx.jpg"/>
+                <!--<p>官方微信公众平台</p>-->
+            </div>
+            <!--<div class="footer-bottom-qr-container fonter-qr-right">-->
+                <!--<img class="footer-show-er" src="../../static/hehe/images/sx-wb.jpg"/>-->
+                <!--&lt;!&ndash;<p>官方微信公众平台</p>&ndash;&gt;-->
+            <!--</div>-->
+        </div>
+
+        <div class="footer-bottom-div">
+            <!--<img src="../../static/hehe/images/demo_footer2.png"/>-->
+            <!--<img src="../../static/hehe/images/demo_footer1.png"/>-->
+            <div>
+                <div class="footer-bottom-icon-view">
+                    <img src="/images/email-icon.png" class="email-icon">
+                    <p class="footer-bottom-email">
+                        <!--<span style="color: #66BBFF;">-->
+                        <a href="mailto:shanxia@shanxiaxuetang.com" style="color: #646464;">
+                            shanxia@shanxiaxuetang.com</a>
+                        <!--</span>-->
+                    </p>
+                    <img src="/images/wx-icon.png" class="wx-icon">
+                    <p class="footer-bottom-email">
+                        山下学堂
+                    </p>
+                    <!--<img src="../../static/hehe/images/wb-icon.png" class="wb-icon">-->
+                    <!--<p class="footer-bottom-email">-->
+                        <!--<a href="http://weibo.com/u/6342283271" style="color: #646464;">@山下学堂</a>-->
+                    <!--</p>-->
+                </div>
+                <hr/>
+                <div style="width: 100%; display: flex; justify-content: space-between; flex-wrap: wrap;">
+                    <span class="footer-bottom-address">版权所有: 北京山下艺术中心有限公司&nbsp;" 京ICP备17055698号</span>
+                    <span class="footer-bottom-copyright">CopyRight © 2017 The Dome Studio,All Rights Reserved</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+
+
+<!--JS-->
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script type="text/javascript" src="js/wxopen-1.0.0.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/respond.js"></script>
+<script src="js/course.js"></script>
+<script>
+	if(wxopen.isWeiXin){
+		$.get("https://shanxiaxuetang.com/sign/get_ticket",{
+			url:window.location.href
+		},
+		function(data,status){
+			var jdata = $.parseJSON(data);
+			wxopen.shareData.appid = jdata.data.appid;
+			wxopen.timestamp = jdata.data.timestamp;
+			wxopen.nonceStr = jdata.data.noncestr;
+			wxopen.signature = jdata.data.signature;
+			wxopen.shareData.title = "陈国富、 周迅、 陈坤共同创办山下学堂";
+			wxopen.shareData.desc = "在这里我们一同探索、一同实验、 一同成长。";
+			wxopen.shareData.link = "https://shanxiaxuetang.com/static/shanxia/course-new-detail.html";
+			wxopen.shareData.imgUrl = "http://qnp.shanxiaxuetang.com/sx_logo.png"
+			wxopen.config();
+		});
+	}
+    
+</script>
+
+</body>
+</html>

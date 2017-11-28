@@ -1,0 +1,189 @@
+a, a:hover, a:active, a:visited { color: inherit; text-decoration: none; cursor: pointer;} 
+.news {
+	margin-top: 500px;
+	width: 100%;
+	background-color: white;
+}
+
+.news-bak {
+	background-image: url(http://qnp.shanxiaxuetang.com/news-head-pc.jpg);
+	position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 500px;
+    z-index: -1;
+	background-size: cover;
+    padding-top: 110px;
+}
+
+.news-container {
+	color: #646464;
+	text-align: center;
+	max-width: 1020px;
+	margin: 0 auto;
+	padding: 110px 20px 0 20px;
+}
+
+.news-title-en {
+	position: absolute;
+	top: 110px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	color: white;
+	opacity: 0.6;
+	font-size: 20px;
+	font-weight: 300;
+	line-height: 24px;
+	letter-spacing: 2px;
+}
+
+.news-title-cn {
+	position: absolute;
+	top: 136px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	color: white;
+	opacity: 0.6;
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 25px;
+}
+.news-list {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.news-item {
+	padding-top: 29px;
+	display: flex;
+	padding-bottom: 29px;
+	border-bottom: 1px solid rgba(100, 100, 100, 0.2);
+}
+.news-item:hover .news-item-caption {
+	text-decoration: underline;
+}
+.news-item-avatar {
+    height: 90px;
+    width: 90px;
+    border-radius: 45px;
+    overflow: hidden;
+    background-color: black;
+    flex-shrink: 0;
+}
+
+.news-item-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.news-item-time {
+	text-align: left;
+	margin-left: 20px;
+	width: 62px;
+	font-size: 10px;
+	font-weight: 300;
+	padding-top: 2px;
+}
+.news-item-right {
+	text-align: left;
+	margin-left: 20px;
+}
+.news-item-caption {
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 33px;
+	margin-bottom: 10px;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+	overflow: hidden;
+}
+.news-item-brief {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 33px;
+    display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+}
+.news-more {
+	margin: 110px auto 0 auto;
+	padding-bottom: 30px;
+	font-size: 14px;
+	font-weight: 300;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.news-more a {
+	padding-bottom: 1px;
+	border-bottom: 1px solid white;
+	position: relative;
+}
+.news-more a:hover {
+	color: rgb(102,187,245);
+}
+
+/*手机版本*/
+@media (max-width: 768px) {
+	#pc-time,.news-title-en,.news-title-cn,footer {
+		display: none;
+	}
+	.news-bak {
+		height: 202px;
+		background-image: url(http://qnp.shanxiaxuetang.com/news-head-phone.jpg);
+	}
+	.news {
+		margin-top: 202px;
+	}
+	.news-container {
+		padding: 14px 28px 0 28px;
+	}
+	.news-item {
+		padding-top: 14px;
+		padding-bottom: 11px;
+	}
+	.news-item-avatar {
+		width: 60px;
+		height: 60px;
+	}
+	.news-item-right {
+		margin-left: 10px;
+	}
+	.news-item-caption {
+		font-size: 14px;
+		line-height: 20px;
+		height: 20px;
+		color: #646464;
+	}
+	.news-item-brief {
+		font-size: 10px;
+		line-height: 20px;
+		max-height: 40px;
+	}
+	.news-item-time {
+		margin-left: 0;
+		margin-top: 10px;
+	}
+	.news-more {
+		margin-top: 24px;
+		padding-bottom: 33px;
+		color: #646464;	
+		font-size: 10px;	
+		line-height: 10px;
+	}
+	
+}
+
+/*pc版本*/
+@media (min-width: 769px) {
+	#phone-time {
+		display: none;
+	}
+}
