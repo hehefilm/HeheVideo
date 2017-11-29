@@ -41,89 +41,8 @@
     <img src="../../static/hehe/images/loading.png"/>
 </div>
 <!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-fixed-top nav-out" role="navigation">
-
-    <div class="nav-wai">
-        <div id="phone-topright" class="nav-menu" data-is-active="false" onclick="pushNav(this)">
-            <div class="nav-menu-wrapper">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-        <a id="phoneLogo" class="nav-brand-phone" href="#Slider"></a>
-
-        <a id="pcLogo" class="nav-brand" href="#Slider" class="sxScroll"></a>
-        <ul class='nav-ul'>
-            <li id='nav-about'>
-                <a href='#aboutus' title='关于山下' class="sxScroll">关于山下</a>
-            </li>
-
-            <li id='nav-channel' class='dropdown'>
-                <a href="#sxxt" title='山下学堂' class="sxScroll">山下学堂</a>
-            </li>
-
-            <li id='nav-channel' class='dropdown'>
-                <a href="#bmzx" title='报名咨询' class="sxScroll">报名咨询</a>
-            </li>
-
-            <li id='nav-channel' class='dropdown'>
-                <a href="#sxxw" title='山下新闻' class="sxScroll">山下新闻</a>
-            </li>
-
-            <li id='nav-news'>
-                <a href='#sxsp' class="sxScroll" title='山下视频'>山下视频</a>
-            </li>
-
-            <li id='nav-blog' class='dropdown'>
-                <a href='#laboratory' title='山下实验室' class="sxScroll">山下实验室</a>
-            </li>
-
-        </ul>
-        <ul class='nav-login'>
-
-            <li id='nav-news'>
-                <a title='登录' onclick="signup()">登录</a>
-            </li>
-
-        </ul>
-
-        <a class="nav-avatar"></a>
-    </div>
-
-</nav>
-
-<div id="phone-navbar" class="nav-wai-phone" data-is-active="first" onclick="pushNav(this)">
-    <ul id="phone-ul" class="nav-phone-ul" data-is-active="">
-        <li id='nav-about'>
-            <a href='../../static/hehe/about.html' title='关于山下'>关于山下</a>
-        </li>
-
-        <li id='nav-channel'>
-            <a href="../../static/hehe/course.html" title='山下学堂'>山下学堂</a>
-        </li>
-
-        <li id='nav-channel'>
-            <a href="../../static/hehe/questions.html" title='报名咨询'>报名咨询</a>
-        </li>
-
-        <li id='nav-news'>
-            <a href='../../static/hehe/videos.html' title='山下视频'>山下视频</a>
-        </li>
-
-        <li id='nav-news'>
-            <a href='../../static/hehe/news.html' title='山下新闻'>山下新闻</a>
-        </li>
-
-        <li id='nav-blog'>
-            <a href="../../static/hehe/lab.html" title='山下实验室'>山下实验室</a>
-        </li>
-    </ul>
-    <!--<div id="phone-sign" class="nav-phone-dlzc" data-is-active="">
-        <a class="phone-signup">注册</a>
-        <a class="phone-signup">登录</a>
-    </div>-->
-    <a class="phone-signup" href="../../static/hehe/course.html">我要报名</a>
+<div id="my-nav">
+	<my-nav></my-nav>
 </div>
 
 <a id="slider-the"></a>
@@ -583,16 +502,14 @@
 
 
 <!--JS-->
+<script type="text/javascript" src="../../static/hehe/js/vue.js"></script>
 <script type="text/javascript" src="../../static/hehe/js/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="../../static/hehe/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
-<script type="text/javascript" src="../../static/hehe/js/wxopen-1.0.0.js"></script>
 <script type="text/javascript" src="../../static/hehe/js/nav.js"></script>
 <script type="text/javascript" src="../../static/hehe/js/respond.js"></script>
 <script type="text/javascript" src="../../static/hehe/js/banner.js"></script>
 <script type="text/javascript" src="../../static/hehe/js/videojs.min.js"></script>
 <script type="text/javascript" src="../../static/hehe/js/template-web.js"></script>
-<script type="text/javascript" src="../../static/hehe/js/news.js"></script>
 
 <script>
 
@@ -642,23 +559,6 @@
         }
     }
 
-	if(wxopen.isWeiXin){
-		$.get("https://shanxiaxuetang.com/sign/get_ticket",{
-			url:window.location.href
-		},
-		function(data,status){
-			var jdata = $.parseJSON(data);
-			wxopen.shareData.appid = jdata.data.appid;
-			wxopen.timestamp = jdata.data.timestamp;
-			wxopen.nonceStr = jdata.data.noncestr;
-			wxopen.signature = jdata.data.signature;
-			wxopen.shareData.title = "陈国富、 周迅、 陈坤共同创办山下学堂";
-			wxopen.shareData.desc = "在这里我们一同探索、一同实验、 一同成长。";
-			wxopen.shareData.link = "https://shanxiaxuetang.com";
-			wxopen.shareData.imgUrl = "http://qnp.shanxiaxuetang.com/sx_logo.png"
-			wxopen.config();
-		});
-	}
 </script>
 
 

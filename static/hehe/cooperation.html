@@ -18,7 +18,7 @@
     <meta name="msapplication-navbutton-color" content="#861519">
     <meta name="apple-mobile-web-app-status-bar-style" content="#861519">
 
-    <title>山下学堂</title>
+    <title>合作伙伴</title>
 
     <!--CSS-->
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
@@ -37,57 +37,9 @@
 <body>
 
 <!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-fixed-top nav-out" role="navigation">
-
-    <div class="nav-wai">
-        <div id="phone-topright" class="nav-menu" data-is-active="false" onclick="pushNav(this)">
-            <div class="nav-menu-wrapper">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-        <a id="phoneLogo" class="nav-brand-phone" href="index.html#slider-the"></a>
-
-        <a id="pcLogo" class="nav-brand" href="index.html#slider-the"></a>
-        <ul class='nav-ul'>
-            <li id='nav-about'>
-                <a href='index.html#about-the' title='关于山下'>关于山下</a>
-            </li>
-
-            <li id='nav-channel' class='dropdown'>
-                <a href='index.html#course-the' title='山下学堂'>山下学堂</a>
-            </li>
-
-            <li id='nav-channel' class='dropdown'>
-                <a href="index.html#ask-the" title='报名咨询'>报名咨询</a>
-            </li>
-
-            <li id='nav-channel' class='dropdown'>
-                <a href="index.html#news-the" title='山下新闻'>山下新闻</a>
-            </li>
-
-            <li id='nav-news'>
-                <a href='index.html#video-the' title='山下视频'>山下视频</a>
-            </li>
-
-            <li id='nav-blog' class='dropdown'>
-                <a href='index.html#laboratory-the' title='山下实验室'>山下实验室</a>
-            </li>
-
-        </ul>
-        <ul class='nav-login'>
-
-            <li id='nav-news'>
-                <a title='登录' onclick="signup()">登录</a>
-            </li>
-
-        </ul>
-
-        <a class="nav-avatar"></a>
-    </div>
-
-</nav>
+<div id="my-nav">
+	<my-nav></my-nav>
+</div>
 
 <div id="phone-navbar" class="nav-wai-phone" data-is-active="first">
     <ul id="phone-ul" class="nav-phone-ul" data-is-active="">
@@ -259,10 +211,9 @@
 
 
 <!--JS-->
+<script src="js/vue.js"></script>
 <script src="js/jquery-1.11.3.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
-<script type="text/javascript" src="js/wxopen-1.0.0.js"></script>
 <script src="js/nav.js"></script>
 <script src="js/respond.js"></script>
 <script>
