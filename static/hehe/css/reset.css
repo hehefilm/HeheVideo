@@ -35,10 +35,11 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 	font-family: "Helvetica","PingFang SC","SF Pro SC","HanHei SC","SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","PingFang SC","Helvetica Neue","Arial","Microsoft YaHei","SimHei",sans-serif;
-	font-size: 62.5%;
+	font-size: 14px;
 	line-height:20px;
 	font-weight: 300;
 }
+
 ol, ul {
 	list-style: none;
 }
@@ -53,3 +54,23 @@ q:before, q:after {
 
 a { color: #9e1f24;}
 a:hover,a:focus { color: rgb(102,187,245); text-decoration:none;}
+
+html {
+	font-size: 62.5%;
+	line-height: 62.5%;
+}
+@media (max-width: 768px) {
+	html {
+		font-size: 50%;
+	}
+}
+@media(max-width: 480px) {
+	html {
+		font-size: 40%;
+	}
+}
+@media(max-width: 320px) {
+	html {
+		font-size: 30%;
+	}
+}

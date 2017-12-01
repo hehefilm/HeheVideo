@@ -1107,13 +1107,13 @@ footer {
 .footer-info {
     width: 30%;
     font-size: 1.4rem;
-    line-height: 3rem;
+    line-height: 200%;
     color: #CCCCCC;
 }
 .footer-link {
     width: 30%;
     font-size: 1.4rem;
-    line-height: 3rem;
+    line-height: 200%;
     color: #CCCCCC;
 }
 .footer-link a:link { 
@@ -1133,8 +1133,6 @@ footer {
 }
 .footer-qr {
     width: 30%;
-    font-size: 1.4rem;
-    line-height: 3rem;
 }
 .footer-qr > img {
     width: 45%;
