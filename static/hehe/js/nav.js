@@ -44,20 +44,15 @@ Vue.component('my-footer',{
 		        <div class="footer-bottom-qr-view">\
 		            <div class="footer-bottom-qr-container">\
 		                <img class="footer-show-er" src="http://qnp.shanxiaxuetang.com/sx-wx.jpg"/>\
-		                <!--<p>官方微信公众平台</p>-->\
 		            </div>\
 		        </div>\
 		        <div class="footer-bottom-div">\
-		            <!--<img src="../../static/hehe/images/demo_footer2.png"/>-->\
-		            <!--<img src="../../static/hehe/images/demo_footer1.png"/>-->\
 		            <div>\
 		                <div class="footer-bottom-icon-view">\
 		                    <img src="/images/email-icon.png" class="email-icon">\
 		                    <p class="footer-bottom-email">\
-		                        <!--<span style="color: #66BBFF;">-->\
 		                        <a href="mailto:shanxia@shanxiaxuetang.com" style="color: #646464;">\
 		                            shanxia@shanxiaxuetang.com</a>\
-		                        <!--</span>-->\
 		                    </p>\
 		                    <img src="/images/wx-icon.png" class="wx-icon">\
 		                    <p class="footer-bottom-email">\

@@ -35,7 +35,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 	font-family: "Helvetica","PingFang SC","SF Pro SC","HanHei SC","SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","PingFang SC","Helvetica Neue","Arial","Microsoft YaHei","SimHei",sans-serif;
-	font-size:14px;
+	font-size: 62.5%;
 	line-height:20px;
 	font-weight: 300;
 }
