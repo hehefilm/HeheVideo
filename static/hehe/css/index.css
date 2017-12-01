@@ -603,7 +603,9 @@
     }
 
     .sx-school-img-div {
-        margin-top: 20px;
+        /*margin-top: 20px;*/
+        padding-left: 0px;
+        padding-right: 0px;
         display: flex;
         flex-direction: column;
     }
@@ -775,7 +777,7 @@
         right: 0;
         bottom: 0;
         background-color: rgba(0, 0, 0, 0.8);
-        opacity: 0;
+        opacity: 1;
         transition: all 0.3s;
     }
     .index-course-item-shadow > p {
@@ -793,7 +795,7 @@
         margin: auto;
     }
     .index-course-item-shadow:hover {
-        opacity: 1;
+        opacity: 0;
     }
 }
 
@@ -893,7 +895,9 @@
     .sx-school-img-div {
         display: flex;
         flex-direction: column;
-        margin: 40px 0px 0px auto;
+        padding-left: 0px;
+        padding-right: 0px;
+        /*margin: 40px 0px 0px auto;*/
     }
 
     .sx-school-holl-title-div {
@@ -1211,7 +1215,7 @@
         right: 0;
         bottom: 0;
         background-color: rgba(0, 0, 0, 0.8);
-        opacity: 0;
+        opacity: 1;
         transition: all 0.3s;
     }
     .index-course-item-shadow > p {
@@ -1229,7 +1233,7 @@
         margin: auto;
     }
     .index-course-item-shadow:hover {
-        opacity: 1;
+        opacity: 0;
     }
 }
 
