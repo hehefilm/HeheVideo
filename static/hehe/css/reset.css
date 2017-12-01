@@ -4,6 +4,16 @@
    License: none (public domain)
 */
 
+@font-face {
+    font-family: 'fzhei-b01regular';
+    src: url('_gbk-webfont.woff2') format('woff2'),
+         url('_gbk-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 html, body, div, span, applet, object, iframe,
 /*h1, h2, h3, h4, h5, h6,*/ p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,7 +34,7 @@ time, mark, audio, video {
 	font: inherit;*/
 	vertical-align: baseline;
 	list-style:none;
-	font-family: "Helvetica","PingFang SC","SF Pro SC","HanHei SC","SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","Helvetica Neue","Arial","Microsoft YaHei","SimHei",sans-serif;
+	font-family: "fzhei-b01regular","PingFang SC","SF Pro SC","HanHei SC","SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","Helvetica Neue","Arial","Microsoft YaHei","SimHei",sans-serif;
 	font-weight: 300;
 }
 /* HTML5 display-role reset for older browsers */
@@ -34,7 +44,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-	font-family: "Helvetica","PingFang SC","SF Pro SC","HanHei SC","SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","PingFang SC","Helvetica Neue","Arial","Microsoft YaHei","SimHei",sans-serif;
+	font-family: "fzhei-b01regular","PingFang SC","SF Pro SC","HanHei SC","SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","PingFang SC","Helvetica Neue","Arial","Microsoft YaHei","SimHei",sans-serif;
 	font-size:14px;
 	line-height:20px;
 	font-weight: 300;
