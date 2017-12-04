@@ -71,3 +71,23 @@ q:before, q:after {
 
 a { color: #9e1f24;}
 a:hover,a:focus { color: rgb(102,187,245); text-decoration:none;}
+
+html {
+	font-size: 62.5%;
+	line-height: 62.5%;
+}
+@media (max-width: 768px) {
+	html {
+		font-size: 50%;
+	}
+}
+@media(max-width: 480px) {
+	html {
+		font-size: 40%;
+	}
+}
+@media(max-width: 320px) {
+	html {
+		font-size: 30%;
+	}
+}

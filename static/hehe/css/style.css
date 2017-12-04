@@ -2,35 +2,19 @@
 /*=================================================================
 		     UTRUST CSS - All Rights Reserved.
 ==================================================================*/
-/*color
-紅色 #9e1f24
-*/
-
-
-
 
 /*-------------------------------------
 *               $BASE
 *------------------------------------*/
 
-
-/*!*Fluid Thumbnails Broken After First Row & hight break*!*/
-/*.row .col-lg-6:nth-child(2n + 3),.row .col-md-6:nth-child(2n + 3),*/
-/*.row .col-lg-4:nth-child(3n + 4),.row .col-md-4:nth-child(3n + 4),*/
-/*.row .col-lg-3:nth-child(4n + 5),.row .col-md-3:nth-child(4n + 5),*/
-/*.row .col-lg-2:nth-child(6n + 7),.row .col-md-2:nth-child(6n + 7),*/
-/*.row .col-lg-1:nth-child(12n + 13),.row .col-md-1:nth-child(12n + 13)*/
-/*{ !*margin-left:0px;*!clear:both;}*/
-
 /*-------------------------------------
 *         $REPLACE BOOTSTRAP
 *------------------------------------*/
 
-
-
 /*-------------------------------------
 *               $HEADER
 *------------------------------------*/
+
 .navbar-inverse {
     background-color: rgba(0,0,0,0.9);
     border-color: transparent;
@@ -419,4 +403,64 @@ a, a:hover, a:active, a:visited { text-decoration: none; }
 .nav-search img {
 	width: 18px;
 	margin: auto 7px auto 0;
+}
+/*-------------------------------------
+*               $FOOTER
+*------------------------------------*/
+footer {
+    width: 100%;
+    background-color: #1A1C21;
+    display: flex;
+}
+.footer-container {
+    /*margin: 0 107px 75px 107px;*/
+    margin: 0 5.3% 3.7% 5.3%;
+    width: 100%;
+}
+.footer-container > hr {
+    margin: 0;
+    border-top: 1px dashed #363942;
+    height: 1px;
+}
+.footer-content {
+    /*margin: 77px 69px 0 69px;*/
+    margin: 3.8% 3.5% 0 3.5%;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-info {
+    width: 30%;
+    font-size: 1.4rem;
+    line-height: 200%;
+    color: #CCCCCC;
+}
+.footer-link {
+    width: 30%;
+    font-size: 1.4rem;
+    line-height: 200%;
+    color: #CCCCCC;
+}
+.footer-link a:link { 
+    font-size: 1.4rem;
+    color: #CCCCCC;
+    text-decoration: none;
+}
+.footer-link a:visited { 
+    font-size: 1.4rem;
+    color: #CCCCCC;
+    text-decoration: none;
+}
+.footer-link a:hover {
+    font-size: 1.4rem;
+    color: #CCCCCC;
+    text-decoration: underline;
+}
+.footer-qr {
+    width: 30%;
+}
+.footer-qr > img {
+    width: 45%;
+}
+.footer-qr > img:last-child {
+    float: right;
 }
