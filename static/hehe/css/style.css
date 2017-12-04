@@ -34,14 +34,19 @@
 .navbar-inverse {
     background-color: rgba(0,0,0,0.9);
     border-color: transparent;
+    margin-bottom:0px;
+    height: 11.5%;
 }
 
 .nav-brand {
-    background: url("../images/logo.png") no-repeat;
-    background-size: contain;
-    width: 130px;
-    height: 44px;
-    margin: auto 0;
+    width: 6.77%;
+    display: flex;
+    margin: 0 9.6% 0 5.6%;
+}
+
+.nav-brand img {
+	width: 100%;
+	margin: auto 0;
 }
 
 .nav-menu {
@@ -120,7 +125,7 @@ a, a:hover, a:active, a:visited { text-decoration: none; }
 
 .nav-wai {
     background-color: transparent;
-    height: 5.5%;
+    height: 100%;
     display: flex;
     width: 100%;
 }
@@ -328,24 +333,21 @@ a, a:hover, a:active, a:visited { text-decoration: none; }
 }
 
 .nav-ul {
-    margin: 0 auto 0 50px;
+	width: 58.75%;
+	margin: auto 0;
     display: flex;
     justify-content: center;
     align-self: center;
 }
 
-.nav-ul, .nav-login, .nav-ul li {
+.nav-ul, .nav-ul li {
     list-style: none; /* 将默认的列表符号去掉 */
     padding: 0; /* 将默认的内边距去掉 */
     position: relative;
 }
 
-.nav-login {
-	display: none;
-}
-
 .nav-ul > li {
-    margin: auto 50px auto 0;
+    margin: auto 6.77% auto 0;
     float: left;
     border-radius: 0;
 }
@@ -361,18 +363,7 @@ a, a:hover, a:active, a:visited { text-decoration: none; }
 	position: relative;
 }
 
-#phoneAbout {
-	border-bottom: 2px solid white;
-}
-
-.nav-ul>li a:hover:after,
-.nav-login>li a:hover:after,
-.index-news-more a:hover:after,
-.sx-consulting-more-div a:hover:after,
-.sx-labs-more-div a:hover:after,
-.news-more a:hover:after,
-.videos-more a:hover:after,
-.hp-left-div a:hover:after{
+.nav-ul>li a:hover:after{
 	-webkit-transform-origin: bottom left;
     -ms-transform-origin: bottom left;
     transform-origin: bottom left;
@@ -382,14 +373,7 @@ a, a:hover, a:active, a:visited { text-decoration: none; }
 
 }
 
-.nav-ul>li a:after,
-.nav-login>li a:after,
-.index-news-more a:after,
-.sx-consulting-more-div a:after,
-.sx-labs-more-div a:after,
-.news-more a:after,
-.videos-more a:after,
-.hp-left-div a:after {
+.nav-ul>li a:after{
 	border-bottom: 2px solid white;
 	content: '';
     display: block;
@@ -409,111 +393,30 @@ a, a:hover, a:active, a:visited { text-decoration: none; }
     transition: transform 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53), -webkit-transform 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53)
 }
 
-.index-news-more a:after,
-.sx-consulting-more-div a:after,
-.sx-labs-more-div a:after,
-.news-more a:after,
-.videos-more a:after,
-.hp-left-div a:after {
-	border-bottom: 1px solid rgb(102,187,245);
+.nav-search {
+	height: 30px;	
+	width: 9.95%;	
+	border: 1px solid #FFFFFF;	
+	border-radius: 15px;
+	margin: auto 0;
+	display: flex;
 }
 
-
-.nav-login {
-    margin: 0 0 0 auto;
+.nav-search input {
+	width: 85%;
+	margin: 0 5px 0 15px;
+	background-color: transparent;
+	font-size: 12px;
+	line-height: 16px;
+	border: 0px solid transparent;
+	color: white;
 }
 
-.nav-login > li {
-    margin: auto 0 auto 15px;
-    float: left;
-    border-radius: 0;
-    position: relative;
+.nav-search input:focus {
+	outline: none;
 }
 
-.nav-login > li a {
-    display: block;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 0;
+.nav-search img {
+	width: 18px;
+	margin: auto 7px auto 0;
 }
-
-.arrow {
-
-	position: absolute;
-	bottom: 90px;
-	left: 0;
-	right: 0;
-	margin: auto;
-	text-align: center;
-	z-index: 10;
-	width: 22px;
-	-webkit-animation: arrowScroll 1.5s infinite;
-    animation: arrowScroll 1.5s infinite;
-}
-
-@-webkit-keyframes arrowScroll {
-    0% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-        opacity: 0
-    }
-
-    50% {
-        opacity: 1
-    }
-
-    100% {
-        -webkit-transform: translateY(0.5rem);
-        transform: translateY(0.5rem);
-        opacity: 0
-    }
-}
-
-@keyframes arrowScroll {
-    0% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-        opacity: 0
-    }
-
-    50% {
-        opacity: 1
-    }
-
-    100% {
-        -webkit-transform: translateY(0.5rem);
-        transform: translateY(0.5rem);
-        opacity: 0
-    }
-}
-
-.top-arrow {
-    position: fixed;
-    bottom: 30px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    text-align: center;
-    z-index: 101;
-    width: 40px;
-    height: 40px;
-    display: none;
-}
-
-.nav-tip {
-    width: 2px;
-    height: 14px;
-    background-color: white;
-}
-
-.nav-avatar {
-	background-image:url(../images/phone-banner-user.png);
-	background-size:contain;
-	width: 35px;
-	height: 35px;
-	border-radius: 18px;
-	margin: auto 0;	
-	display: none;
-}
-
-
