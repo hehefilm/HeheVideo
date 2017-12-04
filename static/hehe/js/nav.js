@@ -46,35 +46,45 @@ var vm=new Vue({ //这里的vm也是一个组件，称为根组件Root
 
 Vue.component('my-footer',{
 	template:'\
-		<footer style="background-color: #f6f6f5 !important;" class="no-phone">\
-		    <div id="pc-footer" class="footer-bottom">\
-		        <div class="footer-bottom-qr-view">\
-		            <div class="footer-bottom-qr-container">\
-		                <img class="footer-show-er" src="http://qnp.shanxiaxuetang.com/sx-wx.jpg"/>\
-		            </div>\
-		        </div>\
-		        <div class="footer-bottom-div">\
-		            <div>\
-		                <div class="footer-bottom-icon-view">\
-		                    <img src="/images/email-icon.png" class="email-icon">\
-		                    <p class="footer-bottom-email">\
-		                        <a href="mailto:shanxia@shanxiaxuetang.com" style="color: #646464;">\
-		                            shanxia@shanxiaxuetang.com</a>\
-		                    </p>\
-		                    <img src="/images/wx-icon.png" class="wx-icon">\
-		                    <p class="footer-bottom-email">\
-		                        山下学堂\
-		                    </p>\
-		                </div>\
-		                <hr/>\
-		                <div style="width: 100%; display: flex; justify-content: space-between; flex-wrap: wrap;">\
-		                    <span class="footer-bottom-address">版权所有: 北京山下艺术中心有限公司&nbsp;" 京ICP备17055698号</span>\
-		                    <span class="footer-bottom-copyright">CopyRight © 2017 The Dome Studio,All Rights Reserved</span>\
-		                </div>\
-		            </div>\
-		        </div>\
-		    </div>\
-		</footer>'
+		<footer>\
+	        <div class="footer-container">\
+	            <hr>\
+	            <div class="footer-content">\
+	                <div class="footer-info">\
+	                    和和（上海）影业有限公司<br>\
+	                    北京市朝阳区姚家园南路1号惠通时代广场7号楼C座5楼<br>\
+	                    Hehe ( Shanghai ) Pictures Co., Ltd<br>\
+	                    5th Floor, Zone C, Builing No.7, HuiTong Office Park<br>\
+	                    No.1 Yaojiayuan South Road, Chaoyang District, 100025 Beijing, China<br>\
+	                    电话：010-85565969\
+	                </div>\
+	                <div class="footer-link">\
+	                    友情链接Links<br>\
+	                    <a href="http://www.alibabapictures.com/">阿里巴巴影业</a>     \
+	                    <a href="http://www.firstfilm.org.cn/">FIRST青年电影展</a>     \
+	                    <a href="http://weibo.com/u/5754144206">并驰影业</a>     \
+	                    <a href="javascript:void(0)">和和基金</a>     \
+	                    <a href="javascript:void(0)">麦特</a>     \
+	                    <a href="javascript:void(0)">至乐汇粹</a>     \
+	                    <a href="javascript:void(0)">黑蚂蚁</a>     \
+	                    <a href="javascript:void(0)">FOTISSIMO</a>     \
+	                    <a href="javascript:void(0)">坤哥文化</a>     \
+	                    <a href="javascript:void(0)">春和</a>     \
+	                    <a href="javascript:void(0)">和和花园</a>     \
+	                    <a href="javascript:void(0)">球和头</a>     \
+	                    <a href="javascript:void(0)">和曦文化</a>     \
+	                    <a href="javascript:void(0)">三目童子</a>     \
+	                    <a href="javascript:void(0)">原来影像</a>     \
+	                    <a href="javascript:void(0)">形影相随</a>     \
+	                    <a href="javascript:void(0)">屋顶世界</a>     \
+	                </div>\
+	                <div class="footer-qr">\
+	                    <img src="../../static/hehe/images/hehe-wb.jpg">\
+	                    <img src="../../static/hehe/images/hehe-wx.jpg">\
+	                </div>\
+	            </div>\
+	        </div>\
+	    </footer>'
 });
 new Vue({ //这里的vm也是一个组件，称为根组件Root
 	el:'#my-footer',
