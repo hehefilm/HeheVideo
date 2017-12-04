@@ -1,4 +1,4 @@
-.jssorl-009-spin img {
+/*'.jssorl-009-spin img {
     animation-name: jssorl-009-spin;
     animation-duration: 1.6s;
     animation-iteration-count: infinite;
@@ -13,15 +13,15 @@
     to {
         transform: rotate(360deg);
     }
-}
+}'*/
 
 
-.jssorb031 {position:absolute;}
-.jssorb031 .i {position:absolute;cursor:pointer;}
-.jssorb031 .i .b {fill:#000;fill-opacity:0.5;stroke:#fff;stroke-width:1200;stroke-miterlimit:10;stroke-opacity:0.3;}
-.jssorb031 .i:hover .b {fill:#fff;fill-opacity:.7;stroke:#000;stroke-opacity:.5;}
-.jssorb031 .iav .b {fill:#fff;stroke:#000;fill-opacity:1;}
-.jssorb031 .i.idn {opacity:.3;}
+.jssorb071 .i {position:absolute;color:#fff;font-family:"Helvetica neue",Helvetica,Arial,sans-serif;text-align:center;cursor:pointer;z-index:0;}
+.jssorb071 .i .b {fill:#000;opacity:.2;}
+.jssorb071 .i:hover {opacity:.7;}
+.jssorb071 .iav {color:#000;}
+.jssorb071 .iav .b {fill:#fff;opacity:1;}
+.jssorb071 .i.idn {opacity:.3;}
         
 @keyframes fadein {
     from {opacity:1;}
@@ -66,12 +66,16 @@
 	flex-direction: column;
 }
 	
-.banner-title {
-	color: #FFCC00;	
+.banner-title-div a {
+	color: #FFFFFF;	
 	font-size: 42px;	
 	line-height: 40px;
 	margin: 34px 0 0 52px;
 	font-weight: bolder;
+}
+
+.banner-title-div a:hover {
+	color: #FFCC00;
 }
 
 .banner-content {
@@ -96,7 +100,7 @@
 	margin-top: 6px;
 }
 
-.banner-title span {
+.banner-title-div span {
 	color: #FFFFFF;
 	font-size: 16px;	
 	line-height: 17px;
