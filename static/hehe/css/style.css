@@ -33,7 +33,7 @@
 	margin: auto 0;
 }
 
-a, a:hover, a:active, a:visited { text-decoration: none; } 
+/*a, a:hover, a:active, a:visited { text-decoration: none; }*/ 
 
 .nav-wai {
     background-color: transparent;

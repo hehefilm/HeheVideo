@@ -1,4 +1,4 @@
-.index-bg{
+.index-bg {
     background-color: #1a1c21;
 }
 
@@ -328,24 +328,6 @@
     margin-top: 2px;
 }
 
-.yinying {
-    flex-direction: column;
-    width: 100%;
-    display: flex;
-    background-color: black;
-    position: relative;
-}
-
-.yinying:hover img {
-    filter: alpha(Opacity=80);
-    opacity: .8;
-}
-
-.yinying:hover p {
-    opacity: 1;
-
-}
-
 .sx-school-holl-type {
     position: absolute;
     width: 100%;
@@ -410,8 +392,6 @@
 
 .index-course-item-shadow:hover {
     opacity: 1;
-}
-
 }
 
 /**
@@ -598,39 +578,6 @@
         -moz-box-orient: vertical;
     }
 
-    .yinying {
-        flex-direction: column;
-        width: 100%;
-        display: flex;
-        background-color: black;
-        position: relative;
-    }
-
-    .yinying:hover img {
-        filter: alpha(Opacity=50);
-        opacity: .5;
-    }
-
-    .yinying:hover p {
-        opacity: 1;
-    }
-
-    .sx-consulting-content {
-        height: 60px;
-        /*width: 85%;*/
-        color: #FFFFFF;
-        font-size: 20px;
-        font-weight: 300;
-        line-height: 28px;
-        text-align: center;
-        margin: 58px auto 0px auto;
-    }
-
-    .sx-consulting-content-b0ttom {
-        font-size: 16px;
-        line-height: 28px;
-    }
-
     .sx-consulting-more {
         color: #FFFFFF;
         font-size: 14px;
@@ -655,13 +602,6 @@
         margin-top: 3px;
     }
 
-    /*.sx-right-more-img {*/
-    /*margin-left: 9px;*/
-    /*width: 6px;*/
-    /*height: 13px;*/
-    /*margin-top: 3px;*/
-    /*background: url("images/right-more.png");*/
-    /*}*/
     .sx-consulting-more-div {
         /*display: flex;*/
         max-width: 500px;
@@ -871,6 +811,7 @@
         bottom: 0;
         margin: auto;
     }
+
     .index-course-item-shadow:hover {
         opacity: 1;
     }
