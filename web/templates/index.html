@@ -23,7 +23,6 @@
 
     <!--CSS-->
     <link rel="stylesheet" href="../../static/hehe/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="../../static/hehe/css/font-awesome.min.css">
     <link rel="stylesheet" href="../../static/hehe/css/reset.css"/>
     <link rel="stylesheet" href="../../static/hehe/css/style.css"/>
     <link rel="stylesheet" href="../../static/hehe/css/index.css"/>
@@ -32,42 +31,64 @@
 
     <link rel="stylesheet" href="../../static/hehe/css/videojs.css">
     <link rel="stylesheet" href="../../static/hehe/css/videojs-theme.css"/>
+    <link rel="stylesheet" href="../../static/hehe/css/dmaku.css"/>
 
     <!-- If you'd like to support IE8 -->
     <script src="../../static/hehe/js/videojs-ie8.min.js"></script>
 </head>
 <body>
-<div class="loading">
+<!--<div class="loading">
     <img src="../../static/hehe/images/loading.png"/>
-</div>
+</div>-->
 <!-- Navigation -->
 <div id="my-nav">
 	<my-nav></my-nav>
 </div>
 
 <a id="slider-the"></a>
-<div id="Slider" class="carousel slide">
-    <div id="arrow-container">
-        <a id="pcArrow"><img class="arrow" src="../../static/hehe/images/arrow.png"/></a>
-    </div>
-    <a id="phoneArrow"><img class="arrow" style="bottom: 31px;" src="../../static/hehe/images/arrow.png"/></a>
-
-    <!-- Indicators -->
-    <ol id="indicators" class="carousel-indicators">
-    </ol>
-
-    <div id="pc-inner" class="carousel-inner">
-    </div>
-
-    <div id="phone-inner" class="carousel-inner">
-        <div class="active">
-            <a href="javascript:void(0);">
-                <div class="fill" id="fill">
+<div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1920px;height:930px;overflow:hidden;visibility:hidden;">
+ 
+    <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1920px;height:930px;overflow:hidden;">
+        <div>
+            <img data-u="image" src="../../static/hehe/images/example1.jpg" />
+            <div class="banner-title-div">
+                <a class="banner-title">西游2伏妖篇 <span>[ 徐克导演&周星驰监制 ]</span></a>
+                <p class="banner-content">就是开不了口让她知道,我一定会呵护着你也逗你笑,你对我有多重要我后悔没让你知道,安静的听你撒娇知道就是那么简单几句我办不到</p>
+                <div class="banner-more">
+               		<p>更多 >></p>
                 </div>
-            </a>
+            </div>
+        </div>
+        <div>
+            <img data-u="image" src="../../static/hehe/images/example2.jpg" />
+            <div class="banner-title-div">
+            	
+                <a class="banner-title">西游2伏妖篇 <span>[ 徐克导演\&周星驰监制 ]</span></a>
+                <p class="banner-content">就是开不了口让她知道,我一定会呵护着你也逗你笑,你对我有多重要我后悔没让你知道,安静的听你撒娇知道就是那么简单几句我办不到</p>
+            	<div class="banner-more">
+	               	<p>更多 >></p>
+	            </div>
+            </div>
+        </div>
+        <div>
+            <img data-u="image" src="../../static/hehe/images/example3.jpg" />
+            <div class="banner-title-div">
+           		<a class="banner-title">西游2伏妖篇 <span>[ 徐克导演&周星驰监制 ]</span></a>
+                <p class="banner-content">就是开不了口让她知道,我一定会呵护着你也逗你笑,你对我有多重要我后悔没让你知道,安静的听你撒娇知道就是那么简单几句我办不到</p>
+                <div class="banner-more">
+               		<p>更多 >></p>
+                </div>
+            </div>
         </div>
     </div>
-
+    <!-- Bullet Navigator -->
+    <div data-u="navigator" class="jssorb031" style="position:absolute;right:12px;" data-autocenter="2" data-scale="0.5" data-scale-right="0.75">
+        <div data-u="prototype" class="i" style="width:12px;height:12px;">
+            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                <circle class="b" cx="8000" cy="8000" r="5800"></circle>
+            </svg>
+        </div>
+    </div>
 </div><!--Slider END-->
 
 
@@ -425,6 +446,7 @@
 <!--JS-->
 <script type="text/javascript" src="../../static/hehe/js/vue.js"></script>
 <script type="text/javascript" src="../../static/hehe/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../../static/hehe/js/jssor.slider.min.js" ></script>
 <script type="text/javascript" src="../../static/hehe/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../../static/hehe/js/nav.js"></script>
 <script type="text/javascript" src="../../static/hehe/js/respond.js"></script>

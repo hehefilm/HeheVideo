@@ -1,110 +1,42 @@
-// $(document).ready(function () {
-//     if ($(window).width() > 768) {
-//         $.get("https://shanxiaxuetang.com/resources/banner", {},
-//             function (data, status) {
-// 				var jsonobj = $.parseJSON(data);
+jQuery(document).ready(function ($) {
 
-//                 var result = '', dotRes = '';
-//                 $.each(jsonobj, function (i, each) {
-//                     var eachRes;
-//                     if (each.type == 'vdo') {
-//                         eachRes = "<div class='item " + (i == 0 ? "active" : "") + "'> <a href='javascript:void(0);' target='_blank'> <div class='fill-video'> <video id='sx-video' src='" + each.url + "' class='banner-video' preload='auto'></video> </div> </a> </div>"
-//                     } else if (each.type == 'img') {
-//                         eachRes = "<div class='item " + (i == 0 ? "active" : "") + "'> <a href='javascript:void(0);' target='_blank'> <div id='img" + i + "' class='fill' style='background-image:url(" + each.url + ")'></div></a></div>"
-//                     } else {
-//                         eachRes = '';
-//                     }
-//                     result += eachRes;
-//                     dotRes += '<li data-target="#Slider" data-slide-to="' + i + '" class=' + (i == 0 ? "active" : "") + '></li>'
-//                 });
-//                 $('#pc-inner').append(result);
-//                 $('#indicators').append(dotRes);
-//                 findVideoAndPlay();
-//             });
-//     }
-//     $.get("https://shanxiaxuetang.com/resources/mbanner", {}, function (data, status) {
-//         $("#fill").css("background-image", "url(" + data + ")");
-//     });
+    var jssor_1_options = {
+      $AutoPlay: 1,
+      $DragOrientation: 2,
+      $PlayOrientation: 2,
+      $Cols: 1,
+      $Align: 0,
+      $BulletNavigatorOptions: {
+        $Class: $JssorBulletNavigator$,
+        $Orientation: 2
+      }
+    };
 
+    var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
 
-// });
+    /*#region responsive code begin*/
 
-// var curBannerVideo = null;
-// var bannerPaused = false;
-// var isLoadingEnd = false;
+    var MAX_WIDTH = 1920;
 
-// function loadingEnd() {
-//     isLoadingEnd = true;
-//     findVideoAndPlay();
-// }
+    function ScaleSlider() {
+        var containerElement = jssor_1_slider.$Elmt.parentNode;
+        var containerWidth = containerElement.clientWidth;
 
-// function findVideoAndPlay() {
-//     if (isLoadingEnd && $(window).width() > 768 && $(".item.active").find('video').length > 0) {
-//         $('#Slider').carousel('pause');
-//         var video = $(".item.active").find('video').get(0);
-//         video.load();
-//         video.play();
-//         curBannerVideo = video;
-//         video.onended = function (e) {
-//             $('#Slider').carousel('next');
-//             $('#Slider').carousel('cycle');
-//             curBannerVideo = null;
-//             setTimeout(function () {
-//                 video.currentTime = 0;
-//             }, 2000);
-//         };
-//     }
-// }
+        if (containerWidth) {
 
-// function stopBanner() {
-//     if (bannerPaused == false) {
-//         if (curBannerVideo) {
-//             curBannerVideo.pause();
-//         } else {
-//             $('#Slider').carousel('pause');
-//         }
-//         bannerPaused = true;
-//     }
-// }
+            var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
 
-// function resumeBanner() {
-//     if (bannerPaused == true) {
-//         if (curBannerVideo) {
-//             curBannerVideo.currentTime = 0;
-//             curBannerVideo.play();
-//         } else {
-//             $('#Slider').carousel('cycle');
-//         }
-//         bannerPaused = false;
-//     }
-// }
+            jssor_1_slider.$ScaleWidth(expectedWidth);
+        }
+        else {
+            window.setTimeout(ScaleSlider, 30);
+        }
+    }
 
-// $("#Slider").on('slid.bs.carousel', function () {
-//     findVideoAndPlay();
-// });
+    ScaleSlider();
 
-// function toLab() {
-//     if ($(window).width() < 768) {
-//         var url = "../../static/hehe/lab.html";
-//         window.location.href = url;
-//     }
-// }
-// function toNews() {
-//     if ($(window).width() < 768) {
-//         var url = "../../static/hehe/news.html";
-//         window.location.href = url;
-//     }
-// }
-// function toQuestion() {
-//     if ($(window).width() < 768) {
-//         var url = "../../static/hehe/questions.html";
-//         window.location.href = url;
-//     }
-// }
-// function toVideo() {
-//     if ($(window).width() < 768) {
-//         var url = "../../static/hehe/videos.html";
-//         window.location.href = url;
-//     }
-
-// }
+    $(window).bind("load", ScaleSlider);
+    $(window).bind("resize", ScaleSlider);
+    $(window).bind("orientationchange", ScaleSlider);
+    /*#endregion responsive code end*/
+});

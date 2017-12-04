@@ -1,3 +1,28 @@
+.jssorl-009-spin img {
+    animation-name: jssorl-009-spin;
+    animation-duration: 1.6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes jssorl-009-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.jssorb031 {position:absolute;}
+.jssorb031 .i {position:absolute;cursor:pointer;}
+.jssorb031 .i .b {fill:#000;fill-opacity:0.5;stroke:#fff;stroke-width:1200;stroke-miterlimit:10;stroke-opacity:0.3;}
+.jssorb031 .i:hover .b {fill:#fff;fill-opacity:.7;stroke:#000;stroke-opacity:.5;}
+.jssorb031 .iav .b {fill:#fff;stroke:#000;fill-opacity:1;}
+.jssorb031 .i.idn {opacity:.3;}
+        
 @keyframes fadein {
     from {opacity:1;}
     to {opacity:0.5;}
@@ -27,6 +52,64 @@
     box-align: center;
     box-pack: center;
 }
+
+.banner-title-div {
+	position:absolute;
+	bottom:36px;
+	left:0px;
+	text-align:left;
+	box-sizing:border-box;
+	height: 216px;	
+	width: 863px;	
+	background-color: rgba(0,0,0,0.5);
+	display: flex;
+	flex-direction: column;
+}
+	
+.banner-title {
+	color: #FFCC00;	
+	font-size: 42px;	
+	line-height: 40px;
+	margin: 34px 0 0 52px;
+	font-weight: bolder;
+}
+
+.banner-content {
+	color: #FFFFFF;	
+	font-size: 14px;	
+	line-height: 20px;
+	margin: 21px 50px;
+}
+
+.banner-more {	
+	height: 24px;	
+	width: 70px;	
+	border: 1px solid #FFFFFF;	
+	margin: 0 50px;
+	text-align: center;
+}
+
+.banner-more p {
+	line-height: 12px;	
+	color: #FFFFFF;	
+	font-size: 12px;
+	margin-top: 6px;
+}
+
+.banner-title span {
+	color: #FFFFFF;
+	font-size: 16px;	
+	line-height: 17px;
+	margin-left: 22px;
+	font-weight: bolder;
+}
+
+@media (max-width:863px) {
+	.banner-title-div {
+		opacity: 0.0;
+	}
+}
+
 .loading img {
     width: 150px;
     height: 220px;
@@ -520,7 +603,9 @@
     }
 
     .sx-school-img-div {
-        margin-top: 20px;
+        /*margin-top: 20px;*/
+        padding-left: 0px;
+        padding-right: 0px;
         display: flex;
         flex-direction: column;
     }
@@ -692,7 +777,7 @@
         right: 0;
         bottom: 0;
         background-color: rgba(0, 0, 0, 0.8);
-        opacity: 0;
+        opacity: 1;
         transition: all 0.3s;
     }
     .index-course-item-shadow > p {
@@ -710,7 +795,7 @@
         margin: auto;
     }
     .index-course-item-shadow:hover {
-        opacity: 1;
+        opacity: 0;
     }
 }
 
@@ -810,7 +895,9 @@
     .sx-school-img-div {
         display: flex;
         flex-direction: column;
-        margin: 40px 0px 0px auto;
+        padding-left: 0px;
+        padding-right: 0px;
+        /*margin: 40px 0px 0px auto;*/
     }
 
     .sx-school-holl-title-div {
@@ -1128,7 +1215,7 @@
         right: 0;
         bottom: 0;
         background-color: rgba(0, 0, 0, 0.8);
-        opacity: 0;
+        opacity: 1;
         transition: all 0.3s;
     }
     .index-course-item-shadow > p {
@@ -1146,7 +1233,7 @@
         margin: auto;
     }
     .index-course-item-shadow:hover {
-        opacity: 1;
+        opacity: 0;
     }
 }
 

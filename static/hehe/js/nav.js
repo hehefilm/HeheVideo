@@ -30,6 +30,7 @@ Vue.component('my-nav',{
 		</nav>'
 });
 
+
 var vm=new Vue({ //这里的vm也是一个组件，称为根组件Root
 	el:'#my-nav',
 	data:{
