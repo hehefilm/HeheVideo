@@ -210,7 +210,7 @@
 }
 
 .hh-video {
-    background-color: black;
+    background-color: #1a1c21;
 }
 
 .hh-video-title {
@@ -262,8 +262,7 @@
 }
 
 .hh-partners {
-    background-color: black;
-
+    background-color: #1a1c21;
 }
 .partners-icon-div{
     display: flex;
