@@ -42,12 +42,19 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+html {
+	height: 100%;
+}
 body {
 	line-height: 1;
 	font-family: "fzhei-b01regular","PingFang SC","SF Pro SC","HanHei SC","SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","PingFang SC","Helvetica Neue","Arial","Microsoft YaHei","SimHei",sans-serif;
 	font-size:14px;
 	line-height:20px;
 	font-weight: 300;
+	height: 100%;
+}
+body #my-nav {
+	height: 11.5%;
 }
 
 ol, ul {

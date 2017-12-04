@@ -5,7 +5,9 @@ Vue.component('my-nav',{
 	template:'\
 		<nav class="navbar navbar-inverse navbar-fixed-top nav-out" role="navigation">\
 			<div class="nav-wai">\
-				<a id="pcLogo" class="nav-brand" href="../../static/hehe/index.html#Slider"></a>\
+				<a id="pcLogo" class="nav-brand" href="../../static/hehe/index.html#Slider">\
+					<img class="nav-brand" src="../../static/hehe/images/logo.png"/>\
+				</a>\
 				<ul class="nav-ul">\
 					<li>\
 						<a href="../../static/hehe/about.html" title="关于我们">关于我们</a>\
@@ -26,6 +28,10 @@ Vue.component('my-nav',{
 						<a href="../../static/hehe/contactus.html" title="联系我们">联系我们</a>\
 					</li>\
 				</ul>\
+				<div class="nav-search">\
+					<input placeholder="搜索" />\
+					<img src="../../static/hehe/images/search.png"/>\
+				</div>\
 			</div>\
 		</nav>'
 });
