@@ -263,13 +263,15 @@
 
 .video-content-left {
     /*height: 529px;*/
+    height: 100%;
+    /*width: 10%;*/
     width: 178px;
     opacity: 0.2;
     display: flex;
 }
 
 .video-content-right {
-    /*height: 529px;*/
+    height: 100%;
     width: 178px;
     opacity: 0.2;
     display: flex;
@@ -278,13 +280,13 @@
 .arrow-left {
     height: 56px;
     width: 26px;
-    margin: auto;
+    margin: auto 45px auto auto;
 }
 
 .arrow-right {
     height: 56px;
     width: 26px;
-    margin: auto;
+    margin: auto auto auto 45px;
 }
 
 .video-content {
@@ -313,4 +315,9 @@
 
 .partners-icon-right {
     margin: auto auto auto 35px;
+}
+
+.index-video{
+    display: flex;
+    flex-direction: row;
 }
