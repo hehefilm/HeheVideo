@@ -39,35 +39,66 @@
 	<my-nav></my-nav>
 </div>
 
-<div class="news-bak">
-	<!--<p class="news-title-en">SHANGXIA NEWS</p>-->
-    <!--<p class="news-title-cn">山下新闻</p>-->
-</div>
-
-<div class="news">
-    <div class="news-container">
-        
-        <ul id="news-list" class="news-list">
-      		<script id="tpl-news-item" type="text/html">
-      			{{ each list value index }}
-	      			<li>
-		        		<a class="news-item" href="news-detail.html?nid={{value.news_id}}" >  
-		                    <img class="news-item-avatar" src="images/news-sample.png">
-		                    <p id="pc-time" class="news-item-time">{{value.ndate}}</p>
-		                    <div class="news-item-right">
-		                        <p class="news-item-caption">{{value.ntitle}}</p>
-		                        <p class="news-item-brief">{{value.nsubtitle}}</p>
-		                        <p id="phone-time" class="news-item-time">{{value.ndate}}</p>
-		                    </div>
-		            	</a>
-		        	</li>
-	        	{{ /each }}
-            </script>
-        </ul>
-        <div class="news-more">
-            <a  onclick="moreNews()">更多新闻 <i class="icon-angle-down"></i></a>
-        </div>
-    </div>
+<div class="news-div">
+	<a class="news-more">更多 >></a>
+	<div class="news-left-right">
+		<div id="news-left" class="news-left carousel slide">
+			<!-- 轮播（Carousel）指标 -->
+			<ol class="carousel-indicators">
+				<li data-target="#news-left" data-slide-to="0" class="active"></li>
+				<li data-target="#news-left" data-slide-to="1"></li>
+				<li data-target="#news-left" data-slide-to="2"></li>
+				<li data-target="#news-left" data-slide-to="3"></li>
+				<li data-target="#news-left" data-slide-to="4"></li>
+			</ol>   
+			<!-- 轮播（Carousel）项目 -->
+			<div class="carousel-inner" style="height: 100%;border: 1px solid rgba(255,255,255,0.5);">
+				<div class="item active">
+					<img src="images/example1.jpg" >
+				</div>
+				<div class="item">
+					<img src="images/example2.jpg" >
+				</div>
+				<div class="item">
+					<img src="images/example3.jpg" >
+				</div>
+				<div class="item">
+					<img src="images/example1.jpg" >
+				</div>
+				<div class="item">
+					<img src="images/example2.jpg" >
+				</div>
+			</div>
+			<!-- 左下角的文字显示 -->
+			<div class="news-left-bottom">
+				<p class="news-title"> 我是标题 </p>
+				<p class="news-content"> 我是描述我是描述我是描述我是描述我是描述我是描述 </p>
+			</div>
+		</div>
+		<div id="news-right" class="news-right">
+			<div class="each-cell" v-for="(anew,index) in news">
+				<div class="each-cell-time">
+					<p class="each-cell-time-month">{{anew.time.split('-')[0]+ '-' + anew.time.split('-')[1]}}</p>
+					<p class="each-cell-time-day">{{anew.time.split('-')[2]}}</p>
+				</div>
+				<div class="each-cell-content">
+					<a>{{anew.title}}</a>
+					<p>{{anew.content}}</p>
+				</div>
+			</div>
+			<div class="each-cell" v-for="(anew,index) in lastNews" style="margin-bottom: 0;">
+				<div class="each-cell-time">
+					<p class="each-cell-time-month">{{anew.time.split('-')[0]+ '-' + anew.time.split('-')[1]}}</p>
+					<p class="each-cell-time-day">{{anew.time.split('-')[2]}}</p>
+				</div>
+				<div class="each-cell-content">
+					<a>{{anew.title}}</a>
+					<p>{{anew.content}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
 </div>
 
 <!-- Footer -->
@@ -83,27 +114,10 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/nav.js"></script>
 <script src="js/respond.js"></script>
-<script src="js/template-web.js"></script>
 <script type="text/javascript" src="js/news.js"></script>
 
 <script>
-	if(wxopen.isWeiXin){
-		$.get("https://shanxiaxuetang.com/sign/get_ticket",{
-			url:window.location.href
-		},
-		function(data,status){
-			var jdata = $.parseJSON(data);
-			wxopen.shareData.appid = jdata.data.appid;
-			wxopen.timestamp = jdata.data.timestamp;
-			wxopen.nonceStr = jdata.data.noncestr;
-			wxopen.signature = jdata.data.signature;
-			wxopen.shareData.title = "陈国富、 周迅、 陈坤共同创办山下学堂";
-			wxopen.shareData.desc = "在这里我们一同探索、一同实验、 一同成长。";
-			wxopen.shareData.link = "https://shanxiaxuetang.com/static/shanxia/news.html";
-			wxopen.shareData.imgUrl = "http://qnp.shanxiaxuetang.com/sx_logo.png"
-			wxopen.config();
-		});
-	}
+	
     
 </script>
 

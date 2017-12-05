@@ -84,7 +84,7 @@
 }
 
 .nav-ul>li a:after{
-	border-bottom: 2px solid white;
+	border-bottom: 2px solid #FFCC00;
 	content: '';
     display: block;
     position: absolute;
