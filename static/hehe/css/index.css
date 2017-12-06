@@ -253,7 +253,7 @@
     width: 4.48%;
     border: 1px solid #FFFFFF;
     background-color: #FFFFFF;
-    margin: 0.417% 1.354% 0.417% auto;
+    margin: auto 1.354% auto auto;
 
 }
 
@@ -262,7 +262,7 @@
     width: 4.48%;
     border: 1px solid #FFFFFF;
     background-color: #FFFFFF;
-    margin: 0.417% auto 0.417% 1.354%;
+    margin: auto auto auto 1.354%;
 }
 
 .hh-video {
@@ -308,7 +308,7 @@
 
 .arrow-left {
     /*height: 2.9%;*/
-    /*width: 1.354%;*/
+    width: 1.354%;
     width: 26px;
     margin: auto 35px auto auto;
 }
@@ -384,6 +384,7 @@
 .index-video {
     display: flex;
     flex-direction: row;
+    width: 100%;
 }
 
 .partners-icon-2 {
