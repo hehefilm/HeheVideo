@@ -37,13 +37,36 @@
     opacity: .3;
 }
 
-.jssorb071 .i {position:absolute;color:#fff;font-family:"Helvetica neue",Helvetica,Arial,sans-serif;text-align:center;cursor:pointer;z-index:0;}
-.jssorb071 .i .b {fill:#000;opacity:.2;}
-.jssorb071 .i:hover {opacity:.7;}
-.jssorb071 .iav {color:#000;}
-.jssorb071 .iav .b {fill:#fff;opacity:1;}
-.jssorb071 .i.idn {opacity:.3;}
+.jssorb071 .i {
+    position: absolute;
+    color: #fff;
+    font-family: "Helvetica neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+    cursor: pointer;
+    z-index: 0;
+}
 
+.jssorb071 .i .b {
+    fill: #000;
+    opacity: .2;
+}
+
+.jssorb071 .i:hover {
+    opacity: .7;
+}
+
+.jssorb071 .iav {
+    color: #000;
+}
+
+.jssorb071 .iav .b {
+    fill: #fff;
+    opacity: 1;
+}
+
+.jssorb071 .i.idn {
+    opacity: .3;
+}
 
 @keyframes fadein {
     from {
@@ -81,21 +104,21 @@
 }
 
 .banner-title-div {
-    position:absolute;
-    top:63%;
-    left:0px;
-    text-align:left;
-    box-sizing:border-box;
-    height: 23%;    
-    width: 45%; 
-    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 63%;
+    left: 0px;
+    text-align: left;
+    box-sizing: border-box;
+    height: 23%;
+    width: 45%;
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
 }
-    
+
 .banner-title-div a {
-    color: #FFFFFF; 
-    font-size: 42px;    
+    color: #FFFFFF;
+    font-size: 42px;
     line-height: 40px;
     margin: 34px 0 0 52px;
     font-weight: bolder;
@@ -227,23 +250,24 @@
 
 .video-line-left {
     height: 1px;
-    width: 86px;
+    width: 4.48%;
     border: 1px solid #FFFFFF;
     background-color: #FFFFFF;
-    margin: 8px 26px 8px auto;
+    margin: auto 1.354% auto auto;
 
 }
 
 .video-line-right {
     height: 1px;
-    width: 86px;
+    width: 4.48%;
     border: 1px solid #FFFFFF;
     background-color: #FFFFFF;
-    margin: 8px auto 8px 26px;
+    margin: auto auto auto 1.354%;
 }
 
 .hh-video {
     background-color: #1a1c21;
+    max-width: 1920px;
 }
 
 .hh-video-title {
@@ -258,59 +282,145 @@
     flex-direction: row;
     display: flex;
     /*width: 200px;*/
-    margin: 110px auto 0px auto;
+    margin: 5.73% auto 0px auto;
 }
 
 .video-content-left {
-    /*height: 529px;*/
-    width: 178px;
+    height: 100%;
+    width: 9.27%;
     opacity: 0.2;
     display: flex;
+    background-color: black;
 }
 
 .video-content-right {
-    /*height: 529px;*/
-    width: 178px;
+    height: 100%;
+    width: 9.27%;
     opacity: 0.2;
     display: flex;
+    background-color: black;
+
+}
+.hh-video-content-slide{
+    width: 81.7%;
+    margin: auto;
 }
 
 .arrow-left {
-    height: 56px;
+    /*height: 2.9%;*/
+    width: 1.354%;
     width: 26px;
-    margin: auto;
+    margin: auto 35px auto auto;
 }
 
 .arrow-right {
-    height: 56px;
+    /*height: 2.9%;*/
+    /*width: 1.354%;*/
     width: 26px;
-    margin: auto;
+    height: 56px;
+    margin: auto auto auto 35px;
 }
 
+/*@media (max-width: 768px) {*/
+/*.video-content-left {*/
+/*!*height: 529px;*!*/
+/*height: 100%;*/
+/*!*width: 10%;*!*/
+/*width: 50px;*/
+/*opacity: 0.2;*/
+/*display: flex;*/
+/*}*/
+/*.video-content-right {*/
+/*height: 100%;*/
+/*width: 50px;*/
+/*opacity: 0.2;*/
+/*display: flex;*/
+/*}*/
+/*.arrow-left {*/
+/*height: 28px;*/
+/*width: 13px;*/
+/*margin: auto 23px auto auto;*/
+/*}*/
+
+/*.arrow-right {*/
+/*height: 28px;*/
+/*width: 13px;*/
+/*margin: auto auto auto 23px;*/
+/*}*/
+
+/*}*/
+
 .video-content {
-    margin-top: 65px;
+    margin-top: 3.385%;
     flex-direction: row;
     display: flex;
 }
 
 .hh-partners {
     background-color: #1a1c21;
+    max-width: 1920px;
 }
 
 .partners-icon-div {
     display: flex;
     align-items: center;
-    margin: 64px auto 0px auto;
+    margin: 3.4375% auto 0px auto;
 }
 
 .partners-icon {
-    margin: auto 35px;
+    margin: auto 1.82%;
 }
 
 .partners-icon-left {
-    margin: auto 35px auto auto;
+    margin: auto 1.82% auto auto;
+    width: 6%;
 }
 
 .partners-icon-right {
-    margin: auto auto auto 35px;
+    margin: auto auto auto 1.82%;
+    width: 6.04%;
+}
+
+.index-video {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.partners-icon-2 {
+    margin: auto 1.82%;
+    width: 5.05%;
+}
+
+.partners-icon-3 {
+    margin: auto 1.82%;
+    width: 4.375%;
+}
+
+.partners-icon-4 {
+    margin: auto 1.82%;
+    width: 4.84%;
+}
+
+.partners-icon-5 {
+    margin: auto 1.82%;
+    width: 6.2%;
+}
+
+.partners-icon-6 {
+    margin: auto 1.82%;
+    width: 2.5%;
+}
+
+.partners-icon-7 {
+    margin: auto 1.82%;
+    width: 6.927%;
+}
+
+.partners-icon-8 {
+    margin: auto 1.82%;
+    width: 7.5%;
+}
+.hh-video-img-div{
+    padding: 0px;
 }
