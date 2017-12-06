@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="797bc0e7-460a-49f7-83b8-10d01044b3d8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/hehe/films.html" afterPath="$PROJECT_DIR$/static/hehe/films.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/hehe/css/index.css" afterPath="$PROJECT_DIR$/static/hehe/css/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/hehe/css/reset.css" afterPath="$PROJECT_DIR$/static/hehe/css/reset.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/templates/index.html" afterPath="$PROJECT_DIR$/web/templates/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -16,11 +18,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="35" column="21" lean-forward="false" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="21" />
+            <state relative-caret-position="296">
+              <caret line="277" column="0" lean-forward="true" selection-start-line="277" selection-start-column="0" selection-end-line="277" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -28,27 +30,45 @@
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#svg#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#2;n#div#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="films.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/static/hehe/films.html">
+      <file leaf-file-name="arrow-right-hh.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/hehe/images/arrow-right-hh.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap.min.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/hehe/css/bootstrap.min.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="261" column="33" lean-forward="true" selection-start-line="261" selection-start-column="33" selection-end-line="261" selection-end-column="33" />
-              <folding>
-                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-              </folding>
+            <state relative-caret-position="224">
+              <caret line="6687" column="1" lean-forward="false" selection-start-line="6687" selection-start-column="1" selection-end-line="6687" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/hehe/css/index.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="films.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/hehe/css/films.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3565">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -78,9 +98,10 @@
       <list>
         <option value="$PROJECT_DIR$/static/hehe/css/index-center.css" />
         <option value="$PROJECT_DIR$/web/templates/index-center.html" />
-        <option value="$PROJECT_DIR$/static/hehe/css/index.css" />
-        <option value="$PROJECT_DIR$/web/templates/index.html" />
         <option value="$PROJECT_DIR$/static/hehe/films.html" />
+        <option value="$PROJECT_DIR$/static/hehe/css/reset.css" />
+        <option value="$PROJECT_DIR$/web/templates/index.html" />
+        <option value="$PROJECT_DIR$/static/hehe/css/index.css" />
       </list>
     </option>
   </component>
@@ -150,6 +171,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="hehe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HeheVideo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HeheVideo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hehe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -601,7 +644,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18088000" />
+    <option name="totallyTimeSpent" value="26061000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="40" y="65" width="1400" height="790" extended-state="0" />
@@ -670,33 +713,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/hehe/css/questions.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="3" lean-forward="false" selection-start-line="31" selection-start-column="3" selection-end-line="33" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/hehe/images/arrow-left-hh.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/hehe/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="109" column="5" lean-forward="true" selection-start-line="109" selection-start-column="5" selection-end-line="109" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/hehe/js/index-center.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/static/hehe/js/index-center.js" />
     <entry file="file://$PROJECT_DIR$/static/hehe/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -708,7 +725,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -723,23 +739,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/hehe/js/respond.js" />
-    <entry file="file://$PROJECT_DIR$/static/hehe/css/index-center.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1065">
-          <caret line="71" column="19" lean-forward="false" selection-start-line="71" selection-start-column="19" selection-end-line="71" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/static/hehe/css/index-center.css" />
     <entry file="file://$PROJECT_DIR$/web/templates/demo.html" />
-    <entry file="file://$PROJECT_DIR$/web/templates/index-center.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="155" column="0" lean-forward="true" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/web/templates/index-center.html" />
     <entry file="file://$PROJECT_DIR$/web/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
@@ -751,11 +753,7 @@
             <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#svg#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#div#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -780,7 +778,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="24" lean-forward="true" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -853,14 +850,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/hehe/js/index-slide.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="38" lean-forward="true" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/static/hehe/js/index-slide.js" />
     <entry file="file://$PROJECT_DIR$/static/hehe/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="111">
@@ -869,30 +859,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/hehe/js/film-slide.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="29" lean-forward="true" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/hehe/css/film-slider.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="6" selection-end-line="3" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/hehe/qq.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
-          <caret line="398" column="12" lean-forward="false" selection-start-line="396" selection-start-column="41" selection-end-line="398" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/static/hehe/js/film-slide.js" />
+    <entry file="file://$PROJECT_DIR$/static/hehe/css/film-slider.css" />
+    <entry file="file://$PROJECT_DIR$/static/hehe/qq.html" />
     <entry file="file://$PROJECT_DIR$/web/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
@@ -904,49 +873,16 @@
             <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#svg#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#div#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/hehe/film.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="123" column="44" lean-forward="true" selection-start-line="123" selection-start-column="44" selection-end-line="123" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/hehe/img/001.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/hehe/img/002.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/hehe/js/jssor.slider-26.6.0.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="3189" column="49" lean-forward="true" selection-start-line="3189" selection-start-column="49" selection-end-line="3189" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/hehe/standard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="93" column="12" lean-forward="true" selection-start-line="93" selection-start-column="12" selection-end-line="93" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/static/hehe/film.html" />
+    <entry file="file://$PROJECT_DIR$/static/hehe/img/001.jpg" />
+    <entry file="file://$PROJECT_DIR$/static/hehe/img/002.jpg" />
+    <entry file="file://$PROJECT_DIR$/static/hehe/js/jssor.slider-26.6.0.min.js" />
+    <entry file="file://$PROJECT_DIR$/static/hehe/standard.html" />
     <entry file="file://$PROJECT_DIR$/static/hehe/css/about.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -963,22 +899,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/hehe/css/index-center.css" />
     <entry file="file://$PROJECT_DIR$/web/templates/index-center.html" />
-    <entry file="file://$PROJECT_DIR$/static/hehe/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="6784" column="1" lean-forward="false" selection-start-line="6784" selection-start-column="1" selection-end-line="6784" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/hehe/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="266" column="19" lean-forward="true" selection-start-line="266" selection-start-column="19" selection-end-line="266" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/hehe/news-detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-738">
@@ -1053,10 +973,105 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/static/hehe/films.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="102" column="52" lean-forward="false" selection-start-line="102" selection-start-column="32" selection-end-line="102" selection-end-column="52" />
+          <folding>
+            <marker date="1512525974000" expanded="true" signature="5210:5551" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="5274:5521" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="5447:5486" ph="..." />
+            <marker date="1512525974000" expanded="false" signature="5636:7348" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="5822:6139" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="5882:6113" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="6047:6082" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="6218:6535" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="6278:6509" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="6443:6478" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="6613:6930" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="6673:6904" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="6838:6873" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="7008:7325" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="7068:7299" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="7233:7268" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="7417:7636" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="7500:7619" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="7712:11467" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="7740:7885" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="7918:11457" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="8103:8319" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="8185:8302" ph="..." />
+            <marker date="1512525974000" expanded="false" signature="8361:11159" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="8405:9787" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="8465:9764" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="8547:8888" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="8611:8858" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="8784:8823" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="8972:9313" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="9036:9283" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="9209:9248" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="9396:9737" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="9460:9707" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="9633:9672" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="9822:11140" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="10008:10325" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="10068:10299" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="10233:10268" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="10404:10721" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="10464:10695" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="10629:10664" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="10799:11116" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="10859:11090" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="11024:11059" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="11210:11429" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="11293:11412" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="11507:11542" ph="..." />
+            <marker date="1512525974000" expanded="true" signature="11929:11944" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/hehe/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/hehe/css/reset.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" column="20" lean-forward="true" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/hehe/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="6687" column="1" lean-forward="false" selection-start-line="6687" selection-start-column="1" selection-end-line="6687" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/hehe/images/arrow-right-hh.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/hehe/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="35" column="21" lean-forward="false" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="21" />
+        <state relative-caret-position="296">
+          <caret line="277" column="0" lean-forward="true" selection-start-line="277" selection-start-column="0" selection-end-line="277" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1064,23 +1079,6 @@
             <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#svg#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#div#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/hehe/films.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="261" column="33" lean-forward="true" selection-start-line="261" selection-start-column="33" selection-end-line="261" selection-end-column="33" />
-          <folding>
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
