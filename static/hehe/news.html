@@ -19,7 +19,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#861519">
 
 
-    <title>山下新闻</title>
+    <title>新闻</title>
 
     <!--CSS-->
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
@@ -39,63 +39,47 @@
 	<my-nav></my-nav>
 </div>
 
+<img class="new-bak" src="images/new-bak.png" />
 <div class="news-div">
-	<a class="news-more">更多 >></a>
+	<a class="news-more">更多 &raquo;</a>
 	<div class="news-left-right">
 		<div id="news-left" class="news-left carousel slide">
 			<!-- 轮播（Carousel）指标 -->
 			<ol class="carousel-indicators">
-				<li data-target="#news-left" data-slide-to="0" class="active"></li>
-				<li data-target="#news-left" data-slide-to="1"></li>
-				<li data-target="#news-left" data-slide-to="2"></li>
-				<li data-target="#news-left" data-slide-to="3"></li>
-				<li data-target="#news-left" data-slide-to="4"></li>
+				<template v-for="(anew,index) in news">
+					<li data-target="#news-left" v-bind:data-slide-to="index" v-bind:class='{active:index==0}'></li>
+				</template>
 			</ol>   
 			<!-- 轮播（Carousel）项目 -->
 			<div class="carousel-inner" style="height: 100%;border: 1px solid rgba(255,255,255,0.5);">
-				<div class="item active">
-					<img src="images/example1.jpg" >
-				</div>
-				<div class="item">
-					<img src="images/example2.jpg" >
-				</div>
-				<div class="item">
-					<img src="images/example3.jpg" >
-				</div>
-				<div class="item">
-					<img src="images/example1.jpg" >
-				</div>
-				<div class="item">
-					<img src="images/example2.jpg" >
-				</div>
+				<template v-for="(anew,index) in news">
+					<div class="item" v-bind:class='{active:index==0}'>
+						<div class="show" style="background-image: url(images/example1.jpg);">
+						
+						</div>
+						<!-- 左下角的文字显示 -->
+						<div class="news-left-bottom">
+							<p class="news-title"> {{anew.title}} </p>
+							<p class="news-content"> {{anew.content}} </p>
+						</div>
+					</div>
+				</template>
 			</div>
-			<!-- 左下角的文字显示 -->
-			<div class="news-left-bottom">
-				<p class="news-title"> 我是标题 </p>
-				<p class="news-content"> 我是描述我是描述我是描述我是描述我是描述我是描述 </p>
-			</div>
+			
 		</div>
 		<div id="news-right" class="news-right">
-			<div class="each-cell" v-for="(anew,index) in news">
-				<div class="each-cell-time">
-					<p class="each-cell-time-month">{{anew.time.split('-')[0]+ '-' + anew.time.split('-')[1]}}</p>
-					<p class="each-cell-time-day">{{anew.time.split('-')[2]}}</p>
+			<template v-for="(anew,index) in news">
+				<div class="each-cell" v-bind:style="index == news.length-1 ? 'margin-bottom: 0' : ''">
+					<div class="each-cell-time" v-cloak>
+						<p class="each-cell-time-month">{{anew.time.split('-')[0]+ '-' + anew.time.split('-')[1]}}</p>
+						<p class="each-cell-time-day">{{anew.time.split('-')[2]}}</p>
+					</div>
+					<div class="each-cell-content" v-cloak>
+						<a>{{anew.title}}</a>
+						<p>{{anew.content}}</p>
+					</div>
 				</div>
-				<div class="each-cell-content">
-					<a>{{anew.title}}</a>
-					<p>{{anew.content}}</p>
-				</div>
-			</div>
-			<div class="each-cell" v-for="(anew,index) in lastNews" style="margin-bottom: 0;">
-				<div class="each-cell-time">
-					<p class="each-cell-time-month">{{anew.time.split('-')[0]+ '-' + anew.time.split('-')[1]}}</p>
-					<p class="each-cell-time-day">{{anew.time.split('-')[2]}}</p>
-				</div>
-				<div class="each-cell-content">
-					<a>{{anew.title}}</a>
-					<p>{{anew.content}}</p>
-				</div>
-			</div>
+			</template>
 		</div>
 	</div>
 	

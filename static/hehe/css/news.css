@@ -1,10 +1,14 @@
+body {
+	background-color: #1A1C21;
+}
+
 a {
 	cursor:pointer;
 }
 .news-div {
 	width: 100%;
 	/*padding: 16.7% 9.1% 17.5% 9.1%;*/
-	background-color: #1A1C21;
+	background-color: transparent;
 	display: flex;
 	flex-direction: column;
 }
@@ -45,6 +49,7 @@ a {
 	flex-direction: column;
 	text-align: center;
 	border-radius: 4px;
+	min-width: 50px;
 }
 
 .each-cell-time-month {
@@ -116,13 +121,14 @@ a {
 	height: 8px;
 	background-color: white;
 	border: 0px solid transparent;
+	margin: auto 4px;
 }
 
 .carousel-indicators .active {
 	width: 8px;
 	height: 8px;
 	background-color: #FFCC00;
-	margin: 1px;
+	margin: auto 4px;
 }
 
 .carousel-indicators {
@@ -134,14 +140,42 @@ a {
 
 .news-more {
 	text-align: right;
-	color: white;
+	color: #CCCCCC;
 	font-size: 1.2rem;	
 	line-height: 1.2rem;
 	margin: 7.6% 9.1% 1.6% auto;
 }
 
-.news-div a:hover {
-	color: #FFCC00;
+.news-more:hover {
+	color: white;
 }
 
+[v-cloak] {
+    display: none;
+}
 
+.carousel-inner > .item {
+	height: 100%;
+}
+
+.show {
+	/*width: 100%;*/
+    height: 100%;
+    -webkit-transition-duration: 300ms;
+    transition-duration: 300ms;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.new-bak {
+	width: 74.2%;
+	position: absolute;
+	top: 17.5%;
+	left: 12.9%;
+	opacity: 0.02;
+	z-index: -1;
+}
+	
+    

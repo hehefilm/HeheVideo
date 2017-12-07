@@ -16,7 +16,7 @@
 *------------------------------------*/
 
 .navbar-inverse {
-    background-color: rgba(0,0,0,0.9);
+    background-color: #1A1C21;
     border-color: transparent;
     margin-bottom:0px;
     height: 8.5%;
@@ -66,8 +66,7 @@
 	padding-bottom: 5px;
 	display:block;
 	color:#fff;
-	font-size: 14px;
-	line-height: 20px;
+	font-size: 1.4rem;
 	font-weight: 300;
 	border-radius: 0;
 	position: relative;
