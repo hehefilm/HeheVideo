@@ -52,6 +52,7 @@ body {
 	line-height:20px;
 	font-weight: 300;
 	height: 100%;
+	background-color: #1A1C21;
 }
 body #my-nav {
 	height: 8.5%;

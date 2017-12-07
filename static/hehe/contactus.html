@@ -22,13 +22,11 @@
 
     <!--CSS-->
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/reset.css"/>
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="css/respond.css"/>
+    <link rel="stylesheet" href="css/contact.css"/>
     <link rel="shortcut icon" href="images/icon.png"/>
-    <link rel="stylesheet" href="css/questions.css"/>
-    <link rel="stylesheet" href="css/videos.css">
 
 </head>
 <body>
@@ -38,88 +36,38 @@
 	<my-nav></my-nav>
 </div>
 
-<div id="phone-navbar" class="nav-wai-phone" data-is-active="first">
-    <ul id="phone-ul" class="nav-phone-ul" data-is-active="">
-        <li id='nav-about'>
-            <a href='about.html' title='关于山下'>关于山下</a>
-        </li>
+<div class="con-body">
+	<p class="con-title"> CONTACT  US </p>
+	<div class="con-each-div">
+		<div style="margin-bottom: 4.1%;">
+			<img src="images/tel.png"/>
+			<p>+86 10 8556 5969</p>
+		</div>
+		<div style="margin-bottom: 3.8%;">
+			<img src="images/email.png" />
+			<p>info@hehefilm.com</p>
+		</div>
+		<div style="margin-bottom: 4.5%;">
+			<img src="images/address.png" />
+			<p>北京市朝阳区姚家园南路1号惠通时代广场7号楼C区5层</p>
+		</div>
+		<div style="margin-bottom: 4.6%;">
+			<img src="images/address.png" style="opacity: 0;"/>
+			<hr />
+		</div>
+		
+		<div style="margin-bottom: 1.6%;">
+			<img src="images/recruitment.png"/>
+			<p>招聘信箱 :   hr@hehefilm.com</p>
+		</div>
+		
+		<div>
+			<img src="images/recruitment.png"  style="opacity: 0;"/>
+			<p style="color: #999999;"><span style="color: #1A1C21;">招聘信箱 :</span>   （请在邮件标题上注明应聘岗位名称）</p>
+		</div>
 
-        <li id='nav-channel'>
-            <a href="course.html" title='山下学堂'>山下学堂</a>
-        </li>
-
-        <li id='nav-channel'>
-            <a href="questions.html" title='报名咨询'>报名咨询</a>
-        </li>
-
-        <li id='nav-news'>
-            <a href='videos.html' title='山下视频'>山下视频</a>
-        </li>
-
-        <li id='nav-news'>
-            <a href='news.html' title='山下新闻'>山下新闻</a>
-        </li>
-
-        <li id='nav-blog'>
-            <a href="lab.html" title='山下实验室'>山下实验室</a>
-        </li>
-    </ul>
-    <!--<div id="phone-sign" class="nav-phone-dlzc" data-is-active="">
-        <a class="phone-signup">注册</a>
-        <a class="phone-signup">登录</a>
-    </div>-->
-    <a class="phone-signup" href="course.html">我要报名</a>
+	</div>
 </div>
-
-<!--   top -->
-
-<div class="videos-head">
-    <!--<p class="videos-head-title-en">REGISTRATION CONSULTING</p>-->
-    <!--<p class="videos-head-title-cn">报名咨询</p>-->
-    <img class="pc-only" src="http://qnp.shanxiaxuetang.com/question-bg.jpg">
-    <img class="mobile-only" src="http://qnp.shanxiaxuetang.com/question-bg-phone.jpg">
-</div>
-<!--  center  -->
-
-<div class="sx-questions-center">
-    <div class="sx-questions-list" id="question-list">
-        <script defer id="tpl-question-item" type="text/html">
-            {{ each list value index }}
-            <p class="sx-questions-abouts   {{value.tp=='无' ? 'hidden_' : ''}}">{{value.tp}}</p>
-            <div class="sx-questions-lines"></div>
-            <ul>
-                {{ each value.qa_li question indexq }}
-                <div class="panel-default">
-                    <div class="questions-item" onclick="showAnswer({{index}},{{indexq}})" data-toggle="collapse"
-                         data-target="#fold_{{index}}{{indexq}}">
-                        <p class="questions-mark">Q</p>
-                        <a class="questions-title">{{question.q}}</a>
-                        <img src="images/arrow-todown.png" class="arrow-down " id="down_{{index}}{{indexq}}"/>
-                        <img src="images/arrow-up-blue.png" class="arrow-down hidden_{{question.show}}" id="up_{{index}}{{indexq}}"/>
-                    </div>
-                    <div  class="questions-item-a" >
-                        <p id="a_{{index}}{{indexq}}"  class="questions-mark  questions-a hidden_{{question.show}}">A</p>
-                        <p  id="fold_{{index}}{{indexq}}" class="questions-content collapse">{{question.a}}</p>
-                        <!--<p  class="questions-content ">A   {{question.a}}</p>-->
-                    </div>
-                    <div class="sx-questions-line"></div>
-                </div>
-                {{ /each }}
-            </ul>
-            {{ /each }}
-            <!--<div class="questions-more-div-left">
-                <p class="questions-more-left">☆ 更多问题请关注山下学堂官方微博<a href="http://weibo.com/u/6342283271?refer_flag=1001030101_" style="color: #66BBFF;">@山下学堂</a>、官方微信公众号 <span  style="color: #66BBFF;" >（微信号：山下学堂）</span></p>
-            </div>-->
-
-        </script>
-
-    </div>
-
-
-
-
-</div>
-
 
 <!-- Footer -->
 <div id="my-footer">
@@ -134,26 +82,8 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/nav.js"></script>
 <script src="js/respond.js"></script>
-<script src="js/template-web.js"></script>
-<script type="text/javascript" src="js/question.js"></script>
 <script>
-	if(wxopen.isWeiXin){
-		$.get("https://shanxiaxuetang.com/sign/get_ticket",{
-			url:window.location.href
-		},
-		function(data,status){
-			var jdata = $.parseJSON(data);
-			wxopen.shareData.appid = jdata.data.appid;
-			wxopen.timestamp = jdata.data.timestamp;
-			wxopen.nonceStr = jdata.data.noncestr;
-			wxopen.signature = jdata.data.signature;
-			wxopen.shareData.title = "陈国富、 周迅、 陈坤共同创办山下学堂";
-			wxopen.shareData.desc = "在这里我们一同探索、一同实验、 一同成长。";
-			wxopen.shareData.link = "https://shanxiaxuetang.com/static/shanxia/questions.html";
-			wxopen.shareData.imgUrl = "http://qnp.shanxiaxuetang.com/sx_logo.png"
-			wxopen.config();
-		});
-	}
+	
     
 </script>
 
