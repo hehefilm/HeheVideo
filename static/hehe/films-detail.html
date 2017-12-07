@@ -19,15 +19,14 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#861519">
 
 
-    <title>影视作品详情</title>
+    <title>和和影业</title>
 
     <!--CSS-->
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/reset.css"/>
     <link rel="stylesheet" href="css/style.css"/>
-    <link rel="stylesheet" href="css/lab.css" />
-    <link rel="stylesheet" href="css/respond.css"/>
+    <link rel="stylesheet" href="css/films-detail.css"/>
     <link rel="shortcut icon" href="images/icon.png"/>
 </head>
 <body>
@@ -37,151 +36,224 @@
 	<my-nav></my-nav>
 </div>
 
-<div id="phone-navbar" class="nav-wai-phone" data-is-active="first">
-    <ul id="phone-ul" class="nav-phone-ul" data-is-active="">
-        <li id='nav-about'>
-            <a href='about.html' title='关于山下'>关于山下</a>
-        </li>
-
-        <li id='nav-channel'>
-            <a href="course.html" title='山下学堂'>山下学堂</a>
-        </li>
-
-        <li id='nav-channel'>
-            <a href="questions.html" title='报名咨询'>报名咨询</a>
-        </li>
-
-        <li id='nav-news'>
-            <a href='videos.html' title='山下视频'>山下视频</a>
-        </li>
-
-        <li id='nav-news'>
-            <a href='news.html' title='山下新闻'>山下新闻</a>
-        </li>
-
-        <li id='nav-blog'>
-            <a href="lab.html" title='山下实验室'>山下实验室</a>
-        </li>
-    </ul>
-    <!--<div id="phone-sign" class="nav-phone-dlzc" data-is-active="">
-        <a class="phone-signup">注册</a>
-        <a class="phone-signup">登录</a>
-    </div>-->
-    <a class="phone-signup" href="course.html">我要报名</a>
+<div class="page-bak" style="background-image: url(images/films-cover-demo.jpg);">
+	<!--<p class="news-title-en">SHANGXIA NEWS</p>-->
+    <!--<p class="news-title-cn">山下新闻</p>-->
 </div>
 
-<div class="lab-head">
-    <!--<p class="lab-head-title-en">LABORATORYS</p>-->
-    <!--<p class="lab-head-title-cn">山下实验室</p>-->
-    <img src="http://qnp.shanxiaxuetang.com/lab-head-phone.jpg">
-</div>
-<!--山下实验室 pc-->
-<div class="lab">
-    <div class="lab-container">
-        <div class="lab-list-pc">
-            <div class="lab-item">
-                <div class="lab-item-img">
-                    <img id="jlp" src="http://qnp.shanxiaxuetang.com/laboratorys-logo-ck.jpg">
-                    <div class="lab-item-shadow">
-                        <p>山下纪录片实验室</p>
-                    </div>
-                </div>
-                <p class="lab-item-txt-top">山下纪录片实验室</p>
-                <p class="lab-item-txt">
-                    山下学堂创始人陈坤与FIRST青年电影展共同发起山下纪录片实验室，鼓励纪录片作者创作更多具备社会文化价值的作品。 </p>
-                <div class="lab-more-div">
-                    <a class="lab-more" href="laboratory.html">了解更多 ></a>
-                    <!--<img  class="right-more-img"/>-->
-                </div>
-            </div>
-
-            <div class="lab-item">
-                <div class="lab-item-img">
-                    <img id="jlp" src="http://qnp.shanxiaxuetang.com/laboratorys-logo-zx.jpg">
-                    <div class="lab-item-shadow">
-                        <p>COMING SOON</p>
-                    </div>
-                </div>
-                <p class="lab-item-txt-top">山下短片实验室</p>
-                <p class="lab-item-txt">
-                    敬请期待！</p>
-                <div class="lab-more-div">
-                    <a class="lab-more">了解更多 ></a>
-                    <!--<img  class="right-more-img"/>-->
-                </div>
-            </div>
+<div class="page" id="vue-page">
+    <div class="film-info">
+        <div class="film-info-left">
+            <p>{{title}}</p>
+            <img v-bind:src="poster">
+            <a v-if="store" v-bind:href="store">
+                <p>购买周边</p>
+            </a>
         </div>
-        <div class="lab-list-mobile">
-            <div class="lab-item">
-                <div class="lab-more-div">
-                    <a class="lab-more" href="laboratory.html">了解更多 ></a>
-                    <!--<img  class="right-more-img"/>-->
-                </div>
-                <p class="lab-item-txt-top">山下纪录片实验室</p>
-                
-                <p class="lab-item-txt">
-                    山下学堂创始人陈坤与FIRST青年电影展共同发起山下纪录片实验室，鼓励纪录片作者创作更多具备社会文化价值的作品。 </p>
-                <a class="lab-item-img" href="laboratory.html">
-                    <img id="jlp" src="http://qnp.shanxiaxuetang.com/laboratorys-logo-ck.jpg">
-                    <div class="lab-item-shadow">
-                        <p>山下纪录片实验室</p>
+        <div class="film-info-right">
+            <table>
+            <tr v-if="director">
+                <td>导演：</td>
+                <td>{{director}}</td>
+            </tr>
+            <tr v-if="writer">
+                <td>编剧：</td>
+                <td>{{writer}}</td>
+            </tr>
+            <tr v-if="stars">
+                <td>主演：</td>
+                <td>{{stars}}</td>
+            </tr>
+            <tr v-if="release_date">
+                <td>上映日期：</td>
+                <td>{{release_date}}</td>
+            </tr>
+            <tr v-if="genre">
+                <td>类型：</td>
+                <td>{{genre}}</td>
+            </tr>
+            <tr v-if="lang">
+                <td>语言：</td>
+                <td>{{lang}}</td>
+            </tr>
+            <tr v-if="duration">
+                <td>片长：</td>
+                <td>{{duration}}分钟</td>
+            </tr>
+            <tr v-if="country">
+                <td>制片地区：</td>
+                <td>{{country}}</td>
+            </tr>
+            <tr v-if="release_vision">
+                <td>版本：</td>
+                <td>{{release_vision}}</td>
+            </tr>
+            <tr v-if="description">
+                <td>故事梗概：</td>
+                <td>{{description}}</td>
+            </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="film-videos">
+        <div class="film-videos-head">
+            <hr>
+            <p>预告片</p>
+            <hr>
+        </div>
+        <div class="film-videos-preview-title">
+            <p>{{currentPreviewTitle}}</p>
+        </div>
+        <div class="film-videos-preview">
+            <div id="moviePreview" class="carousel slide" data-ride="carousel" data-wrap="false" data-interval="false">
+                <div class="carousel-inner">
+                    <div v-for="(video, index) of videos" v-bind:class="index==0?'item active':'item'">
+                        <img v-bind:src="video.img">
+                        <img class="play-icon" src="images/video-play.png">
                     </div>
+                </div>
+
+                <a v-bind:class="currentPreviewIndex==0?'disable':''" class="left carousel-control" href="#moviePreview" data-slide="prev">
+                    <img src="../../static/hehe/images/arrow-left-hh.png">
+                </a>
+                <a v-bind:class="currentPreviewIndex==videos.length - 1?'disable':''" class="right carousel-control" href="#moviePreview" data-slide="next">
+                    <img src="../../static/hehe/images/arrow-right-hh.png">
                 </a>
             </div>
-
-            <div class="lab-item">
-                <div class="lab-more-div">
-                    <!--<a class="lab-more">了解更多 ></a>-->
-                    <!--<img  class="right-more-img"/>-->
-                </div>
-                <p class="lab-item-txt-top">山下短片实验室</p>
-                <p class="lab-item-txt">
-                    敬请期待！</p>
-                <div class="lab-item-img">
-                    <img id="jlp" src="http://qnp.shanxiaxuetang.com/laboratorys-logo-zx.jpg">
-                    <div class="lab-item-shadow">
-                        <p>COMING SOON</p>
+            <div id="movieThumbnail" class="carousel slide" data-ride="carousel" data-wrap="false" data-interval="false">
+                <div class="carousel-inner">
+                    <div v-for="n in Math.ceil(videos.length/3)" v-bind:class="n==1?'item active':'item'">
+                        <div v-for="(video, index) of sliceVideos(n)" class="item-thumbnail" v-bind:class="index + (n-1)*3 == currentPreviewIndex?'selected':''" id="item-thumbnail-{{index + (n-1)*3}}" v-on:click="thumbnailClick(index + (n-1)*3)">
+                            <img v-bind:src="video.img">
+                            <p class="time">{{video.time}}</p>
+                            <p class="title">{{video.title}}</p>
+                        </div>
                     </div>
+                </div>
+
+                <div class="arrow">
+                    <a v-bind:class="currentThumbnailIndex==0?'disable':''" class="left" href="#movieThumbnail" data-slide="prev">
+                        <img src="images/films-thumbnail-left-active.png">
+                    </a>
+                    <a v-bind:class="currentThumbnailIndex==Math.floor(videos.length/3)?'disable':''" class="right" href="#movieThumbnail" data-slide="next">
+                        <img src="images/films-thumbnail-right-active.png">
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 <!-- Footer -->
 <div id="my-footer">
     <my-footer></my-footer>
 </div>
-
-
 
 <!--JS-->
 <script src="js/vue.js"></script>
 <script src="js/jquery-1.11.3.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/nav.js"></script>
-<script src="js/respond.js"></script>
+<!-- <script type="text/javascript" src="js/films-detail.js"></script> -->
 <script>
-	if(wxopen.isWeiXin){
-		$.get("https://shanxiaxuetang.com/sign/get_ticket",{
-			url:window.location.href
-		},
-		function(data,status){
-			var jdata = $.parseJSON(data);
-			wxopen.shareData.appid = jdata.data.appid;
-			wxopen.timestamp = jdata.data.timestamp;
-			wxopen.nonceStr = jdata.data.noncestr;
-			wxopen.signature = jdata.data.signature;
-			wxopen.shareData.title = "陈国富、 周迅、 陈坤共同创办山下学堂";
-			wxopen.shareData.desc = "在这里我们一同探索、一同实验、 一同成长。";
-			wxopen.shareData.link = "https://shanxiaxuetang.com/static/shanxia/lab.html";
-			wxopen.shareData.imgUrl = "http://qnp.shanxiaxuetang.com/sx_logo.png"
-			wxopen.config();
-		});
-	}
+    var vue = new Vue({
+        el: '#vue-page',
+        data: {
+            title: "《西游2伏妖篇》",
+            poster: "images/films-cover-demo.jpg",
+            store: "https://www.taobao.com/",
+            director: "徐克", //导演
+            writer: "周星驰", //编剧
+            release_date: "2017-01-01", //上映日期
+            genre: "魔幻/喜剧", //类型
+            duration: 120, //片长
+            description: "作为《西游降魔篇》的后继故事，唐三藏在上集感化了杀死段小姐的齐天大圣，并收其为徒后，带着孙悟空、猪八戒及沙僧，一行\
+人《西游降魔篇》的后继故事，唐三藏在上集感化了杀死段小姐的齐天大圣，并收其为徒后，带着孙悟空、猪八戒及沙僧，一行四\
+踏上西天取经之旅，路途凶险，除魔伏妖，师徒四人并收其为徒后，带着孙悟空。", //简介
+            stars: "吴亦凡 / 皮尔斯·布鲁斯南 / 欧拉·布拉迪 / 德莫·克劳利 / 吴亦凡 / 吴亦凡", //主演，演员
+            clips: ["http://hh.com/1.jpg", "http://hh.com/2.jpg"], //剧照
+            videos: [{
+                title: "终极预告片1",
+                time: "01:23",
+                url: "",
+                img: "images/img/001.jpg"
+                },
+                {
+                title: "终极预告片2",
+                time: "02:23",
+                url: "",
+                img: "images/img/002.jpg"
+                },
+                {
+                title: "终极预告片3",
+                time: "03:23",
+                url: "",
+                img: "images/img/003.jpg"
+                },
+                {
+                title: "终极预告片4",
+                time: "04:23",
+                url: "",
+                img: "images/img/004.jpg"
+                },
+                {
+                title: "终极预告片5",
+                time: "05:23",
+                url: "",
+                img: "images/img/005.jpg"
+                },
+            ], //宣传视频
+            lang: "普通话", //语言
+            release_vision: "2D/IMAX3D", //荧幕类型
+            country: "中国大陆", //制作国家
+            mknown: "小海怪/Mermaid", //又名
+            currentPreviewTitle: "",
+            currentPreviewIndex: 0,
+            currentThumbnailIndex: 0,
+        },
+        mounted: function () {
+            this.currentPreviewTitle = this.videos[0].title;
+            document.title = '和和影业 - ' + this.title;
+        },
+        methods: {
+            sliceVideos: function (n) {
+                return this.videos.slice( (n-1)*3, n*3);
+            },
+            thumbnailClick: function(index) {
+                this.currentPreviewTitle = this.videos[index].title;
+                this.currentPreviewIndex = index;
+                this.currentThumbnailIndex = Math.floor(index/3);
+                if (lastSelectedThumbnailIndex != index) {
+                    $("#moviePreview").carousel(index);
+                    $("#movieThumbnail").carousel(Math.floor(index/3));
+                    $("#item-thumbnail-"+index).addClass("selected"); 
+                    $("#item-thumbnail-"+lastSelectedThumbnailIndex).removeClass("selected"); 
+                    lastSelectedThumbnailIndex = index;
+                }
+            }
+        }
+    })
+
+    var lastSelectedThumbnailIndex = 0;
+	
+    $('#movieThumbnail').on('slid.bs.carousel', function() {
+        index = $('#movieThumbnail > .carousel-inner > div.active').index();
+        vue.currentThumbnailIndex = index;
+    });
+    $('#moviePreview').on('slid.bs.carousel', function() {
+        index = $('#moviePreview > .carousel-inner > div.active').index();
+        vue.currentPreviewIndex = index;
+        vue.currentThumbnailIndex = Math.floor(index/3);
+        if (lastSelectedThumbnailIndex != index) {
+            $("#movieThumbnail").carousel(Math.floor(index/3));
+            $("#item-thumbnail-"+index).addClass("selected"); 
+            $("#item-thumbnail-"+lastSelectedThumbnailIndex).removeClass("selected"); 
+            lastSelectedThumbnailIndex = index;
+        }
+    });
+
     
 </script>
-
 
 </body>
 </html>
