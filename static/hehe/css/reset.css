@@ -55,6 +55,10 @@ body {
 }
 body #my-nav {
 	height: 8.5%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
 }
 
 ol, ul {
@@ -72,22 +76,26 @@ q:before, q:after {
 a { color: #9e1f24;}
 a:hover,a:focus { color: rgb(102,187,245); text-decoration:none;}
 
-html {
+/*html {
 	font-size: 62.5%;
 	line-height: 62.5%;
+}*/
+
+
+
+html {
+    font-size: 5px;
+    line-height: 5px;
 }
-@media (max-width: 768px) {
-	html {
-		font-size: 50%;
-	}
+
+@media (min-width: 321px) and (max-width: 1920px) {
+    html {
+        font-size: calc(5px + 5 * ((100vw - 320px) / 1600));
+    }
 }
-@media(max-width: 480px) {
-	html {
-		font-size: 40%;
-	}
-}
-@media(max-width: 320px) {
-	html {
-		font-size: 30%;
-	}
+
+@media (min-width: 1920px) {
+    html {
+        font-size: 10px;
+    }
 }
