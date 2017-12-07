@@ -42,6 +42,50 @@
 </head>
 <body class="index-bg">
 
+<!--浏览  大图-->
+
+<div class="mask" id="mask" onclick="maskDismiss()">
+    <div class="mask-video-content">
+
+        <div id="mask-myCarousel" class="carousel slide  mask-index-video">
+            <!-- 轮播（Carousel）项目 -->
+            <a class="mask-video-content-left" href="#mask-myCarousel"
+               data-slide="prev">
+                <img class="mask-arrow-left" src="images/arrow-left-hh.png">
+            </a>
+
+            <div class="mask-hh-video-content-slide">
+                <div class="carousel-inner ">
+                    <div class="item active">
+                        <li class="hh-video-img-div ">
+                            <div class="mask-item-img">
+                                <img src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
+                                <div class="index-course-item-shadow">
+                                </div>
+                            </div>
+                        </li>
+                    </div>
+                    <div class="item">
+
+                        <!--<img src="http://qnp.shanxiaxuetang.com/index-course-1.jpg" alt="Second slide">-->
+                        <li class="hh-video-img-div ">
+                            <div class="mask-item-img">
+                                <img id="jlp" src="images/example1.jpg">
+                                <div class="index-course-item-shadow">
+                                </div>
+                            </div>
+                        </li>
+                    </div>
+                </div>
+            </div>
+            <a class="mask-video-content-right" href="#mask-myCarousel"
+               data-slide="next" onclick="mmm()">
+                <img class="mask-arrow-right" src="../../static/hehe/images/arrow-right-hh.png">
+            </a>
+        </div>
+    </div>
+</div>
+
 <!-- Navigation -->
 <div id="my-nav">
     <my-nav></my-nav>
@@ -78,6 +122,7 @@
 <div class="page" id="vue-page">
     <div class="page-bak" style="background-image: url(images/films-cover-demo.jpg);">
     </div>
+
     <div class="film-info">
         <div class="film-info-left">
             <p>{{title}}</p>
@@ -222,7 +267,7 @@
                         <div class="item active">
 
                             <div class="video-content-center row">
-                                <li class="sx-school-img-div col-md-3 col-sm-3 col-xs-3">
+                                <li class="sx-school-img-div col-md-3 col-sm-3 col-xs-3"  v-on:click="showImageBig">
                                     <div class="index-course-item-img">
                                         <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
                                         <div class="index-course-item-shadow">
@@ -230,7 +275,7 @@
                                     </div>
                                 </li>
 
-                                <li class="hh-video-img-div col-md-3 col-sm-3 col-xs-3">
+                                <li class="hh-video-img-div col-md-3 col-sm-3 col-xs-3" v-on:click="showImageBig">
                                     <div class="index-course-item-img">
                                         <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
                                         <div class="index-course-item-shadow">
@@ -302,6 +347,8 @@
         </div>
 
     </div>
+
+
 
     <!-- 剧照-->
     <div class="hh-partners">
@@ -393,53 +440,7 @@
 
     </div>
 
-    <!--浏览  大图-->
-    <div class="mask" id="mask" v-on:click="maskDismiss">
-        <div class="mask-video-content">
 
-            <div id="mask-myCarousel" class="carousel slide  mask-index-video">
-                <!-- 轮播（Carousel）项目 -->
-                <a class="mask-video-content-left" href="#mask-myCarousel"
-                   data-slide="prev">
-                    <img class="mask-arrow-left" src="../../static/hehe/images/arrow-left-hh.png">
-                </a>
-
-                <div class="mask-hh-video-content-slide">
-                    <div class="carousel-inner ">
-                        <div class="item active">
-                            <li class="hh-video-img-div ">
-                                <div class="mask-item-img">
-                                    <img src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
-                                    <div class="index-course-item-shadow">
-                                    </div>
-                                </div>
-                            </li>
-                        </div>
-                        <div class="item">
-
-                            <!--<img src="http://qnp.shanxiaxuetang.com/index-course-1.jpg" alt="Second slide">-->
-                            <li class="hh-video-img-div ">
-                                <div class="mask-item-img">
-                                    <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-2.jpg">
-                                    <div class="index-course-item-shadow">
-                                    </div>
-                                </div>
-                            </li>
-                        </div>
-                    </div>
-                </div>
-                <a class="mask-video-content-right" href="#mask-myCarousel"
-                   data-slide="prev">
-                    <img class="mask-arrow-right" src="../../static/hehe/images/arrow-right-hh.png">
-                </a>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="content">
-        <button  v-on:click="showImageBig">点击弹出遮罩</button>
-    </div>
 
 </div>
 
@@ -571,6 +572,8 @@
         }
     });
 </script>
+
+
 
 
 </body>
