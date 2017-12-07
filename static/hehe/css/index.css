@@ -288,18 +288,21 @@
 .video-content-left {
     height: 100%;
     width: 9.27%;
-    opacity: 0.2;
     display: flex;
-    background-color: black;
+}
+
+.video-content-left:hover{
+    background-color: rgba(0,0,0,0.2);
+}
+.video-content-right:hover{
+    background-color: rgba(0,0,0,0.2);
 }
 
 .video-content-right {
     height: 100%;
     width: 9.27%;
-    opacity: 0.2;
     display: flex;
-    background-color: black;
-
+    opacity:1;
 }
 .hh-video-content-slide{
     width: 81.7%;
@@ -352,6 +355,7 @@
 
 .video-content {
     margin-top: 3.385%;
+    width: 100%;
     flex-direction: row;
     display: flex;
 }
@@ -423,4 +427,5 @@
 }
 .hh-video-img-div{
     padding: 0px;
+    display: flex;
 }
