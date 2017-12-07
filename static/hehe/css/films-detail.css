@@ -86,7 +86,7 @@
 .page-bak {
 	position: fixed;
 	left: 0;
-    top: 0;
+    top: 5.5vw;
     right: 0;
     z-index: -1;
 	height: 28.6vw;
@@ -98,7 +98,7 @@
 	width: 100%;
 }
 .film-info {
-	margin: 28.6vw 9vw 0 9vw;
+	margin: 34.1vw 9vw 0 9vw;
 	display: flex;
 	justify-content: space-between;
 }
