@@ -13,7 +13,7 @@ Vue.component('my-nav',{
 						<a href="../../static/hehe/about.html" title="关于我们">关于我们</a>\
 					</li>\
 					<li>\
-						<a href="../../static/hehe/films.html" title="影视作品">影视作品</a>\
+						<a href="../../static/hehe/films-detail.html" title="影视作品">影视作品</a>\
 					</li>\
 					<li>\
 						<a href="../../static/hehe/news.html" title="新闻资讯">新闻资讯</a>\
