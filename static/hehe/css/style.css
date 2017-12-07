@@ -20,6 +20,7 @@
     border-color: transparent;
     margin-bottom:0px;
     height: 8.5%;
+    max-height: 105px;
 }
 
 .nav-brand {
@@ -103,7 +104,8 @@
 }
 
 .nav-search {
-	height: 30px;	
+	height: 45%;
+	max-height: 30px;	
 	width: 9.95%;	
 	border: 1px solid #FFFFFF;	
 	border-radius: 15px;
