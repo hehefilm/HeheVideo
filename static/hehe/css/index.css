@@ -251,7 +251,7 @@
 .video-line-left {
     height: 1px;
     width: 4.48%;
-    border: 1px solid #FFFFFF;
+    /*border: 1px solid #FFFFFF;*/
     background-color: #FFFFFF;
     margin: auto 1.354% auto auto;
 
@@ -260,7 +260,7 @@
 .video-line-right {
     height: 1px;
     width: 4.48%;
-    border: 1px solid #FFFFFF;
+    /*border: 1px solid #FFFFFF;*/
     background-color: #FFFFFF;
     margin: auto auto auto 1.354%;
 }
