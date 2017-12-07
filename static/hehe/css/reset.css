@@ -32,7 +32,7 @@ time, mark, audio, video {
 	border: 0;
 	/*font-size: 100%;
 	font: inherit;*/
-	vertical-align: baseline;
+	/*vertical-align: baseline;*/
 	list-style:none;
 	font-family: "fzhei-b01regular","PingFang SC","SF Pro SC","HanHei SC","SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","Helvetica Neue","Arial","Microsoft YaHei","SimHei",sans-serif;
 	font-weight: 300;
