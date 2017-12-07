@@ -355,6 +355,7 @@
 
 .video-content {
     margin-top: 3.385%;
+    width: 100%;
     flex-direction: row;
     display: flex;
 }
@@ -426,4 +427,5 @@
 }
 .hh-video-img-div{
     padding: 0px;
+    display: flex;
 }
