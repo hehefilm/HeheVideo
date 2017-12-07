@@ -186,36 +186,4 @@ function nextFSVideo() {
 
 
 
-function showImageBig() {
-
-    var mask = document.getElementById("mask");
-
-    mask.style.display = "flex";
-
-}
-function maskDismiss() {
-    var mask = document.getElementById("mask");
-
-    mask.style.display = "none";
-}
-
-
-// jQuery(document).ready(function ($) {
-//     var zhezhao = document.getElementById("mask");
-//     var login = document.getElementById("login");
-//     var bt = document.getElementById("bt");
-//     var btclose = document.getElementById("btclose");
-//
-//     bt.onclick = function () {
-//         zhezhao.style.display = "block";
-//         login.style.display = "block";
-//     }
-//     btclose.onclick = function () {
-//         zhezhao.style.display = "none";
-//         login.style.display = "none";
-//     }
-//     zhezhao.onclick = function () {
-//         zhezhao.style.display = "none";
-//     }
-// }
 
