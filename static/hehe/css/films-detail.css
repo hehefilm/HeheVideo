@@ -1,3 +1,88 @@
+
+.mask {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    opacity: 0.9;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: none;
+    z-index: 1000;
+}
+
+.content {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.mask-video-content {
+    margin-top: 3.385%;
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+}
+
+.mask-index-video {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.mask-video-content-left {
+    height: 100%;
+    width: 9.27%;
+    display: flex;
+}
+
+.mask-video-content-left:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.mask-video-content-right:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.mask-video-content-right {
+    height: 100%;
+    width: 9.27%;
+    display: flex;
+    opacity: 1;
+}
+
+.mask-hh-video-content-slide {
+    width: 81.7%;
+    margin: auto;
+}
+
+.mask-video-content-center {
+
+}
+.mask-item-img{
+    margin: auto;
+}
+
+.hh-mask-video-img-div {
+    padding: 0px;
+}
+
+.mask-arrow-left {
+    /*height: 2.9%;*/
+    width: 1.354%;
+    width: 26px;
+    margin: auto 35px auto auto;
+}
+
+.mask-arrow-right {
+    /*height: 2.9%;*/
+    /*width: 1.354%;*/
+    width: 26px;
+    height: 56px;
+    margin: auto auto auto 35px;
+}
+
 .page-bak {
 	position: fixed;
 	left: 0;
