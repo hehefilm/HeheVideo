@@ -289,6 +289,7 @@
     height: 100%;
     width: 9.27%;
     display: flex;
+    transition: all 0.3s;
 }
 
 .video-content-left:hover{
@@ -303,6 +304,7 @@
     width: 9.27%;
     display: flex;
     opacity:1;
+    transition: all 0.3s;
 }
 .hh-video-content-slide{
     width: 81.7%;

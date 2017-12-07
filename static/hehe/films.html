@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="zh-CN" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="zh-CN" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="zh-CN" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="zh-CN" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+    <meta name="author" content="wangyali"/>
+    <meta name="keywords" content=""> <!-- 关键词，搜索什么能看到 -->
+    <meta name="description" content=""/> <!-- 内容描述 -->
+    <meta name="theme-color" content="#861519">
+    <meta name="msapplication-navbutton-color" content="#861519">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#861519">
+
+
+    <title>和和影业</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/films.css"/>
+    <link rel="stylesheet" href="css/respond.css"/>
+
+    <link rel="shortcut icon" href="images/icon.png"/>
+
+    <link rel="stylesheet" href="css/videojs.css">
+    <link rel="stylesheet" href="css/videojs-theme.css"/>
+
+    <link rel="stylesheet" href="css/index.css">
+
+
+    <!-- If you'd like to support IE8 -->
+    <script src="js/videojs-ie8.min.js"></script>
+</head>
+<body class="index-bg">
+
+<!-- Navigation -->
+<div id="my-nav">
+    <my-nav></my-nav>
+</div>
+
+
+
+
+<div class="fs-video-container" style="display:none;" onclick="hideFSVideoContainer()">
+    <!-- <video class="fs-video-player" src="../../static/hehe/videos/sample.mp4" preload
+    " controls="controls"
+    onclick="pauseVideo()"></video> -->
+    <div class="fs-video-player" onclick="stopBubble()">
+        <video id="fs-videojs-player" class="video-js vjs-fluid" controls preload="auto"
+               data-setup="{}">
+            <source src="" type='video/mp4'>
+            <p class="vjs-no-js">
+                要收看此视频，请开启JavaScript功能，或者升级您的浏览器至
+                <a href="http://videojs.com/html5-video-support/">支持HTML5视频标签的浏览器</a>
+            </p>
+        </video>
+    </div>
+    <img class="fs-video-close" src="images/close.png">
+    <img class="fs-video-arrow-left pc-only" src="images/fs-video-arrow-left.png" onclick="prevFSVideo()">
+    <img class="fs-video-arrow-right pc-only" src="images/fs-video-arrow-right.png" onclick="nextFSVideo()">
+</div>
+
+
+<div class="page" id="vue-page">
+
+
+    <!--hh 影片-->
+    <div class="hh-video">
+
+        <div class="video-top">
+            <div class="video-line-left"></div>
+            <div class="hh-video-title">影视作品</div>
+            <div class="video-line-right"></div>
+        </div>
+
+
+        <div class="film-content">
+            <div class="film-content-center row">
+                <li class="hh-film-img-div col-md-3 col-sm-3 col-xs-3">
+                    <div class="film-item-img">
+                        <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
+                        <div class="film-item-shadow">
+                        </div>
+                    </div>
+                </li>
+                <li class="hh-film-img-div col-md-3 col-sm-3 col-xs-3">
+                    <div class="film-item-img">
+                        <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
+                        <div class="film-item-shadow">
+                        </div>
+                    </div>
+                </li>
+                <li class="hh-film-img-div col-md-3 col-sm-3 col-xs-3">
+                    <div class="film-item-img">
+                        <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
+                        <div class="film-item-shadow">
+                        </div>
+                    </div>
+                </li>
+                <li class="hh-film-img-div col-md-3 col-sm-3 col-xs-3">
+                    <div class="film-item-img">
+                        <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
+                        <div class="film-item-shadow">
+                        </div>
+                    </div>
+                </li>
+
+                <li class="hh-film-img-div col-md-3 col-sm-3 col-xs-3">
+                    <div class="film-item-img">
+                        <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
+                        <div class="film-item-shadow">
+                        </div>
+                    </div>
+                </li>
+                <li class="hh-film-img-div col-md-3 col-sm-3 col-xs-3">
+                    <div class="film-item-img">
+                        <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
+                        <div class="film-item-shadow">
+                        </div>
+                    </div>
+                </li>
+                <li class="hh-film-img-div col-md-3 col-sm-3 col-xs-3">
+                    <div class="film-item-img">
+                        <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
+                        <div class="film-item-shadow">
+                        </div>
+                    </div>
+                </li>
+                <li class="hh-film-img-div col-md-3 col-sm-3 col-xs-3">
+                    <div class="film-item-img">
+                        <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
+                        <div class="film-item-shadow">
+                        </div>
+                    </div>
+                </li>
+                <li class="hh-film-img-div col-md-3 col-sm-3 col-xs-3">
+                    <div class="film-item-img">
+                        <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
+                        <div class="film-item-shadow">
+                        </div>
+                    </div>
+                </li>
+                <li class="hh-film-img-div col-md-3 col-sm-3 col-xs-3">
+                    <div class="film-item-img">
+                        <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
+                        <div class="film-item-shadow">
+                        </div>
+                    </div>
+                </li>
+                <li class="hh-film-img-div col-md-3 col-sm-3 col-xs-3">
+                    <div class="film-item-img">
+                        <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
+                        <div class="film-item-shadow">
+                        </div>
+                    </div>
+                </li>
+                <li class="hh-film-img-div col-md-3 col-sm-3 col-xs-3">
+                    <div class="film-item-img">
+                        <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
+                        <div class="film-item-shadow">
+                        </div>
+                    </div>
+                </li>
+
+
+
+
+
+
+            </div>
+
+        </div>
+
+        <div class="film-more">
+            <!--<div class="film-more-text">-->
+            <p class="film-more-text">
+                更多
+            </p>
+            <!--</div>-->
+        </div>
+
+    </div>
+
+
+
+
+
+
+</div>
+
+
+<!-- Footer -->
+<div id="my-footer">
+    <my-footer></my-footer>
+</div>
+
+<!--JS-->
+<script src="js/vue.js"></script>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/respond.js"></script>
+<script src="js/template-web.js"></script>
+<script type="text/javascript" src="js/videojs.min.js"></script>
+<script type="text/javascript" src="js/films-detail.js"></script>
+
+<!-- <script type="text/javascript" src="js/films-detail.js"></script> -->
+<script>
+    var vue = new Vue({
+        el: '#vue-page',
+        data: {
+            title: "《西游2伏妖篇》",
+            poster: "images/films-cover-demo.jpg",
+            store: "https://www.taobao.com/",
+            director: "徐克", //导演
+            writer: "周星驰", //编剧
+            release_date: "2017-01-01", //上映日期
+            genre: "魔幻/喜剧", //类型
+            duration: 120, //片长
+            description: "作为《西游降魔篇》的后继故事，唐三藏在上集感化了杀死段小姐的齐天大圣，并收其为徒后，带着孙悟空、猪八戒及沙僧，一行\
+人《西游降魔篇》的后继故事，唐三藏在上集感化了杀死段小姐的齐天大圣，并收其为徒后，带着孙悟空、猪八戒及沙僧，一行四\
+踏上西天取经之旅，路途凶险，除魔伏妖，师徒四人并收其为徒后，带着孙悟空。", //简介
+            stars: "吴亦凡 / 皮尔斯·布鲁斯南 / 欧拉·布拉迪 / 德莫·克劳利 / 吴亦凡 / 吴亦凡", //主演，演员
+            clips: ["http://hh.com/1.jpg", "http://hh.com/2.jpg"], //剧照
+            videos: [{
+                title: "终极预告片1",
+                time: "01:23",
+                url: "",
+                img: "images/img/001.jpg"
+            },
+                {
+                    title: "终极预告片2",
+                    time: "02:23",
+                    url: "",
+                    img: "images/img/002.jpg"
+                },
+                {
+                    title: "终极预告片3",
+                    time: "03:23",
+                    url: "",
+                    img: "images/img/003.jpg"
+                },
+                {
+                    title: "终极预告片4",
+                    time: "04:23",
+                    url: "",
+                    img: "images/img/004.jpg"
+                },
+                {
+                    title: "终极预告片5",
+                    time: "05:23",
+                    url: "",
+                    img: "images/img/005.jpg"
+                },
+            ], //宣传视频
+            lang: "普通话", //语言
+            release_vision: "2D/IMAX3D", //荧幕类型
+            country: "中国大陆", //制作国家
+            mknown: "小海怪/Mermaid", //又名
+            currentPreviewTitle: "",
+            currentPreviewIndex: 0,
+            currentThumbnailIndex: 0,
+        },
+        mounted: function () {
+            this.currentPreviewTitle = this.videos[0].title;
+            document.title = '和和影业 - ' + this.title;
+        },
+        methods: {
+            sliceVideos: function (n) {
+                return this.videos.slice((n - 1) * 3, n * 3);
+            },
+            thumbnailClick: function (index) {
+                this.currentPreviewTitle = this.videos[index].title;
+                this.currentPreviewIndex = index;
+                this.currentThumbnailIndex = Math.floor(index / 3);
+                if (lastSelectedThumbnailIndex != index) {
+                    $("#moviePreview").carousel(index);
+                    $("#movieThumbnail").carousel(Math.floor(index / 3));
+                    $("#item-thumbnail-" + index).addClass("selected");
+                    $("#item-thumbnail-" + lastSelectedThumbnailIndex).removeClass("selected");
+                    lastSelectedThumbnailIndex = index;
+                }
+            },
+
+            //showBigImg
+            showImageBig:function (n) {
+                var mask = document.getElementById("mask");
+
+                mask.style.display = "flex";
+            },
+            maskDismiss:function (n) {
+                var mask = document.getElementById("mask");
+
+                mask.style.display = "none";
+            },
+
+            
+        }
+    })
+
+    var lastSelectedThumbnailIndex = 0;
+
+    $('#movieThumbnail').on('slid.bs.carousel', function () {
+        index = $('#movieThumbnail > .carousel-inner > div.active').index();
+        vue.currentThumbnailIndex = index;
+    });
+    $('#moviePreview').on('slid.bs.carousel', function () {
+        index = $('#moviePreview > .carousel-inner > div.active').index();
+        vue.currentPreviewIndex = index;
+        vue.currentThumbnailIndex = Math.floor(index / 3);
+        if (lastSelectedThumbnailIndex != index) {
+            $("#movieThumbnail").carousel(Math.floor(index / 3));
+            $("#item-thumbnail-" + index).addClass("selected");
+            $("#item-thumbnail-" + lastSelectedThumbnailIndex).removeClass("selected");
+            lastSelectedThumbnailIndex = index;
+        }
+    });
+</script>
+
+
+</body>
+</html>
