@@ -11,84 +11,84 @@
 //     return [parseInt(v[1], 10), parseInt(v[2], 10), parseInt(v[3] || 0, 10)];
 //   }
 // }
-function getMobileOperatingSystem() {
-    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+// function getMobileOperatingSystem() {
+//     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
-    if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i) || userAgent.match(/iPod/i)) {
-        // if (iOSversion()[0] >= 11) {
-        // 	return 'iOS11';
-        // } else {
-        return 'iOS';
-        // }
+//     if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i) || userAgent.match(/iPod/i)) {
+//         // if (iOSversion()[0] >= 11) {
+//         // 	return 'iOS11';
+//         // } else {
+//         return 'iOS';
+//         // }
 
-    }
-    else if (userAgent.match(/Android/i)) {
+//     }
+//     else if (userAgent.match(/Android/i)) {
 
-        return 'Android';
-    }
-    else {
-        return 'unknown';
-    }
-}
+//         return 'Android';
+//     }
+//     else {
+//         return 'unknown';
+//     }
+// }
 
-//page data
-var data = {list: []};
-var videosPageCur = 1;
+// //page data
+// var data = {list: []};
+// var videosPageCur = 1;
 
-function getVideos(page) {
-    $.get("https://shanxiaxuetang.com/resources/videos?num=3&pg=" + page, function (rdata, status) {
-        var moreData = {
-            // list : [
-            // 	{
-            // 		title : '视频1',
-            // 		time : '2017.2.2',
-            // 		image : 'images/videos-item-thumbnail.jpg',
-            // 		url : 'videos/sample.mp4'
-            // 	},
-            // 	{
-            // 		title : '视频2',
-            // 		time : '2017.2.2',
-            // 		image : 'images/videos-item-thumbnail.jpg',
-            // 		url : 'videos/sample.mp4'
-            // 	},
-            // 	{
-            // 		title : '视频3',
-            // 		time : '2017.2.2',
-            // 		image : 'images/videos-item-thumbnail.jpg',
-            // 		url : 'videos/sample.mp4'
-            // 	},
-            // ]
-        };
-        // rdata = '[{"url": "https://odffqu1hn.qnssl.com/small.mp4", "thumb_url":"http://qnp.shanxiaxuetang.com/o_1bs5l9ngf14hg1cif12e22e31l6rk.png", "video_id": "video_1505815457", "created": 1505815457, "title": "\u60ef\u770b\u79cb\u6708\u6625\u98ce"}, {"url": "https://odffqu1hn.qnssl.com/small.mp4", "video_id": "video_1505792385", "created": 1505792385, "title": "\u767d\u53d1\u6e14\u6a35\u6c5f\u6e1a\u4e0a"}, {"url": "https://odffqu1hn.qnssl.com/small.mp4", "video_id": "video_1505792356", "created": 1505792356, "title": "\u4e0d\u5c3d\u957f\u6c5f\u6eda\u6eda\u6d41"}]';
-        moreData.list = jQuery.parseJSON(rdata);
-        moreData.platform = getMobileOperatingSystem();
-        if (getMobileOperatingSystem() == 'iOS') {
-            moreData.controls = 'controls';
-        } else {
-            moreData.controls = '';
-        }
-        if (moreData.list.length > 0) {
-            for (var i = moreData.list.length - 1; i >= 0; i--) {
-                var iDate = new Date(moreData.list[i].created * 1000);
-                moreData.list[i].time = iDate.getFullYear() + '.' + (iDate.getMonth() + 1) + '.' + iDate.getDate();
-            }
-            // data.list.concat(moreData.list);
-            Array.prototype.push.apply(data.list, moreData.list);
+// function getVideos(page) {
+//     $.get("https://shanxiaxuetang.com/resources/videos?num=3&pg=" + page, function (rdata, status) {
+//         var moreData = {
+//             // list : [
+//             // 	{
+//             // 		title : '视频1',
+//             // 		time : '2017.2.2',
+//             // 		image : 'images/videos-item-thumbnail.jpg',
+//             // 		url : 'videos/sample.mp4'
+//             // 	},
+//             // 	{
+//             // 		title : '视频2',
+//             // 		time : '2017.2.2',
+//             // 		image : 'images/videos-item-thumbnail.jpg',
+//             // 		url : 'videos/sample.mp4'
+//             // 	},
+//             // 	{
+//             // 		title : '视频3',
+//             // 		time : '2017.2.2',
+//             // 		image : 'images/videos-item-thumbnail.jpg',
+//             // 		url : 'videos/sample.mp4'
+//             // 	},
+//             // ]
+//         };
+//         // rdata = '[{"url": "https://odffqu1hn.qnssl.com/small.mp4", "thumb_url":"http://qnp.shanxiaxuetang.com/o_1bs5l9ngf14hg1cif12e22e31l6rk.png", "video_id": "video_1505815457", "created": 1505815457, "title": "\u60ef\u770b\u79cb\u6708\u6625\u98ce"}, {"url": "https://odffqu1hn.qnssl.com/small.mp4", "video_id": "video_1505792385", "created": 1505792385, "title": "\u767d\u53d1\u6e14\u6a35\u6c5f\u6e1a\u4e0a"}, {"url": "https://odffqu1hn.qnssl.com/small.mp4", "video_id": "video_1505792356", "created": 1505792356, "title": "\u4e0d\u5c3d\u957f\u6c5f\u6eda\u6eda\u6d41"}]';
+//         moreData.list = jQuery.parseJSON(rdata);
+//         moreData.platform = getMobileOperatingSystem();
+//         if (getMobileOperatingSystem() == 'iOS') {
+//             moreData.controls = 'controls';
+//         } else {
+//             moreData.controls = '';
+//         }
+//         if (moreData.list.length > 0) {
+//             for (var i = moreData.list.length - 1; i >= 0; i--) {
+//                 var iDate = new Date(moreData.list[i].created * 1000);
+//                 moreData.list[i].time = iDate.getFullYear() + '.' + (iDate.getMonth() + 1) + '.' + iDate.getDate();
+//             }
+//             // data.list.concat(moreData.list);
+//             Array.prototype.push.apply(data.list, moreData.list);
 
-            var html = template('tpl-video-item', moreData);
-            document.getElementById('videos-list').insertAdjacentHTML('beforeend', html);
-        } else {
-            $(".videos-more").css('visibility', 'hidden');
-        }
-    });
-}
+//             var html = template('tpl-video-item', moreData);
+//             document.getElementById('videos-list').insertAdjacentHTML('beforeend', html);
+//         } else {
+//             $(".videos-more").css('visibility', 'hidden');
+//         }
+//     });
+// }
 
-getVideos(videosPageCur);
+// getVideos(videosPageCur);
 
-function moreVideos(event) {
-    videosPageCur++;
-    getVideos(videosPageCur);
-}
+// function moreVideos(event) {
+//     videosPageCur++;
+//     getVideos(videosPageCur);
+// }
 
 
 //full screen video play

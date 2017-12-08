@@ -3,7 +3,7 @@
  */
 Vue.component('my-nav',{
 	template:'\
-		<nav class="navbar navbar-inverse navbar-fixed-top nav-out" role="navigation">\
+		<nav class="navbar-inverse navbar-fixed-top nav-out" role="navigation">\
 			<div class="nav-wai">\
 				<a id="pcLogo" class="nav-brand" href="../../static/hehe/index.html#Slider">\
 					<img class="nav-brand" src="../../static/hehe/images/logo.png"/>\
