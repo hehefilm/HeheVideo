@@ -18,29 +18,69 @@
     <meta name="msapplication-navbutton-color" content="#861519">
     <meta name="apple-mobile-web-app-status-bar-style" content="#861519">
 
-
     <title>和和影业</title>
 
     <!--CSS-->
-    <link rel="stylesheet" href="css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css"/>
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="css/films-detail.css"/>
-    <link rel="stylesheet" href="css/respond.css"/>
 
     <link rel="shortcut icon" href="images/icon.png"/>
 
     <link rel="stylesheet" href="css/videojs.css">
     <link rel="stylesheet" href="css/videojs-theme.css"/>
-
     <link rel="stylesheet" href="css/index.css">
-
 
     <!-- If you'd like to support IE8 -->
     <script src="js/videojs-ie8.min.js"></script>
 </head>
 <body class="index-bg">
+
+<!--浏览  大图-->
+
+<div class="mask" id="mask" onclick="maskDismiss()">
+    <div class="mask-video-content">
+
+        <div id="mask-myCarousel" class="carousel slide  mask-index-video">
+            <!-- 轮播（Carousel）项目 -->
+            <a class="mask-video-content-left" href="#mask-myCarousel"
+               data-slide="prev">
+                <img class="mask-arrow-left" src="images/arrow-left-hh.png">
+            </a>
+
+            <div class="mask-hh-video-content-slide">
+                <div class="carousel-inner ">
+                    <div class="item active">
+                        <li class="hh-video-img-div ">
+                            <div class="mask-item-img">
+                                <img src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
+                                <div class="index-course-item-shadow">
+                                </div>
+                            </div>
+                        </li>
+                    </div>
+                    <div class="item">
+
+                        <!--<img src="http://qnp.shanxiaxuetang.com/index-course-1.jpg" alt="Second slide">-->
+                        <li class="hh-video-img-div ">
+                            <div class="mask-item-img">
+                                <img id="jlp" src="images/example1.jpg">
+                                <div class="index-course-item-shadow">
+                                </div>
+                            </div>
+                        </li>
+                    </div>
+                </div>
+            </div>
+            <a class="mask-video-content-right" href="#mask-myCarousel"
+               data-slide="next" onclick="mmm()">
+                <img class="mask-arrow-right" src="../../static/hehe/images/arrow-right-hh.png">
+            </a>
+        </div>
+    </div>
+</div>
 
 <!-- Navigation -->
 <div id="my-nav">
@@ -55,10 +95,7 @@
     <img class="fs-video-arrow-right" src="images/fs-video-arrow-right.png" onclick="nextFSVideo()">
 </div> -->
 
-<div class="fs-video-container" style="display:none;" onclick="hideFSVideoContainer()">
-    <!-- <video class="fs-video-player" src="../../static/hehe/videos/sample.mp4" preload
-    " controls="controls"
-    onclick="pauseVideo()"></video> -->
+<!-- <div class="fs-video-container" style="display:none;" onclick="hideFSVideoContainer()">
     <div class="fs-video-player" onclick="stopBubble()">
         <video id="fs-videojs-player" class="video-js vjs-fluid" controls preload="auto"
                data-setup="{}">
@@ -72,12 +109,13 @@
     <img class="fs-video-close" src="images/close.png">
     <img class="fs-video-arrow-left pc-only" src="images/fs-video-arrow-left.png" onclick="prevFSVideo()">
     <img class="fs-video-arrow-right pc-only" src="images/fs-video-arrow-right.png" onclick="nextFSVideo()">
-</div>
+</div> -->
 
 
 <div class="page" id="vue-page">
     <div class="page-bak" style="background-image: url(images/films-cover-demo.jpg);">
     </div>
+
     <div class="film-info">
         <div class="film-info-left">
             <p>{{title}}</p>
@@ -164,12 +202,8 @@
             <div id="movieThumbnail" class="carousel slide" data-ride="carousel"
                  data-wrap="false" data-interval="false">
                 <div class="carousel-inner">
-                    <div v-for="n in Math.ceil(videos.length/3)"
-                         v-bind:class="n==1?'item active':'item'">
-                        <div v-for="(video, index) of sliceVideos(n)" class="item-thumbnail"
-                             v-bind:class="index + (n-1)*3 == currentPreviewIndex?'selected':''"
-                             id="item-thumbnail-{{index + (n-1)*3}}"
-                             v-on:click="thumbnailClick(index + (n-1)*3)">
+                    <div v-for="n in Math.ceil(videos.length/3)" v-bind:class="n==1?'item active':'item'">
+                        <div v-for="(video, index) of sliceVideos(n)" class="item-thumbnail" v-bind:class="index + (n-1)*3 == currentPreviewIndex?'selected':''" v-on:click="thumbnailClick(index + (n-1)*3)">
                             <img v-bind:src="video.img">
                             <p class="time">{{video.time}}</p>
                             <p class="title">{{video.title}}</p>
@@ -222,7 +256,7 @@
                         <div class="item active">
 
                             <div class="video-content-center row">
-                                <li class="sx-school-img-div col-md-3 col-sm-3 col-xs-3">
+                                <li class="sx-school-img-div col-md-3 col-sm-3 col-xs-3"  v-on:click="showImageBig">
                                     <div class="index-course-item-img">
                                         <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
                                         <div class="index-course-item-shadow">
@@ -230,7 +264,7 @@
                                     </div>
                                 </li>
 
-                                <li class="hh-video-img-div col-md-3 col-sm-3 col-xs-3">
+                                <li class="hh-video-img-div col-md-3 col-sm-3 col-xs-3" v-on:click="showImageBig">
                                     <div class="index-course-item-img">
                                         <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
                                         <div class="index-course-item-shadow">
@@ -302,6 +336,8 @@
         </div>
 
     </div>
+
+
 
     <!-- 剧照-->
     <div class="hh-partners">
@@ -393,53 +429,7 @@
 
     </div>
 
-    <!--浏览  大图-->
-    <div class="mask" id="mask" v-on:click="maskDismiss">
-        <div class="mask-video-content">
 
-            <div id="mask-myCarousel" class="carousel slide  mask-index-video">
-                <!-- 轮播（Carousel）项目 -->
-                <a class="mask-video-content-left" href="#mask-myCarousel"
-                   data-slide="prev">
-                    <img class="mask-arrow-left" src="../../static/hehe/images/arrow-left-hh.png">
-                </a>
-
-                <div class="mask-hh-video-content-slide">
-                    <div class="carousel-inner ">
-                        <div class="item active">
-                            <li class="hh-video-img-div ">
-                                <div class="mask-item-img">
-                                    <img src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
-                                    <div class="index-course-item-shadow">
-                                    </div>
-                                </div>
-                            </li>
-                        </div>
-                        <div class="item">
-
-                            <!--<img src="http://qnp.shanxiaxuetang.com/index-course-1.jpg" alt="Second slide">-->
-                            <li class="hh-video-img-div ">
-                                <div class="mask-item-img">
-                                    <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-2.jpg">
-                                    <div class="index-course-item-shadow">
-                                    </div>
-                                </div>
-                            </li>
-                        </div>
-                    </div>
-                </div>
-                <a class="mask-video-content-right" href="#mask-myCarousel"
-                   data-slide="prev">
-                    <img class="mask-arrow-right" src="../../static/hehe/images/arrow-right-hh.png">
-                </a>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="content">
-        <button  v-on:click="showImageBig">点击弹出遮罩</button>
-    </div>
 
 </div>
 
@@ -450,16 +440,14 @@
 </div>
 
 <!--JS-->
-<script src="js/vue.js"></script>
-<script src="js/jquery-1.11.3.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="https://cdn.bootcss.com/vue/2.5.9/vue.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdn.bootcss.com/axios/0.17.1/axios.min.js"></script>
 <script src="js/nav.js"></script>
-<script src="js/respond.js"></script>
-<script src="js/template-web.js"></script>
-<script type="text/javascript" src="js/videojs.min.js"></script>
-<script type="text/javascript" src="js/films-detail.js"></script>
+<script src="js/videojs.min.js"></script>
+<script src="js/films-detail.js"></script>
 
-<!-- <script type="text/javascript" src="js/films-detail.js"></script> -->
 <script>
     var vue = new Vue({
         el: '#vue-page',
@@ -516,6 +504,14 @@
             currentPreviewIndex: 0,
             currentThumbnailIndex: 0,
         },
+        created: function () {
+            axios.get('http://staging.hehefilm.com/resources/movie/movie_1512469716')
+            .then(resp => {
+                console.log(resp.data);
+            }).catch(err => {
+                console.log('请求失败：'+err.status+','+err.statusText);
+            });
+        },
         mounted: function () {
             this.currentPreviewTitle = this.videos[0].title;
             document.title = '和和影业 - ' + this.title;
@@ -531,8 +527,6 @@
                 if (lastSelectedThumbnailIndex != index) {
                     $("#moviePreview").carousel(index);
                     $("#movieThumbnail").carousel(Math.floor(index / 3));
-                    $("#item-thumbnail-" + index).addClass("selected");
-                    $("#item-thumbnail-" + lastSelectedThumbnailIndex).removeClass("selected");
                     lastSelectedThumbnailIndex = index;
                 }
             },
@@ -565,12 +559,12 @@
         vue.currentThumbnailIndex = Math.floor(index / 3);
         if (lastSelectedThumbnailIndex != index) {
             $("#movieThumbnail").carousel(Math.floor(index / 3));
-            $("#item-thumbnail-" + index).addClass("selected");
-            $("#item-thumbnail-" + lastSelectedThumbnailIndex).removeClass("selected");
             lastSelectedThumbnailIndex = index;
         }
     });
 </script>
+
+
 
 
 </body>

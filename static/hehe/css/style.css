@@ -18,15 +18,15 @@
 .navbar-inverse {
     background-color: #1A1C21;
     border-color: transparent;
-    margin-bottom:0px;
-    height: 8.5%;
-    max-height: 105px;
+    margin-bottom: 0px;
+    height: 5.5vw;
+    max-height: 106px;
 }
 
 .nav-brand {
-    width: 6.77%;
+    width: 6.77vw;
     display: flex;
-    margin: 0 9.6% 0 5.6%;
+    margin: 0 9.6vw 0 5.6vw;
 }
 
 .nav-brand img {
@@ -61,16 +61,19 @@
     margin: auto 6.77% auto 0;
     float: left;
     border-radius: 0;
+    box-sizing: border-box;
 }
 
 .nav-ul>li a {
-	padding-bottom: 5px;
+	padding: 1.5vw 0;
 	display:block;
 	color:#fff;
-	font-size: 1.4rem;
+	font-size: 1.8rem;
 	font-weight: 300;
 	border-radius: 0;
 	position: relative;
+    white-space: nowrap;
+
 }
 
 .nav-ul>li a:hover:after{
@@ -84,7 +87,7 @@
 }
 
 .nav-ul>li a:after{
-	border-bottom: 2px solid #FFCC00;
+	border-bottom: 0.15vw solid #FFCC00;
 	content: '';
     display: block;
     position: absolute;
@@ -104,21 +107,21 @@
 }
 
 .nav-search {
-	height: 45%;
+	height: 1.56vw;
 	max-height: 30px;	
-	width: 9.95%;	
+	width: 9.95vw;	
 	border: 1px solid #FFFFFF;	
-	border-radius: 15px;
+	border-radius: 0.78vw;
 	margin: auto 0;
 	display: flex;
 }
 
 .nav-search input {
 	width: 85%;
-	margin: 0 5px 0 15px;
+	margin: 0 0.26vw 0 0.78vw;
 	background-color: transparent;
-	font-size: 12px;
-	line-height: 16px;
+	font-size: 1.6rem;
+	line-height: 133%;
 	border: 0px solid transparent;
 	color: white;
 }
@@ -128,8 +131,8 @@
 }
 
 .nav-search img {
-	width: 18px;
-	margin: auto 7px auto 0;
+	width: 0.94vw;
+	margin: auto 0.89vw auto 0;
 }
 /*-------------------------------------
 *               $FOOTER

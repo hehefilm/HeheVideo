@@ -27,7 +27,6 @@
     <link rel="stylesheet" href="css/reset.css"/>
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="css/news.css"/>
-    <link rel="stylesheet" href="css/respond.css"/>
     <link rel="shortcut icon" href="images/icon.png"/>
 
 
@@ -72,6 +71,7 @@
 				<div class="each-cell" v-bind:style="index == news.length-1 ? 'margin-bottom: 0' : ''">
 					<div class="each-cell-time" v-cloak>
 						<p class="each-cell-time-month">{{anew.time.split('-')[0]+ '-' + anew.time.split('-')[1]}}</p>
+						<hr>
 						<p class="each-cell-time-day">{{anew.time.split('-')[2]}}</p>
 					</div>
 					<div class="each-cell-content" v-cloak>
@@ -97,7 +97,6 @@
 <script src="js/jquery-1.11.3.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/nav.js"></script>
-<script src="js/respond.js"></script>
 <script type="text/javascript" src="js/news.js"></script>
 
 <script>
