@@ -251,7 +251,7 @@
 .video-line-left {
     height: 1px;
     width: 4.48%;
-    border: 1px solid #FFFFFF;
+    /*border: 1px solid #FFFFFF;*/
     background-color: #FFFFFF;
     margin: auto 1.354% auto auto;
 
@@ -260,7 +260,7 @@
 .video-line-right {
     height: 1px;
     width: 4.48%;
-    border: 1px solid #FFFFFF;
+    /*border: 1px solid #FFFFFF;*/
     background-color: #FFFFFF;
     margin: auto auto auto 1.354%;
 }
@@ -289,6 +289,7 @@
     height: 100%;
     width: 9.27%;
     display: flex;
+    transition: all 0.3s;
 }
 
 .video-content-left:hover{
@@ -303,6 +304,7 @@
     width: 9.27%;
     display: flex;
     opacity:1;
+    transition: all 0.3s;
 }
 .hh-video-content-slide{
     width: 81.7%;

@@ -6,10 +6,10 @@
     filter: alpha(opacity=50);
     -moz-opacity: 0.5;
     opacity: 0.9;
-    position: absolute;
-    left: 0px;
-    top: 0px;
     display: none;
+	position: fixed;
+	left: 0;
+	top:0;
     z-index: 1000;
 }
 
@@ -35,6 +35,7 @@
     height: 100%;
     width: 9.27%;
     display: flex;
+	z-index: 10000;
 }
 
 .mask-video-content-left:hover {
@@ -69,18 +70,17 @@
 }
 
 .mask-arrow-left {
-    /*height: 2.9%;*/
-    width: 1.354%;
-    width: 26px;
-    margin: auto 35px auto auto;
+	width: 1.35vw;
+	height: auto;
+    margin: auto 1.82vw auto auto;
 }
 
 .mask-arrow-right {
     /*height: 2.9%;*/
     /*width: 1.354%;*/
-    width: 26px;
-    height: 56px;
-    margin: auto auto auto 35px;
+    width: 1.35vw;
+    height: auto;
+    margin: auto auto auto 1.82vw;
 }
 
 .page-bak {
