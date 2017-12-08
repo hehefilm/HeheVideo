@@ -74,7 +74,7 @@
 
 
     <!--hh 影片-->
-    <div class="hh-video">
+    <div class="hh-film">
 
         <div class="video-top">
             <div class="video-line-left"></div>
@@ -90,7 +90,9 @@
                     <div class="film-item-img">
                         <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
                         <div class="film-item-shadow">
+                            <p class="film-item-title">美人鱼</p>
                         </div>
+
                     </div>
                 </li>
                 </a>
@@ -99,6 +101,7 @@
                     <div class="film-item-img">
                         <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
                         <div class="film-item-shadow">
+                            <p class="film-item-title">美人鱼</p>
                         </div>
                     </div>
                 </li>
@@ -106,6 +109,7 @@
                     <div class="film-item-img">
                         <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
                         <div class="film-item-shadow">
+                            <p class="film-item-title">美人鱼</p>
                         </div>
                     </div>
                 </li>
@@ -113,6 +117,7 @@
                     <div class="film-item-img">
                         <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
                         <div class="film-item-shadow">
+                            <p class="film-item-title">美人鱼</p>
                         </div>
                     </div>
                 </li>
@@ -181,7 +186,7 @@
         <div class="film-more">
             <!--<div class="film-more-text">-->
             <p class="film-more-text">
-                更多
+                更  多
             </p>
             <!--</div>-->
         </div>
@@ -216,90 +221,94 @@
     var vue = new Vue({
         el: '#vue-page',
         data: {
-            title: "《西游2伏妖篇》",
-            poster: "images/films-cover-demo.jpg",
-            store: "https://www.taobao.com/",
-            director: "徐克", //导演
-            writer: "周星驰", //编剧
-            release_date: "2017-01-01", //上映日期
-            genre: "魔幻/喜剧", //类型
-            duration: 120, //片长
-            description: "作为《西游降魔篇》的后继故事，唐三藏在上集感化了杀死段小姐的齐天大圣，并收其为徒后，带着孙悟空、猪八戒及沙僧，一行\
-人《西游降魔篇》的后继故事，唐三藏在上集感化了杀死段小姐的齐天大圣，并收其为徒后，带着孙悟空、猪八戒及沙僧，一行四\
-踏上西天取经之旅，路途凶险，除魔伏妖，师徒四人并收其为徒后，带着孙悟空。", //简介
-            stars: "吴亦凡 / 皮尔斯·布鲁斯南 / 欧拉·布拉迪 / 德莫·克劳利 / 吴亦凡 / 吴亦凡", //主演，演员
-            clips: ["http://hh.com/1.jpg", "http://hh.com/2.jpg"], //剧照
-            videos: [{
-                title: "终极预告片1",
-                time: "01:23",
-                url: "",
-                img: "images/img/001.jpg"
-            },
+
+            "movie_li": [
                 {
-                    title: "终极预告片2",
-                    time: "02:23",
-                    url: "",
-                    img: "images/img/002.jpg"
+                    "movie_id": "movie_001",
+                    "title": "美人鱼", //片名
+                    "director": "徐克", //导演
+                    "writer": "周星驰", //编剧
+                    "poster": "http://hh.com/something.jpg", //封面图片，海报
+                    "release_date": "2017-01-01", //上映日期
+                    "genre": "魔幻/喜剧", //类型
+                    "duration": 120, //片长
+                    "description": "美人鱼不是人。", //简介
+                    "stars": "不知道/buzhidao/知道", //主演，演员
+                    "clips": ["http://hh.com/1.jpg", "http://hh.com/2.jpg"], //剧照
+                    "videos": ["http://hh.com/1.mp4", "http://hh.com/2.mp4"], //宣传视频
+                    "store": "http://hehefilm.com", //衍生品地址
+                    "lang": "普通话", //语言
+                    "release_vision": "3D", //荧幕类型
+                    "country": "中国", //制作国家
+                    "mknown": "小海怪/Mermaid" //又名
                 },
                 {
-                    title: "终极预告片3",
-                    time: "03:23",
-                    url: "",
-                    img: "images/img/003.jpg"
+                    "movie_id": "movie_001",
+                    "title": "美人鱼", //片名
+                    "director": "徐克", //导演
+                    "writer": "周星驰", //编剧
+                    "poster": "http://hh.com/something.jpg", //封面图片，海报
+                    "release_date": "2017-01-01", //上映日期
+                    "genre": "魔幻/喜剧", //类型
+                    "duration": 120, //片长
+                    "description": "美人鱼不是人。", //简介
+                    "stars": "不知道/buzhidao/知道", //主演，演员
+                    "clips": ["http://hh.com/1.jpg", "http://hh.com/2.jpg"], //剧照
+                    "videos": ["http://hh.com/1.mp4", "http://hh.com/2.mp4"], //宣传视频
+                    "store": "http://hehefilm.com", //衍生品地址
+                    "lang": "普通话", //语言
+                    "release_vision": "3D", //荧幕类型
+                    "country": "中国", //制作国家
+                    "mknown": "小海怪/Mermaid" //又名
                 },
                 {
-                    title: "终极预告片4",
-                    time: "04:23",
-                    url: "",
-                    img: "images/img/004.jpg"
+                    "movie_id": "movie_001",
+                    "title": "美人鱼", //片名
+                    "director": "徐克", //导演
+                    "writer": "周星驰", //编剧
+                    "poster": "http://hh.com/something.jpg", //封面图片，海报
+                    "release_date": "2017-01-01", //上映日期
+                    "genre": "魔幻/喜剧", //类型
+                    "duration": 120, //片长
+                    "description": "美人鱼不是人。", //简介
+                    "stars": "不知道/buzhidao/知道", //主演，演员
+                    "clips": ["http://hh.com/1.jpg", "http://hh.com/2.jpg"], //剧照
+                    "videos": ["http://hh.com/1.mp4", "http://hh.com/2.mp4"], //宣传视频
+                    "store": "http://hehefilm.com", //衍生品地址
+                    "lang": "普通话", //语言
+                    "release_vision": "3D", //荧幕类型
+                    "country": "中国", //制作国家
+                    "mknown": "小海怪/Mermaid" //又名
                 },
                 {
-                    title: "终极预告片5",
-                    time: "05:23",
-                    url: "",
-                    img: "images/img/005.jpg"
-                },
-            ], //宣传视频
-            lang: "普通话", //语言
-            release_vision: "2D/IMAX3D", //荧幕类型
-            country: "中国大陆", //制作国家
-            mknown: "小海怪/Mermaid", //又名
-            currentPreviewTitle: "",
-            currentPreviewIndex: 0,
-            currentThumbnailIndex: 0,
-        },
-        mounted: function () {
-            this.currentPreviewTitle = this.videos[0].title;
-            document.title = '和和影业 - ' + this.title;
-        },
-        methods: {
-            sliceVideos: function (n) {
-                return this.videos.slice((n - 1) * 3, n * 3);
-            },
-            thumbnailClick: function (index) {
-                this.currentPreviewTitle = this.videos[index].title;
-                this.currentPreviewIndex = index;
-                this.currentThumbnailIndex = Math.floor(index / 3);
-                if (lastSelectedThumbnailIndex != index) {
-                    $("#moviePreview").carousel(index);
-                    $("#movieThumbnail").carousel(Math.floor(index / 3));
-                    $("#item-thumbnail-" + index).addClass("selected");
-                    $("#item-thumbnail-" + lastSelectedThumbnailIndex).removeClass("selected");
-                    lastSelectedThumbnailIndex = index;
+                    "movie_id": "movie_001",
+                    "title": "美人鱼", //片名
+                    "director": "徐克", //导演
+                    "writer": "周星驰", //编剧
+                    "poster": "http://hh.com/something.jpg", //封面图片，海报
+                    "release_date": "2017-01-01", //上映日期
+                    "genre": "魔幻/喜剧", //类型
+                    "duration": 120, //片长
+                    "description": "美人鱼不是人。", //简介
+                    "stars": "不知道/buzhidao/知道", //主演，演员
+                    "clips": ["http://hh.com/1.jpg", "http://hh.com/2.jpg"], //剧照
+                    "videos": ["http://hh.com/1.mp4", "http://hh.com/2.mp4"], //宣传视频
+                    "store": "http://hehefilm.com", //衍生品地址
+                    "lang": "普通话", //语言
+                    "release_vision": "3D", //荧幕类型
+                    "country": "中国", //制作国家
+                    "mknown": "小海怪/Mermaid" //又名
                 }
-            },
 
-            //showBigImg
-            showImageBig:function (n) {
-                var mask = document.getElementById("mask");
+            ]
 
-                mask.style.display = "flex";
-            },
-            maskDismiss:function (n) {
-                var mask = document.getElementById("mask");
 
-                mask.style.display = "none";
-            },
+
+        },
+
+        methods: {
+
+
 
             
         }

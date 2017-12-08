@@ -3,6 +3,10 @@
     background-color: #1a1c21;
     width: 100%;
 }
+.hh-film{
+    max-width: 1920px;
+    margin-top: 7.55%;
+}
 
 .film-content {
     margin-top: 3.385%;
@@ -15,7 +19,6 @@
 .film-content-center {
     width: 81.6vw;
     margin: auto 9.1vw;
-
 }
 
 .hh-film-img-div {
@@ -28,18 +31,20 @@
     height: 72px;
     margin: 1.9% auto 1.9% auto;
     display: flex;
-    background-color: rgba(255,255,255,0.03);
+    background-color: rgba(255, 255, 255, 0.03);
     color: #999999;
     font-family: FZLanTingHei-L-GBK;
     font-size: 20px;
     align-items: center;
     transition: all 0.3s;
 }
-.film-more:hover{
-    background-color: rgba(255,255,255,0.08);
+
+.film-more:hover {
+    background-color: rgba(255, 255, 255, 0.08);
     color: #fff;
 }
-.film-more-text:hover{
+
+.film-more-text:hover {
     color: #fff;
 }
 
@@ -49,9 +54,11 @@
     line-height: 0;
     margin: auto;
 }
-.film-item-img{
+
+.film-item-img {
     overflow: hidden;
 }
+
 .film-item-shadow {
     vertical-align: bottom;
     position: absolute;
@@ -62,8 +69,18 @@
     background-color: rgba(0, 0, 0, 0.6);
     opacity: 1;
     transition: all 0.3s;
+    display: flex;
 }
 
 .film-item-shadow:hover {
     opacity: 0;
 }
+
+.film-item-title {
+    text-align: center;
+    margin: auto;
+    color: #FFFFFF;
+    font-family: FZLanTingHei-B-GBK;
+    font-size: 20px;
+}
+
