@@ -113,7 +113,9 @@
 
 
 <div class="page" id="vue-page">
-    <div class="page-bak" style="background-image: url(images/films-cover-demo.jpg);">
+    <div class="page-bak">
+        <img src="images/films-cover-demo.jpg">
+        <div></div>
     </div>
 
     <div class="film-info">
@@ -449,6 +451,18 @@
 <script src="js/films-detail.js"></script>
 
 <script>
+
+    var navHeight = $(window).width() * 0.055;
+    $("#my-nav").css('background-color', 'transparent');
+    window.onscroll = function () {
+        var t = document.documentElement.scrollTop || document.body.scrollTop;
+        if (t >= navHeight) {
+            $("#my-nav").css('background-color', '#1A1C21');
+        } else {
+            $("#my-nav").css('background-color', 'transparent');
+        }
+    }
+
     var vue = new Vue({
         el: '#vue-page',
         data: {
