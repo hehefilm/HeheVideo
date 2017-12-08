@@ -458,6 +458,7 @@
         var t = document.documentElement.scrollTop || document.body.scrollTop;
         if (t >= navHeight) {
             $("#my-nav").css('background-color', '#1A1C21');
+            $("#my-nav").css('transition-duration', '0.25s');
         } else {
             $("#my-nav").css('background-color', 'transparent');
         }
