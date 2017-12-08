@@ -86,7 +86,7 @@
 .page-bak {
 	position: fixed;
 	left: 0;
-    top: 0;
+    top: 5.5vw;
     right: 0;
     z-index: -1;
 	height: 28.6vw;
@@ -98,7 +98,7 @@
 	width: 100%;
 }
 .film-info {
-	margin: 28.6vw 9vw 0 9vw;
+	margin: 34.1vw 9vw 0 9vw;
 	display: flex;
 	justify-content: space-between;
 }
@@ -125,6 +125,7 @@
 .film-info-left > a {
 	border: 1px solid #FFFFFF;
 	margin-top: 1.8vw;
+	transition-duration: 0.25s;
 }
 .film-info-left a:link { 
     color: #CCCCCC;
@@ -135,8 +136,11 @@
     text-decoration: none;
 }
 .film-info-left a:hover {
-    color: #CCCCCC;
+    color: black;
     text-decoration: none;
+    background-color: #fecb2f;
+    border-color: #fecb2f;
+    transition-duration: 0.25s;
 }
 .film-info-left > a > p {
 	font-size: 1.2rem;
