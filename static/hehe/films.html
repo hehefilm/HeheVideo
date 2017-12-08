@@ -48,8 +48,6 @@
 </div>
 
 
-
-
 <div class="fs-video-container" style="display:none;" onclick="hideFSVideoContainer()">
     <!-- <video class="fs-video-player" src="../../static/hehe/videos/sample.mp4" preload
     " controls="controls"
@@ -84,118 +82,34 @@
 
 
         <div class="film-content">
-            <div class="film-content-center row" >
-                <a href="films-detail.html">
-                <li class="hh-film-img-div col-md-3 col-sm-3 col-xs-3">
-                    <div class="film-item-img">
-                        <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
-                        <div class="film-item-shadow">
-                            <p class="film-item-title">美人鱼</p>
-                        </div>
+            <div class="film-content-center row">
 
-                    </div>
-                </li>
-                </a>
-
-                <li class="hh-film-img-div col-md-3 col-sm-3 col-xs-3">
-                    <div class="film-item-img">
-                        <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
-                        <div class="film-item-shadow">
-                            <p class="film-item-title">美人鱼</p>
-                        </div>
-                    </div>
-                </li>
-                <li class="hh-film-img-div col-md-3 col-sm-3 col-xs-3">
-                    <div class="film-item-img">
-                        <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
-                        <div class="film-item-shadow">
-                            <p class="film-item-title">美人鱼</p>
-                        </div>
-                    </div>
-                </li>
-                <li class="hh-film-img-div col-md-3 col-sm-3 col-xs-3">
-                    <div class="film-item-img">
-                        <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
-                        <div class="film-item-shadow">
-                            <p class="film-item-title">美人鱼</p>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="hh-film-img-div col-md-3 col-sm-3 col-xs-3">
-                    <div class="film-item-img">
-                        <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
-                        <div class="film-item-shadow">
-                        </div>
-                    </div>
-                </li>
-                <li class="hh-film-img-div col-md-3 col-sm-3 col-xs-3">
-                    <div class="film-item-img">
-                        <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
-                        <div class="film-item-shadow">
-                        </div>
-                    </div>
-                </li>
-                <li class="hh-film-img-div col-md-3 col-sm-3 col-xs-3">
-                    <div class="film-item-img">
-                        <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
-                        <div class="film-item-shadow">
-                        </div>
-                    </div>
-                </li>
-                <li class="hh-film-img-div col-md-3 col-sm-3 col-xs-3">
-                    <div class="film-item-img">
-                        <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
-                        <div class="film-item-shadow">
-                        </div>
-                    </div>
-                </li>
-                <li class="hh-film-img-div col-md-3 col-sm-3 col-xs-3">
-                    <div class="film-item-img">
-                        <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
-                        <div class="film-item-shadow">
-                        </div>
-                    </div>
-                </li>
-                <li class="hh-film-img-div col-md-3 col-sm-3 col-xs-3">
-                    <div class="film-item-img">
-                        <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
-                        <div class="film-item-shadow">
-                        </div>
-                    </div>
-                </li>
-                <li class="hh-film-img-div col-md-3 col-sm-3 col-xs-3">
-                    <div class="film-item-img">
-                        <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
-                        <div class="film-item-shadow">
-                        </div>
-                    </div>
-                </li>
-                <li class="hh-film-img-div col-md-3 col-sm-3 col-xs-3">
-                    <div class="film-item-img">
-                        <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
-                        <div class="film-item-shadow">
-                        </div>
-                    </div>
-                </li>
+                <div v-for="(film, index) of movie_li">
+                    <a href="films-detail.html?movie_id={{film.movie_id}}">
+                        <li class="hh-film-img-div col-md-3 col-sm-3 col-xs-3">
+                            <div class="film-item-img">
+                                <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
+                                <div class="film-item-shadow">
+                                    <p class="film-item-title">{{film.title}}</p>
+                                </div>
+                            </div>
+                        </li>
+                    </a>
+                </div>
 
             </div>
 
         </div>
 
-        <div class="film-more">
+        <div class="film-more" v-if="more" v-on:click="initMore">
             <!--<div class="film-more-text">-->
             <p class="film-more-text">
-                更  多
+                更 多
             </p>
             <!--</div>-->
         </div>
 
     </div>
-
-
-
-
 
 
 </div>
@@ -218,10 +132,11 @@
 
 <!-- <script type="text/javascript" src="js/films-detail.js"></script> -->
 <script>
+
     var vue = new Vue({
         el: '#vue-page',
         data: {
-
+            more: true,
             "movie_li": [
                 {
                     "movie_id": "movie_001",
@@ -244,7 +159,7 @@
                 },
                 {
                     "movie_id": "movie_001",
-                    "title": "美人鱼", //片名
+                    "title": "战狼", //片名
                     "director": "徐克", //导演
                     "writer": "周星驰", //编剧
                     "poster": "http://hh.com/something.jpg", //封面图片，海报
@@ -263,7 +178,7 @@
                 },
                 {
                     "movie_id": "movie_001",
-                    "title": "美人鱼", //片名
+                    "title": "夏洛特烦恼", //片名
                     "director": "徐克", //导演
                     "writer": "周星驰", //编剧
                     "poster": "http://hh.com/something.jpg", //封面图片，海报
@@ -282,7 +197,26 @@
                 },
                 {
                     "movie_id": "movie_001",
-                    "title": "美人鱼", //片名
+                    "title": "喜剧之王", //片名
+                    "director": "徐克", //导演
+                    "writer": "周星驰", //编剧
+                    "poster": "http://hh.com/something.jpg", //封面图片，海报
+                    "release_date": "2017-01-01", //上映日期
+                    "genre": "魔幻/喜剧", //类型
+                    "duration": 120, //片长
+                    "description": "美人鱼不是人。", //简介
+                    "stars": "不知道/buzhidao/知道", //主演，演员
+                    "clips": ["http://hh.com/1.jpg", "http://hh.com/2.jpg"], //剧照
+                    "videos": ["http://hh.com/1.mp4", "http://hh.com/2.mp4"], //宣传视频
+                    "store": "http://hehefilm.com", //衍生品地址
+                    "lang": "普通话", //语言
+                    "release_vision": "3D", //荧幕类型
+                    "country": "中国", //制作国家
+                    "mknown": "小海怪/Mermaid" //又名
+                },
+                {
+                    "movie_id": "movie_001",
+                    "title": "喜剧之王", //片名
                     "director": "徐克", //导演
                     "writer": "周星驰", //编剧
                     "poster": "http://hh.com/something.jpg", //封面图片，海报
@@ -303,34 +237,22 @@
             ]
 
 
-
         },
 
         methods: {
+            initData: function () {
 
 
+            },
+            initMore: function (page, number) {
+                this.more = false;
+            }
 
-            
+
         }
     })
 
-    var lastSelectedThumbnailIndex = 0;
 
-    $('#movieThumbnail').on('slid.bs.carousel', function () {
-        index = $('#movieThumbnail > .carousel-inner > div.active').index();
-        vue.currentThumbnailIndex = index;
-    });
-    $('#moviePreview').on('slid.bs.carousel', function () {
-        index = $('#moviePreview > .carousel-inner > div.active').index();
-        vue.currentPreviewIndex = index;
-        vue.currentThumbnailIndex = Math.floor(index / 3);
-        if (lastSelectedThumbnailIndex != index) {
-            $("#movieThumbnail").carousel(Math.floor(index / 3));
-            $("#item-thumbnail-" + index).addClass("selected");
-            $("#item-thumbnail-" + lastSelectedThumbnailIndex).removeClass("selected");
-            lastSelectedThumbnailIndex = index;
-        }
-    });
 </script>
 
 
