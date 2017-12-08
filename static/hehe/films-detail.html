@@ -26,15 +26,12 @@
     <link rel="stylesheet" href="css/reset.css"/>
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="css/films-detail.css"/>
-    <link rel="stylesheet" href="css/respond.css"/>
 
     <link rel="shortcut icon" href="images/icon.png"/>
 
     <link rel="stylesheet" href="css/videojs.css">
     <link rel="stylesheet" href="css/videojs-theme.css"/>
-
     <link rel="stylesheet" href="css/index.css">
-
 
     <!-- If you'd like to support IE8 -->
     <script src="js/videojs-ie8.min.js"></script>
@@ -54,10 +51,7 @@
     <img class="fs-video-arrow-right" src="images/fs-video-arrow-right.png" onclick="nextFSVideo()">
 </div> -->
 
-<div class="fs-video-container" style="display:none;" onclick="hideFSVideoContainer()">
-    <!-- <video class="fs-video-player" src="../../static/hehe/videos/sample.mp4" preload
-    " controls="controls"
-    onclick="pauseVideo()"></video> -->
+<!-- <div class="fs-video-container" style="display:none;" onclick="hideFSVideoContainer()">
     <div class="fs-video-player" onclick="stopBubble()">
         <video id="fs-videojs-player" class="video-js vjs-fluid" controls preload="auto"
                data-setup="{}">
@@ -71,7 +65,7 @@
     <img class="fs-video-close" src="images/close.png">
     <img class="fs-video-arrow-left pc-only" src="images/fs-video-arrow-left.png" onclick="prevFSVideo()">
     <img class="fs-video-arrow-right pc-only" src="images/fs-video-arrow-right.png" onclick="nextFSVideo()">
-</div>
+</div> -->
 
 
 <div class="page" id="vue-page">
@@ -510,7 +504,7 @@
             currentThumbnailIndex: 0,
         },
         created: function () {
-            axios.get('http://staging.hehefilm.com/resources/movie/1')
+            axios.get('http://staging.hehefilm.com/resources/movie/movie_1512469716')
             .then(resp => {
                 console.log(resp.data);
             }).catch(err => {

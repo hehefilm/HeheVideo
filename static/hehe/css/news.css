@@ -15,32 +15,32 @@ a {
 
 .news-left-right {
 	display: flex;
-	margin-bottom: 8%;
-	height: 70%;
+	margin-bottom: 8vw;
+	height: 30vw;
 }
 
 .news-left {
-	width: 45%;
-	max-width: 865px;
+	width: 45vw;
+	/*max-width: 865px;*/
 	height: 100%;
-	max-height: 576px;
-	margin-left: 9%;
+	/*max-height: 576px;*/
+	margin-left: 9vw;
 	background-color: #1A1C21;
 }
 
 .news-right {
-	width: 32.5%;
-	max-width: 603px;
+	width: 32.5vw;
+	/*max-width: 603px;*/
 	height: 100%;
-	max-height: 608px;
-	margin: 0 9% 0 4.5%;
+	/*max-height: 608px;*/
+	margin: 0 9vw 0 4.5vw;
 	display: flex;
 	flex-direction: column;
 }
 
 .each-cell {
 	display: flex;
-	margin-bottom: 7.4%;
+	margin-bottom: 2.66vw;
 }
 
 .each-cell-time {
@@ -48,22 +48,27 @@ a {
 	display: flex;
 	flex-direction: column;
 	text-align: center;
-	border-radius: 4px;
-	min-width: 50px;
+	border-radius: 0.2vw;
+	width: 3.85vw;
+	height: 3.85vw;
 }
-
+.each-cell-time hr {
+	margin: 0;
+}
 .each-cell-time-month {
 	color: #FFFFFF;	
-	font-size: 1.2rem;	
-	line-height: 1.2rem;
-	margin: 13.5% 0 10.8% 0;
+	font-size: 0.625vw;	
+	line-height: 0.625vw;
+	margin: 0.52vw 0 0.52vw 0;
+	white-space: nowrap;
 }
 
 .each-cell-time-day {
 	color: #FFFFFF;	
-	font-size: 2.4rem;	
-	padding: 10.86% 0;
-	border-top: 1px solid #FFFFFF;
+	font-size: 1.25vw;
+	line-height: 1.25vw;
+	margin: 0.52vw 0;
+	/*border-top: 1px solid #FFFFFF;*/
 }
 
 .each-cell-content {
@@ -143,7 +148,7 @@ a {
 	color: #CCCCCC;
 	font-size: 1.2rem;	
 	line-height: 1.2rem;
-	margin: 7.6% 9.1% 1.6% auto;
+	margin: 11.6vw 9.1vw 1.04vw auto;
 }
 
 .news-more:hover {
@@ -170,10 +175,10 @@ a {
 }
 
 .new-bak {
-	width: 74.2%;
+	width: 74.2vw;
 	position: absolute;
-	top: 17.5%;
-	left: 12.9%;
+	top: 20vw;
+	left: 12.9vw;
 	opacity: 0.02;
 	z-index: -1;
 }

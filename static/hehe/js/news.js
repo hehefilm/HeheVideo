@@ -10,9 +10,9 @@
 //  interval: 2000
 //})
 
-var width = $(window).width();
-var hei = width/2.18;
-$('.news-div').height(hei);
+// var width = $(window).width();
+// var hei = width/2.18;
+// $('.news-div').height(hei);
 var allnews = {
 		news:[
 			{id:9527,time:'2017-10-03',title:'死亡不是永别，忘记才是',content:'作为一个郁郁寡话的创作者，时常会思考为什么皮克斯能把最简单的故事讲得那么极致，'},
@@ -46,11 +46,11 @@ function getNews(page) {
 		};
 		moreData.list = jQuery.parseJSON(rdata);
 		if (moreData.list.length > 0) {
-			data.list.concat(moreData.list);
-			Array.prototype.push.apply(data.list, moreData.list);
+			// data.list.concat(moreData.list);
+			// Array.prototype.push.apply(data.list, moreData.list);
 
-			var html = template('tpl-news-item', moreData);
-			document.getElementById('news-list').insertAdjacentHTML('beforeend', html);
+			// var html = template('tpl-news-item', moreData);
+			// document.getElementById('news-list').insertAdjacentHTML('beforeend', html);
 		}  else {
 	    	$(".news-more").css('visibility', 'hidden');
 		}
