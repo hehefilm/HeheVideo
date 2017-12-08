@@ -183,6 +183,15 @@ function nextFSVideo() {
 /**
  * hh  films  js
  */
+function maskDismiss() {
+    var mask = document.getElementById("mask");
+
+    mask.style.display = "none";
+}
+
+function mmm() {
+    
+}
 
 
 
