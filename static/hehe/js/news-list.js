@@ -10,8 +10,7 @@ var allnews = {
 			{id:1001,time:'2017-03-03',title:'看完这部电影，我觉得更丧了',content:'中肯地说，这是一部制作精良的动画片，墓地、花瓣桥、亡灵之地等景色非常美。'},
 			{id:9527,time:'2017-04-01',title:'万寿菊铺就的回忆，会否有人记得你？',content:'只是不要忘记啊。不要忘记那些此生哪怕只有一刻曾经对你重要过的人。'}
 		],
-		leftWidth:leftWidth,
-		
+		leftWidth:leftWidth,	
 };
 
 var right = {

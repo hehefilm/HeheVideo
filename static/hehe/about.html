@@ -23,14 +23,13 @@
 
     <!--CSS-->
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/reset.css"/>
     <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/news-detail.css"/>
+    <link rel="stylesheet" href="css/respond.css"/>
     <link rel="stylesheet" href="css/about.css" />
     <link rel="shortcut icon" href="images/icon.png"/>
 
-    <link rel="stylesheet" href="css/videojs.css">
-    <link rel="stylesheet" href="css/videojs-theme.css"/>
 </head>
 <body>
 
@@ -39,108 +38,9 @@
 	<my-nav></my-nav>
 </div>
 
-<div id="phone-navbar" class="nav-wai-phone" data-is-active="first" onclick="pushNav(this)">
-    <ul id="phone-ul" class="nav-phone-ul" data-is-active="">
-        <li id='nav-about'>
-            <a href='about.html' title='关于山下'>关于山下</a>
-        </li>
-
-        <li id='nav-channel'>
-            <a href="course.html" title='山下学堂'>山下学堂</a>
-        </li>
-
-        <li id='nav-channel'>
-            <a href="questions.html" title='报名咨询'>报名咨询</a>
-        </li>
-
-        <li id='nav-news'>
-            <a href='videos.html' title='山下视频'>山下视频</a>
-        </li>
-
-        <li id='nav-news'>
-            <a href='news.html' title='山下新闻'>山下新闻</a>
-        </li>
-
-        <li id='nav-blog'>
-            <a href="lab.html" title='山下实验室'>山下实验室</a>
-        </li>
-    </ul>
-    <!--<div id="phone-sign" class="nav-phone-dlzc" data-is-active="">
-        <a class="phone-signup">注册</a>
-        <a class="phone-signup">登录</a>
-    </div>-->
-    <a class="phone-signup" href="course.html">我要报名</a>
-</div>
-
-<div class="fs-video-container" style="display:none;" onclick="hideVideo()">
-    <!-- <video class="fs-video-player" src="http://qnp.shanxiaxuetang.com/about.mp4" preload
-    " controls="controls"
-    onclick="pauseVideo()"></video> -->
-    <div class="fs-video-player" onclick="stopBubble()">
-        <video id="fs-videojs-player" class="video-js vjs-fluid" controls preload="auto"
-               data-setup="{}">
-            <source src="http://qnp.shanxiaxuetang.com/about.mp4" type='video/mp4'>
-            <p class="vjs-no-js">
-              要收看此视频，请开启JavaScript功能，或者升级您的浏览器至
-              <a href="http://videojs.com/html5-video-support/">支持HTML5视频标签的浏览器</a>
-            </p>
-        </video>
-    </div>
-    <img class="fs-video-close" src="images/close.png">
-</div>
-
-<div class="about-head">
-    <!--<p class="about-head-title-en">ABOUT SHANXIA</p>-->
-    <!--<p class="about-head-title-cn">关于山下</p>-->
-    <img src="http://qnp.shanxiaxuetang.com/about-bg.jpg">
-</div>
-<!-- <div class="about-placeholder"></div> -->
-<div class="about">
-    <div class="about-container">
-        <div class="about-desc">
-            山下学堂由陈国富、周迅、陈坤
-        </div>
-        <div class="about-desc">
-            共同创办于2017年。
-        </div>
-        <div class="about-desc">
-            为了分享，为了再创造，
-        </div>
-        <div class="about-desc-last">
-            为了往下一站出发……
-        </div>
-        <div class="promo" onclick="showVideo()">
-            <img src="images/sx_video_play.png" class="promo-play">
-        </div>
-
-        <div class="index-founder-title">创始人｜FOUNDERS</div>
-
-        <div class="index-founder-list">
-            <div class="index-founder-item">
-                <div class="index-founder-item-avatar">
-                    <img src="http://qnp.shanxiaxuetang.com/index-founder-chenkuofu.png">
-                </div>
-                <div class="index-founder-item-right">
-                    <div class="index-founder-item-name">陈国富</div>
-                </div>
-            </div>
-            <div class="index-founder-item">
-                <div class="index-founder-item-avatar">
-                    <img src="http://qnp.shanxiaxuetang.com/index-founder-zhouxun.png">
-                </div>
-                <div class="index-founder-item-right">
-                    <div class="index-founder-item-name">周迅</div>
-                </div>
-            </div>
-            <div class="index-founder-item">
-                <div class="index-founder-item-avatar">
-                    <img src="http://qnp.shanxiaxuetang.com/index-founder-chenkun.png">
-                </div>
-                <div class="index-founder-item-right">
-                    <div class="index-founder-item-name">陈坤</div>
-                </div>
-            </div>
-        </div>
+<div class="news">
+    <div id="news-detail" class="news-container">
+		
     </div>
 </div>
 
@@ -149,49 +49,17 @@
     <my-footer></my-footer>
 </div>
 
-
-
 <!--JS-->
 <script src="js/vue.js"></script>
 <script src="js/jquery-1.11.3.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/nav.js"></script>
-<script type="text/javascript" src="js/videojs.min.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/respond.js"></script>
+<script type="text/javascript" src="js/about.js"></script>
 <script>
-    function showVideo(event) {
-        $(".fs-video-container").show();
-        openMask();
-        var videoPlayer = videojs('fs-videojs-player');
-        videoPlayer.play();
-    }
-
-    function hideVideo(event) {
-        $(".fs-video-container").hide();
-        closeMask();
-        var videoPlayer = videojs('fs-videojs-player');
-        videoPlayer.pause();
-        videoPlayer.currentTime(0);
-    }
-	if(wxopen.isWeiXin){
-		$.get("https://shanxiaxuetang.com/sign/get_ticket",{
-			url:window.location.href
-		},
-		function(data,status){
-			var jdata = $.parseJSON(data);
-			wxopen.shareData.appid = jdata.data.appid;
-			wxopen.timestamp = jdata.data.timestamp;
-			wxopen.nonceStr = jdata.data.noncestr;
-			wxopen.signature = jdata.data.signature;
-			wxopen.shareData.title = "陈国富、 周迅、 陈坤共同创办山下学堂";
-			wxopen.shareData.desc = "在这里我们一同探索、一同实验、 一同成长。";
-			wxopen.shareData.link = "https://shanxiaxuetang.com";
-			wxopen.shareData.imgUrl = "http://qnp.shanxiaxuetang.com/sx_logo.png"
-			wxopen.config();
-		});
-	}
+	
     
 </script>
-
 
 </body>
 </html>
