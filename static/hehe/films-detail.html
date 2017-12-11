@@ -31,10 +31,13 @@
 
     <link rel="stylesheet" href="css/videojs.css">
     <link rel="stylesheet" href="css/videojs-theme.css"/>
-    <link rel="stylesheet" href="css/index.css">
+    <!-- <link rel="stylesheet" href="css/index.css"> -->
 
     <!-- If you'd like to support IE8 -->
     <script src="js/videojs-ie8.min.js"></script>
+
+    <link href="https://cdn.bootcss.com/slick-carousel/1.8.1/slick.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/slick-carousel/1.8.1/slick-theme.min.css" rel="stylesheet">
 </head>
 <body class="index-bg">
 
@@ -120,7 +123,7 @@
 
     <div class="film-info">
         <div class="film-info-left">
-            <p>{{title}}</p>
+            <p v-bind:class="title.length > 10 ? 'left-align':''">{{title}}</p>
             <img v-bind:src="poster">
             <a v-if="store" v-bind:href="store">
                 <p>购买周边</p>
@@ -230,6 +233,19 @@
 
     </div>
 
+    <div class="film-videos">
+        <div class="your-class" style="width: 100%; height: 27.92vw;">
+            <div style="margin-right: 20px;">
+                <img style="height: 27.92vw;" id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
+            </div>
+            <div style="margin-right: 20px;">
+                <img style="height: 27.92vw;" id="jlp" src="images/films-cover-demo.jpg">
+            </div>
+            <div style="margin-right: 20px;">
+                <img style="height: 27.92vw;" id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-3.jpg">
+            </div>
+        </div>
+    </div>
 
     <!--hh 海报-->
     <div class="hh-video">
@@ -449,8 +465,22 @@
 <script src="js/nav.js"></script>
 <script src="js/videojs.min.js"></script>
 <script src="js/films-detail.js"></script>
+<script src="https://cdn.bootcss.com/slick-carousel/1.8.1/slick.min.js"></script>
 
 <script>
+
+    $(document).ready(function(){
+        $('.your-class').slick({
+            // dots: true,
+            infinite: false,
+            // slidesToShow: 4,
+            variableWidth: true,
+            arrows: true,
+            // centerPadding: '40px',
+            // centerMode: true,
+        });
+    });
+
     function GetQueryString(name) {  
         var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");  
         var r = window.location.search.substr(1).match(reg);  //获取url中"?"符后的字符串并正则匹配
@@ -480,7 +510,7 @@
     var vue = new Vue({
         el: '#vue-page',
         data: {
-            title: "《西游2伏妖篇》",
+            title: "《西游2伏妖篇西游2伏妖篇西游2伏妖篇》",
             poster: "images/films-cover-demo.jpg",
             store: "https://www.taobao.com/",
             director: "徐克", //导演
