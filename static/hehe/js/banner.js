@@ -1,9 +1,11 @@
+var bannerHeight = $(document.body).height()*0.915;
 
 var banner = [];
 new Vue({
-	el:'#myCarousel',
+	el:'#mysection',
 	data:{
-		banner:banner
+		banner:banner,
+		bannerHeight:bannerHeight
 	},
 	created: function() {
 		this.getBanner();
@@ -30,7 +32,7 @@ new Vue({
 $(document).ready(function(){
 	// invoke the carousel
     $('#myCarousel').carousel({
-      interval: false
+      interval: 5000
     });
 
 	// scroll slides on mouse scroll 
