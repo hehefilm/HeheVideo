@@ -155,10 +155,6 @@ a {
 	color: white;
 }
 
-[v-cloak] {
-    display: none;
-}
-
 .carousel-inner > .item {
 	height: 100%;
 }
