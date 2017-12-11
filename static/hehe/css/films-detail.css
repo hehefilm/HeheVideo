@@ -129,6 +129,10 @@
 	font-size: 4.2rem;
 	line-height: 100%;
 	margin-bottom: 1.3vw;
+	white-space: nowrap;
+}
+.left-align {
+	align-self: left;
 }
 .film-info-left > img {
 	width: 22.3vw;
@@ -340,4 +344,100 @@
 }
 #movieThumbnail a img {
 	height: 1.2vw;
+}
+
+.video-line-left {
+    height: 1px;
+    width: 4.48%;
+    /*border: 1px solid #FFFFFF;*/
+    background-color: #FFFFFF;
+    margin: auto 1.354% auto auto;
+
+}
+
+.video-line-right {
+    height: 1px;
+    width: 4.48%;
+    /*border: 1px solid #FFFFFF;*/
+    background-color: #FFFFFF;
+    margin: auto auto auto 1.354%;
+}
+
+.hh-video {
+    background-color: #1a1c21;
+    max-width: 1920px;
+}
+
+.hh-video-title {
+    color: #FFFFFF;
+    font-size: 1.8rem;
+    line-height: 100%;
+}
+
+.video-top {
+    text-align: center;
+    flex-direction: row;
+    display: flex;
+    /*width: 200px;*/
+    margin: 4.2vw auto 0px auto;
+}
+
+.video-content-left {
+    height: 100%;
+    width: 9.27vw;
+    display: flex;
+    transition: all 0.3s;
+}
+
+.video-content-left:hover{
+    background-color: rgba(0,0,0,0.2);
+}
+.video-content-right:hover{
+    background-color: rgba(0,0,0,0.2);
+}
+
+.video-content-right {
+    height: 100%;
+    width: 9.27vw;
+    display: flex;
+    opacity:1;
+    transition: all 0.3s;
+}
+
+.hh-video-content-slide{
+    width: 81.7vw;
+    margin: auto;
+}
+
+.arrow-left {
+    /*height: 2.9%;*/
+    width: 1.354vw;
+    /*width: 26px;*/
+    margin: auto 1.82vw auto auto;
+}
+
+.arrow-right {
+    /*height: 2.9%;*/
+    width: 1.354vw;
+    /*width: 26px;*/
+    /*height: 56px;*/
+    margin: auto auto auto 1.82vw;
+}
+
+.video-content {
+    margin-top: 4.2vw;
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+}
+
+.hh-partners {
+    background-color: #1a1c21;
+    max-width: 1920px;
+}
+
+.index-video {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 }
