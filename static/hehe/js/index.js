@@ -1,7 +1,38 @@
 var vue = new Vue({
     el: '#vue-page',
     data: {
-        more: false,
+        films_li:[
+            {
+                movie_li: [
+                    {
+                        "movie_id": "movie_001",
+                        "title": "美人鱼", //片名
+                    },
+
+                ]
+        },
+            {
+                movie_li: [
+                    {
+                        "movie_id": "movie_001",
+                        "title": "美人鱼a", //片名
+
+                    },
+                ]
+
+          },
+
+            {
+                movie_li: [
+                    {
+                        "movie_id": "movie_001",
+                        "title": "美人鱼a", //片名
+
+                    },
+                ]
+
+            }
+        ],
         movie_li: [
             {
                 // "movie_id": "movie_001",
@@ -28,12 +59,27 @@ var vue = new Vue({
 
     },
     created: function () {
-        axios.get('http://staging.hehefilm.com/resources/movie?pg=1&num=16')
+        axios.get('http://staging.hehefilm.com/resources/movie?pg=1&num=50')
             .then(resp => {
-                this.movie_li = resp.data.movie_li;
-                if (this.movie_li.length >= 16) {
-                    this.more = true;
-                }        // console.log(resp.data);
+                var list=resp.data.movie_li;
+                for (var i=0;i<10;i++){
+                    list=list.concat(resp.data.movie_li);
+                }
+                var number=8;
+                var objectLi;
+                if (list.length>number){
+                    for (var i=0;number*i<list.length;i++){
+                        if(i*number+number>list.length){
+                            this.films_li[i].movie_li=list.slice(i*number,list.length);
+                        }else{
+                            this.films_li[i].movie_li=list.slice(i*number,(i+1)*number);
+                        }
+                    }
+                }else{
+                    this.films_li[i].movie_li=list.slice(0,list.length);
+                }
+                // this.films_li=objectLi;
+                console.log(this.films_li);
             }).catch(err => {
             console.log('请求失败：' + err.status + ',' + err.statusText);
         })
@@ -47,8 +93,7 @@ var vue = new Vue({
         initMore: function (page, number) {
             this.more = false;
         }
-    },
-
+    }
 });
 
 // var data = {list: []};

@@ -119,7 +119,7 @@
         <div class="video-line-right"></div>
     </div>
 
-    <div class="video-content">
+    <div class="video-content" id="vue-page">
 
         <div id="myCarousel" class="carousel slide  index-video">
             <!-- 轮播（Carousel）项目 -->
@@ -127,152 +127,35 @@
             <a class="video-content-left" href="#myCarousel"
                data-slide="prev">
                 <!--<div class="video-content-left">-->
-                    <img class="arrow-left" src="../../static/hehe/images/arrow-left-hh.png">
+                <img class="arrow-left" src="../../static/hehe/images/arrow-left-hh.png">
                 <!--</div>-->
             </a>
             <div class="hh-video-content-slide">
                 <div class="carousel-inner ">
-                    <div class="item active">
-
+                    <div v-for="(film,index) in films_li" v-bind:class="index==0?'item active':'item'">
+                        {{index}}
                         <div class="video-content-center row">
-                            <li class="hh-video-img-div col-md-3 col-sm-3 col-xs-3">
-                                <div class="index-course-item-img">
-                                    <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
-                                    <div class="index-course-item-shadow">
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="hh-video-img-div col-md-3 col-sm-3 col-xs-3">
-                                <div class="index-course-item-img">
-                                    <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
-                                    <div class="index-course-item-shadow">
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="hh-video-img-div col-md-3 col-sm-3 col-xs-3">
-                                <div class="index-course-item-img">
-                                    <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
-                                    <div class="index-course-item-shadow">
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="hh-video-img-div col-md-3 col-sm-3 col-xs-3">
-                                <div class="index-course-item-img">
-                                    <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
-                                    <div class="index-course-item-shadow">
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="hh-video-img-div col-md-3 col-sm-3 col-xs-3">
-                                <div class="index-course-item-img">
-                                    <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
-                                    <div class="index-course-item-shadow">
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="hh-video-img-div col-md-3 col-sm-3 col-xs-3">
-                                <div class="index-course-item-img">
-                                    <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
-                                    <div class="index-course-item-shadow">
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="hh-video-img-div col-md-3 col-sm-3 col-xs-3">
-                                <div class="index-course-item-img">
-                                    <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
-                                    <div class="index-course-item-shadow">
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="hh-video-img-div col-md-3 col-sm-3 col-xs-3">
-                                <div class="index-course-item-img">
-                                    <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
-                                    <div class="index-course-item-shadow">
-                                    </div>
-                                </div>
-                            </li>
-
-
+                            <div v-for="movie in film.movie_li">
+                                <a v-bind:href="'../../static/hehe/films-detail.html?movie_id='+movie.movie_id">
+                                    <li class="hh-video-img-div col-md-3 col-sm-3 col-xs-3">
+                                        <div class="index-course-item-img">
+                                            <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
+                                            <div class="index-course-item-shadow">
+                                            </div>
+                                        </div>
+                                    </li>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="item">
-
-                        <!--<img src="http://qnp.shanxiaxuetang.com/index-course-1.jpg" alt="Second slide">-->
-                        <li class="hh-video-img-div col-md-3 col-sm-3 col-xs-3">
-                            <div class="index-course-item-img">
-                                <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-2.jpg">
-                                <div class="index-course-item-shadow">
-                                </div>
-                            </div>
-                        </li>
-                        <li class="hh-video-img-div col-md-3 col-sm-3 col-xs-3">
-                            <div class="index-course-item-img">
-                                <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-2.jpg">
-                                <div class="index-course-item-shadow">
-                                </div>
-                            </div>
-                        </li>
-                        <li class="hh-video-img-div col-md-3 col-sm-3 col-xs-3">
-                            <div class="index-course-item-img">
-                                <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-2.jpg">
-                                <div class="index-course-item-shadow">
-                                </div>
-                            </div>
-                        </li>
-                        <li class="hh-video-img-div col-md-3 col-sm-3 col-xs-3">
-                            <div class="index-course-item-img">
-                                <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-2.jpg">
-                                <div class="index-course-item-shadow">
-                                </div>
-                            </div>
-                        </li>
-                    </div>
-                    <div class="item">
-                        <!--<img src="http://qnp.shanxiaxuetang.com/index-course-1.jpg" alt="Third slide">-->
-                        <li class="hh-video-img-div col-md-3 col-sm-3 col-xs-3">
-                            <div class="index-course-item-img">
-                                <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-3.jpg">
-                                <div class="index-course-item-shadow">
-                                </div>
-                            </div>
-                        </li>
-                        <li class="hh-video-img-div col-md-3 col-sm-3 col-xs-3">
-                            <div class="index-course-item-img">
-                                <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-3.jpg">
-                                <div class="index-course-item-shadow">
-                                </div>
-                            </div>
-                        </li>
-                        <li class="hh-video-img-div col-md-3 col-sm-3 col-xs-3">
-                            <div class="index-course-item-img">
-                                <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-3.jpg">
-                                <div class="index-course-item-shadow">
-                                </div>
-                            </div>
-                        </li>
-                        <li class="hh-video-img-div col-md-3 col-sm-3 col-xs-3">
-                            <div class="index-course-item-img">
-                                <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-3.jpg">
-                                <div class="index-course-item-shadow">
-                                </div>
-                            </div>
-                        </li>
                     </div>
                 </div>
             </div>
 
-                <a class="video-content-right" href="#myCarousel"
-                   data-slide="next">
-                    <img class="arrow-right" src="../../static/hehe/images/arrow-right-hh.png">
-                </a>
-            
+            <a class="video-content-right" href="#myCarousel"
+               data-slide="next">
+                <img class="arrow-right" src="../../static/hehe/images/arrow-right-hh.png">
+            </a>
+
         </div>
 
     </div>
@@ -315,6 +198,10 @@
 <script type="text/javascript" src="../../static/hehe/js/nav.js"></script>
 <script type="text/javascript" src="../../static/hehe/js/banner.js"></script>
 <script type="text/javascript" src="../../static/hehe/js/videojs.min.js"></script>
+
+<script src="https://cdn.bootcss.com/axios/0.17.1/axios.min.js"></script>
+
+<script type="text/javascript" src="../../static/hehe/js/index.js"></script>
 
 <script>
 
