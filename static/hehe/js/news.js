@@ -1,18 +1,4 @@
-//page data
 
-//$(document).ready(function(){
-//	
-//	
-//	
-//});
-//
-//$('#news-left').carousel({
-//  interval: 2000
-//})
-
-// var width = $(window).width();
-// var hei = width/2.18;
-// $('.news-div').height(hei);
 var allnews = {
 		news:[
 			{id:9527,time:'2017-10-03',title:'死亡不是永别，忘记才是',content:'作为一个郁郁寡话的创作者，时常会思考为什么皮克斯能把最简单的故事讲得那么极致，'},
@@ -24,7 +10,12 @@ var allnews = {
 };
 new Vue({
 	el:'.news-left',
-	data:allnews,
+	data:{
+		news:[],
+	},
+	created: function() {
+		alert('有哟');
+	},
 	methods:{
 	},
 });
