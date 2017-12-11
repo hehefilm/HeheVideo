@@ -83,9 +83,8 @@
 
         <div class="film-content">
             <div class="film-content-center row">
-
                 <div v-for="(film, index) of movie_li">
-                    <a href="films-detail.html?movie_id={{film.movie_id}}">
+                    <a  v-bind:href="'films-detail.html?movie_id='+film.movie_id">
                         <li class="hh-film-img-div col-md-3 col-sm-3 col-xs-3">
                             <div class="film-item-img">
                                 <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
@@ -96,7 +95,6 @@
                         </li>
                     </a>
                 </div>
-
             </div>
 
         </div>
@@ -128,9 +126,11 @@
 <script src="js/respond.js"></script>
 <script src="js/template-web.js"></script>
 <script type="text/javascript" src="js/videojs.min.js"></script>
-<script type="text/javascript" src="js/films.js"></script>
+<script src="https://cdn.bootcss.com/vue/2.5.9/vue.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/axios/0.17.1/axios.min.js"></script>
 
-<!-- <script type="text/javascript" src="js/films-detail.js"></script> -->
+ <script type="text/javascript" src="js/films.js"></script>
 <script>
 
 
