@@ -3,7 +3,7 @@
  */
 Vue.component('my-nav',{
 	template:'\
-		<nav class="navbar navbar-inverse navbar-fixed-top nav-out" role="navigation">\
+		<nav class="navbar-inverse navbar-fixed-top nav-out" role="navigation">\
 			<div class="nav-wai">\
 				<a id="pcLogo" class="nav-brand" href="../../static/hehe/index.html#Slider">\
 					<img class="nav-brand" src="../../static/hehe/images/logo.png"/>\
@@ -13,7 +13,7 @@ Vue.component('my-nav',{
 						<a href="../../static/hehe/about.html" title="关于我们">关于我们</a>\
 					</li>\
 					<li>\
-						<a href="../../static/hehe/films-detail.html" title="影视作品">影视作品</a>\
+						<a href="../../static/hehe/films.html" title="影视作品">影视作品</a>\
 					</li>\
 					<li>\
 						<a href="../../static/hehe/news.html" title="新闻资讯">新闻资讯</a>\
