@@ -451,6 +451,16 @@
 <script src="js/films-detail.js"></script>
 
 <script>
+    function GetQueryString(name) {  
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");  
+        var r = window.location.search.substr(1).match(reg);  //获取url中"?"符后的字符串并正则匹配
+        var context = "";  
+        if (r != null)  
+             context = r[2];  
+        reg = null;  
+        r = null;  
+        return context == null || context == "" || context == "undefined" ? "" : context;  
+    }
 
     var navHeight = $(window).width() * 0.055;
     $("#my-nav").css('background-color', 'transparent');
@@ -464,6 +474,9 @@
         }
     }
 
+    if (!GetQueryString('movie_id')) {
+        window.location = "index.html";
+    }
     var vue = new Vue({
         el: '#vue-page',
         data: {
@@ -520,7 +533,7 @@
             currentThumbnailIndex: 0,
         },
         created: function () {
-            axios.get('http://staging.hehefilm.com/resources/movie/movie_1512469716')
+            axios.get('http://staging.hehefilm.com/resources/movie/' + GetQueryString('movie_id'))
             .then(resp => {
                 console.log(resp.data);
             }).catch(err => {
