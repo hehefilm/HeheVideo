@@ -2,7 +2,7 @@ var vue = new Vue({
     el: '#vue-page',
     data: {
         page:1,
-        more: false,
+        more: true,
         movie_li: [
             {
                 // "movie_id": "movie_001",
