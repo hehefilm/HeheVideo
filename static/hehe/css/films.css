@@ -9,11 +9,12 @@
 }
 
 .film-content {
-    margin-top: 3.385%;
+    /*margin-top: 3.385%;*/
     width: 100%;
     max-width: 1920px;
     flex-direction: row;
     display: flex;
+    margin: 3.385% auto 1.9% auto;
 }
 
 .film-content-center {
@@ -30,7 +31,7 @@
 .film-more {
     width: 38%;
     height: 72px;
-    margin: 1.9% auto 1.9% auto;
+    margin: 0 auto 1.9% auto;
     display: flex;
     background-color: rgba(255, 255, 255, 0.03);
     color: #999999;
@@ -58,6 +59,8 @@
 
 .film-item-img {
     overflow: hidden;
+    width: 20.3vw;
+    height: 13.75vw;
 }
 
 .film-item-shadow {
