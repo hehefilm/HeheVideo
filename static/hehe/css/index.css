@@ -305,11 +305,15 @@
     transition: all 0.3s;
 }
 .hh-video-content-slide{
-    width: 81.7%;
+    width: 100%;
     margin: auto;
     height: auto;
 }
-
+.video-item-img{
+    /*overflow: hidden;*/
+    /*width: 20.4vw;*/
+    /*height: 13.75vw;*/
+}
 .arrow-left {
     /*height: 2.9%;*/
     /*width: 1.354%;*/
