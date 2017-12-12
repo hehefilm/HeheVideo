@@ -55,12 +55,11 @@ body {
 	background-color: #1A1C21;
 }
 body #my-nav {
-	height: 8.3vh;
+	height: 5.5vw;
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
-    z-index: 1;
 }
 
 ol, ul {

@@ -19,7 +19,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#861519">
 
 
-    <title>新闻</title>
+    <title>新闻咨询</title>
 
     <!--CSS-->
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -42,7 +42,7 @@
 <div class="news-div">
 	<a class="news-more" href="news-list.html">更多 &raquo;</a>
 	<div class="news-left-right">
-		<div id="news-left" class="carousel slide">
+		<div id="news-left" class="news-left carousel slide">
 			<!-- 轮播（Carousel）指标 -->
 			<ol class="carousel-indicators">
 				<template v-for="(anew,index) in news">
@@ -52,7 +52,7 @@
 			<!-- 轮播（Carousel）项目 -->
 			<div class="carousel-inner" style="height: 100%;border: 1px solid rgba(255,255,255,0.5);">
 				<template v-for="(anew,index) in news">
-					<div class="item" v-bind:class='{active:index==0}'>
+					<div class="item" v-bind:class='{active:index==0}' v-on:click="toNewsDetail(anew.news_id)">
 						<div class="show" v-bind:style="{'background-image' : 'url('+'http://staging.hehefilm.com'+anew.ncover+')'}">
 						
 						</div>
@@ -66,7 +66,7 @@
 			</div>
 			
 		</div>
-		<div id="news-right">
+		<div id="news-right" class="news-right">
 			<template v-for="(anew,index) in news">
 				<div class="each-cell" v-bind:style="index == news.length-1 ? 'margin-bottom: 0' : ''">
 					<div class="each-cell-time" v-cloak>
@@ -75,7 +75,7 @@
 						<p class="each-cell-time-day">{{anew.ndate.split('-')[2]}}</p>
 					</div>
 					<div class="each-cell-content" v-cloak>
-						<a>{{anew.ntitle}}</a>
+						<a v-bind:href="'news-detail.html?nid='+anew.news_id">{{anew.ntitle}}</a>
 						<p>{{anew.nsubtitle}}</p>
 					</div>
 				</div>

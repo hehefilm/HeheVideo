@@ -1,11 +1,9 @@
-var bannerHeight = $(document.body).height()*0.915;
 
 var banner = [];
 new Vue({
 	el:'#mysection',
 	data:{
 		banner:banner,
-		bannerHeight:bannerHeight
 	},
 	created: function() {
 		this.getBanner();
@@ -31,7 +29,7 @@ new Vue({
 
 $(document).ready(function(){
 	// invoke the carousel
-    $('#myCarousel').carousel({
+    $('#mybanner').carousel({
       interval: 5000
     });
 
@@ -50,7 +48,7 @@ $(document).ready(function(){
 
 	//scroll slides on swipe for touch enabled devices 
 
- 	$("#myCarousel").on("touchstart", function(event){
+ 	$("#mybanner").on("touchstart", function(event){
  
         var yClick = event.originalEvent.touches[0].pageY;
     	$(this).one("touchmove", function(event){
