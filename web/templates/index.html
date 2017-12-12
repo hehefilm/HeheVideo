@@ -46,14 +46,14 @@
 <!--Slider BEGIN-->	
 <section id="mysection" class="slide-wrapper">
 	<div class="container" v-bind:style="{height:bannerHeight+'px'}">
-		<div id="myCarousel" class="carousel slide">
+		<div id="mybanner" class="carousel slide">
 			
 		  	<!-- Indicators -->
 		  	<div class="carousel-indicators-div">
 		  		<hr />
 		    	<ol class="carousel-indicators">
 		    		<template v-for="(bn,index) in banner">
-						<li data-target="#myCarousel" v-bind:data-slide-to="index" v-bind:class='{active:index==0}'>{{index+1}}</li>
+						<li data-target="#mybanner" v-bind:data-slide-to="index" v-bind:class='{active:index==0}'>{{index+1}}</li>
 					</template>
 		   	 	</ol>
 		  	</div>
