@@ -38,6 +38,8 @@
 
     <link href="https://cdn.bootcss.com/slick-carousel/1.8.1/slick.min.css" rel="stylesheet">
     <link href="https://cdn.bootcss.com/slick-carousel/1.8.1/slick-theme.min.css" rel="stylesheet">
+
+    <link href="https://cdn.bootcss.com/fancybox/3.2.5/jquery.fancybox.min.css" rel="stylesheet">
 </head>
 <body class="index-bg">
 
@@ -176,7 +178,7 @@
     </div>
 
     <div class="film-videos">
-        <div class="film-videos-head">
+        <div class="film-section-head">
             <hr>
             <p>预告片</p>
             <hr>
@@ -233,222 +235,71 @@
 
     </div>
 
-    <div class="film-videos">
-        <div class="your-class" style="width: 100%; height: 27.92vw;">
-            <div style="margin-right: 20px;">
-                <img style="height: 27.92vw;" id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
-            </div>
-            <div style="margin-right: 20px;">
-                <img style="height: 27.92vw;" id="jlp" src="images/films-cover-demo.jpg">
-            </div>
-            <div style="margin-right: 20px;">
-                <img style="height: 27.92vw;" id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-3.jpg">
-            </div>
+    <div class="film-posters">
+        <div class="film-section-head">
+            <hr>
+            <p>海报</p>
+            <hr>
         </div>
-    </div>
-
-    <!--hh 海报-->
-    <div class="hh-video">
-
-        <div class="video-top">
-            <div class="video-line-left"></div>
-            <div class="hh-video-title">海报</div>
-            <div class="video-line-right"></div>
-        </div>
-
-
-        <div class="video-content">
-
-            <div id="myCarousel" class="carousel slide  index-video">
-                <!-- 轮播（Carousel）项目 -->
-                <!-- 轮播（Carousel）导航 -->
-                <a class="video-content-left" href="#myCarousel"
-                   data-slide="prev">
-                    <!--<div class="">-->
-                    <img class="arrow-left" src="../../static/hehe/images/arrow-left-hh.png">
-                    <!--</div>-->
-                </a>
-                <div class="hh-video-content-slide">
-
-                    <div class="carousel-inner ">
-                        <div class="item active">
-
-                            <div class="video-content-center row">
-                                <li class="sx-school-img-div col-md-3 col-sm-3 col-xs-3"  v-on:click="showImageBig">
-                                    <div class="index-course-item-img">
-                                        <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
-                                        <div class="index-course-item-shadow">
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li class="hh-video-img-div col-md-3 col-sm-3 col-xs-3" v-on:click="showImageBig">
-                                    <div class="index-course-item-img">
-                                        <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
-                                        <div class="index-course-item-shadow">
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li class="hh-video-img-div col-md-3 col-sm-3 col-xs-3">
-                                    <div class="index-course-item-img">
-                                        <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
-                                        <div class="index-course-item-shadow">
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li class="hh-video-img-div col-md-3 col-sm-3 col-xs-3">
-                                    <div class="index-course-item-img">
-                                        <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
-                                        <div class="index-course-item-shadow">
-                                        </div>
-                                    </div>
-                                </li>
-                            </div>
-                        </div>
-                        <div class="item">
-
-                            <!--<img src="http://qnp.shanxiaxuetang.com/index-course-1.jpg" alt="Second slide">-->
-                            <li class="hh-video-img-div col-md-3 col-sm-3 col-xs-3">
-                                <div class="index-course-item-img">
-                                    <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-2.jpg">
-                                    <div class="index-course-item-shadow">
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="hh-video-img-div col-md-3 col-sm-3 col-xs-3">
-                                <div class="index-course-item-img">
-                                    <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-2.jpg">
-                                    <div class="index-course-item-shadow">
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="hh-video-img-div col-md-3 col-sm-3 col-xs-3">
-                                <div class="index-course-item-img">
-                                    <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-2.jpg">
-                                    <div class="index-course-item-shadow">
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="hh-video-img-div col-md-3 col-sm-3 col-xs-3">
-                                <div class="index-course-item-img">
-                                    <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-2.jpg">
-                                    <div class="index-course-item-shadow">
-                                    </div>
-                                </div>
-                            </li>
-                        </div>
-                    </div>
+        <div class="film-posters-carousel">
+            <a class="film-posters-arrow-left" id="film-posters-left">
+                <img src="../../static/hehe/images/arrow-left-hh.png">
+            </a>
+            <div class="film-posters-slides" id="film-posters-slides">
+                <div class="film-poster">
+                    <a data-fancybox="film-poster" href="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
+                        <img src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
+                    </a>
                 </div>
-                <a class=" video-content-right" href="#myCarousel"
-                   data-slide="next">
-                    <!--<div class="">-->
-                    <img class="arrow-right" src="../../static/hehe/images/arrow-right-hh.png">
-                    <!--</div>-->
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- 剧照-->
-    <div class="hh-partners">
-        <div class="video-top">
-            <div class="video-line-left"></div>
-            <div class="hh-video-title">剧照</div>
-            <div class="video-line-right"></div>
-        </div>
-
-        <div class="video-content">
-
-            <div id="myCarousel2" class="carousel slide  index-video">
-                <!-- 轮播（Carousel）项目 -->
-                <!-- 轮播（Carousel）导航 -->
-                <a class="video-content-left" href="#myCarousel2"
-                   data-slide="prev">
-                    <!--<div class="video-content-left">-->
-                    <img class="arrow-left" src="../../static/hehe/images/arrow-left-hh.png">
-                    <!--</div>-->
-                </a>
-                <div class="hh-video-content-slide">
-                    <div class="carousel-inner ">
-                        <div class="item active">
-                            <div class="video-content-center row">
-                                <li class="hh-video-img-div col-md-4 col-sm-4 col-xs-4">
-                                    <div class="index-course-item-img">
-                                        <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
-                                        <div class="index-course-item-shadow">
-                                        </div>
-                                    </div>
-                                </li>
-
-
-                                <li class="hh-video-img-div col-md-4 col-sm-4 col-xs-4">
-                                    <div class="index-course-item-img">
-                                        <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
-                                        <div class="index-course-item-shadow">
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li class="hh-video-img-div col-md-4 col-sm-4 col-xs-4">
-                                    <div class="index-course-item-img">
-                                        <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
-                                        <div class="index-course-item-shadow">
-                                        </div>
-                                    </div>
-                                </li>
-                            </div>
-                        </div>
-                        <div class="item">
-
-                            <!--<img src="http://qnp.shanxiaxuetang.com/index-course-1.jpg" alt="Second slide">-->
-                            <li class="hh-video-img-div col-md-4 col-sm-4 col-xs-4">
-                                <div class="index-course-item-img">
-                                    <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-2.jpg">
-                                    <div class="index-course-item-shadow">
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="hh-video-img-div col-md-4 col-sm-4 col-xs-4">
-                                <div class="index-course-item-img">
-                                    <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-2.jpg">
-                                    <div class="index-course-item-shadow">
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="hh-video-img-div col-md-4 col-sm-4 col-xs-4">
-                                <div class="index-course-item-img">
-                                    <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-2.jpg">
-                                    <div class="index-course-item-shadow">
-                                    </div>
-                                </div>
-                            </li>
-
-                        </div>
-                    </div>
+                <div class="film-poster">
+                    <a data-fancybox="film-poster" href="images/films-cover-demo.jpg">
+                        <img src="images/films-cover-demo.jpg">
+                    </a>
                 </div>
-                <a class=" video-content-right" href="#myCarousel2"
-                   data-slide="next">
-                    <img class="arrow-right" src="../../static/hehe/images/arrow-right-hh.png">
-                </a>
-
+                <div class="film-poster">
+                    <a data-fancybox="film-poster" href="http://qnp.shanxiaxuetang.com/index-course-3.jpg">
+                        <img src="http://qnp.shanxiaxuetang.com/index-course-3.jpg">
+                    </a>
+                </div>
             </div>
-
+            <a class="film-posters-arrow-right" id="film-posters-right">
+                <img src="../../static/hehe/images/arrow-right-hh.png">
+            </a>
         </div>
-
-
     </div>
 
-
-
+    <div class="film-posters" style="padding-bottom: 8.07vw;">
+        <div class="film-section-head">
+            <hr>
+            <p>剧照</p>
+            <hr>
+        </div>
+        <div class="film-posters-carousel">
+            <a class="film-posters-arrow-left" id="film-images-left">
+                <img src="../../static/hehe/images/arrow-left-hh.png">
+            </a>
+            <div class="film-posters-slides" id="film-images-slides">
+                <div class="film-poster">
+                    <a data-fancybox="film-images" href="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
+                        <img src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
+                    </a>
+                </div>
+                <div class="film-poster">
+                    <a data-fancybox="film-images" href="images/films-cover-demo.jpg">
+                        <img src="images/films-cover-demo.jpg">
+                    </a>
+                </div>
+                <div class="film-poster">
+                    <a data-fancybox="film-images" href="http://qnp.shanxiaxuetang.com/index-course-3.jpg">
+                        <img src="http://qnp.shanxiaxuetang.com/index-course-3.jpg">
+                    </a>
+                </div>
+            </div>
+            <a class="film-posters-arrow-right" id="film-images-right">
+                <img src="../../static/hehe/images/arrow-right-hh.png">
+            </a>
+        </div>
+    </div>
 </div>
 
 
@@ -466,19 +317,46 @@
 <script src="js/videojs.min.js"></script>
 <script src="js/films-detail.js"></script>
 <script src="https://cdn.bootcss.com/slick-carousel/1.8.1/slick.min.js"></script>
-
+<script src="https://cdn.bootcss.com/fancybox/3.2.5/jquery.fancybox.min.js"></script>
 <script>
 
     $(document).ready(function(){
-        $('.your-class').slick({
+        $('#film-posters-slides').slick({
             // dots: true,
             infinite: false,
             // slidesToShow: 4,
             variableWidth: true,
             arrows: true,
+            prevArrow: $("#film-posters-left"),
+            nextArrow: $("#film-posters-right"),
             // centerPadding: '40px',
             // centerMode: true,
         });
+        $('#film-images-slides').slick({
+            // dots: true,
+            infinite: false,
+            // slidesToShow: 4,
+            variableWidth: true,
+            arrows: true,
+            prevArrow: $("#film-images-left"),
+            nextArrow: $("#film-images-right"),
+            // centerPadding: '40px',
+            // centerMode: true,
+        });
+
+        $('[data-fancybox]').fancybox({
+            infobar: false,
+            toolbar: false,
+            idleTime: 0,
+            btnTpl: {
+                arrowLeft: '<button data-fancybox-prev class="fancybox-button fancybox-button--arrow_left" title="{{PREV}}">' +
+                        '<img src="../../static/hehe/images/arrow-left-hh.png">' +
+                      '</button>',
+                arrowRight: '<button data-fancybox-next class="fancybox-button fancybox-button--arrow_right" title="{{NEXT}}">' +
+                        '<img src="../../static/hehe/images/arrow-right-hh.png">' +
+                      '</button>',
+            }
+        })
     });
 
     function GetQueryString(name) {  
@@ -493,7 +371,14 @@
     }
 
     var navHeight = $(window).width() * 0.055;
-    $("#my-nav").css('background-color', 'transparent');
+
+    var t = document.documentElement.scrollTop || document.body.scrollTop;
+    if (t >= navHeight) {
+        $("#my-nav").css('background-color', '#1A1C21');
+    } else {
+        $("#my-nav").css('background-color', 'transparent');
+    }
+
     window.onscroll = function () {
         var t = document.documentElement.scrollTop || document.body.scrollTop;
         if (t >= navHeight) {
@@ -588,20 +473,6 @@
                     lastSelectedThumbnailIndex = index;
                 }
             },
-
-            //showBigImg
-            showImageBig:function (n) {
-                var mask = document.getElementById("mask");
-
-                mask.style.display = "flex";
-            },
-            maskDismiss:function (n) {
-                var mask = document.getElementById("mask");
-
-                mask.style.display = "none";
-            },
-
-            
         }
     })
 
