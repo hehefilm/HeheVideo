@@ -119,10 +119,6 @@ a {
 	overflow: hidden;
 }
 
-[v-cloak] {
-    display: none;
-}
-
 .right-img {
 	width: 83.4%;;
     margin: 12.5% 8.3% 0 8.3%;

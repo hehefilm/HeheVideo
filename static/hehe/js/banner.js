@@ -1,42 +1,71 @@
-jQuery(document).ready(function ($) {
+var bannerHeight = $(document.body).height()*0.915;
 
-    var jssor_1_options = {
-      $AutoPlay: 1,
-      $DragOrientation: 2,
-      $PlayOrientation: 2,
-      $Cols: 1,
-      $Align: 0,
-      $BulletNavigatorOptions: {
-        $Class: $JssorBulletNavigator$,
-        $Orientation: 2
-      }
-    };
+var banner = [];
+new Vue({
+	el:'#mysection',
+	data:{
+		banner:banner,
+		bannerHeight:bannerHeight
+	},
+	created: function() {
+		this.getBanner();
+	},
+	methods:{
+		getBanner(){
+			axios.get(`http://staging.hehefilm.com/resources/banner?pg=1&num=10`)
+			.then(resp => {
+				var banner = resp.data.banner_li;
+				banner.push(banner[0]);
+				banner.push(banner[0]);
+				banner.push(banner[0]);
+				banner.push(banner[0]);
+				this.banner = banner;
+				console.log(resp.data);
+			}).catch(err => {
+				console.log('请求失败：'+err.status+','+err.statusText);
+			});
+		},
+	},
+});
 
-    var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
 
-    /*#region responsive code begin*/
+$(document).ready(function(){
+	// invoke the carousel
+    $('#myCarousel').carousel({
+      interval: 5000
+    });
 
-    var MAX_WIDTH = 1920;
+	// scroll slides on mouse scroll 
+//	$('#myCarousel').bind('mousewheel DOMMouseScroll', function(e){
+//
+//      if(e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
+//          $(this).carousel('prev');
+//			
+//      }
+//      else{
+//          $(this).carousel('next');
+//			
+//      }
+//  });
 
-    function ScaleSlider() {
-        var containerElement = jssor_1_slider.$Elmt.parentNode;
-        var containerWidth = containerElement.clientWidth;
+	//scroll slides on swipe for touch enabled devices 
 
-        if (containerWidth) {
+ 	$("#myCarousel").on("touchstart", function(event){
+ 
+        var yClick = event.originalEvent.touches[0].pageY;
+    	$(this).one("touchmove", function(event){
 
-            var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
-
-            jssor_1_slider.$ScaleWidth(expectedWidth);
+        var yMove = event.originalEvent.touches[0].pageY;
+        if( Math.floor(yClick - yMove) > 1 ){
+            $(".carousel").carousel('next');
         }
-        else {
-            window.setTimeout(ScaleSlider, 30);
+        else if( Math.floor(yClick - yMove) < -1 ){
+            $(".carousel").carousel('prev');
         }
-    }
-
-    ScaleSlider();
-
-    $(window).bind("load", ScaleSlider);
-    $(window).bind("resize", ScaleSlider);
-    $(window).bind("orientationchange", ScaleSlider);
-    /*#endregion responsive code end*/
+    });
+    $(".carousel").on("touchend", function(){
+            $(this).off("touchmove");
+    });
+});
+    
 });

@@ -2,71 +2,71 @@
     background-color: #1a1c21;
 }
 
-.jssorb031 {
-    position: absolute;
+.carousel-inner,.carousel,.item,.container,.fill {
+  height:100%;
+  width:100%;
+  background-position:center center;
+  background-size:cover;
+}
+.slide-wrapper{display:inline;}
+.slide-wrapper .container{padding:0px;}
+.container {margin-top: 8.5vh;}
+
+/*------------------------------ vertical bootstrap slider----------------------------*/
+
+.carousel-inner> .item.next ,  .carousel-inner > .item.active.right{ transform: translate3d(0, 100%, 0); -webkit-transform: translate3d(0, 100%, 0); -ms-transform: translate3d(0, 100%, 0); -moz-transform: translate3d(0, 100%, 0); -o-transform: translate3d(0, 100%, 0);  top: 0;}
+.carousel-inner > .item.prev ,.carousel-inner > .item.active.left{ transform: translate3d(0,-100%, 0); -webkit-transform: translate3d(0,-100%, 0);  -moz-transform: translate3d(0,-100%, 0);-ms-transform: translate3d(0,-100%, 0); -o-transform: translate3d(0,-100%, 0); top: 0;}
+.carousel-inner > .item.next.left , .carousel-inner > .item.prev.right , .carousel-inner > .item.active{transform:translate3d(0,0,0); -webkit-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);; -moz-transform:translate3d(0,0,0); -o-transform:translate3d(0,0,0); top:0;}
+
+/*------------------------------- vertical carousel indicators ------------------------------*/
+.carousel-indicators-div {
+	position:absolute;
+	bottom:2vw;
+	right:2.9vw; 
+	width:21px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	z-index: 1;
 }
 
-.jssorb031 .i {
-    position: absolute;
-    cursor: pointer;
+.carousel-indicators{
+	margin:1.6vw 0 0 0;
+	height:9.6vw;
+	left:auto;
+	width:21px;
+	position: relative;
+	bottom: 0;
 }
 
-.jssorb031 .i .b {
-    fill: #000;
-    fill-opacity: 0.5;
-    stroke: #fff;
-    stroke-width: 1200;
-    stroke-miterlimit: 10;
-    stroke-opacity: 0.3;
+.carousel-indicators-div hr {
+	height: 3.7vw;
+	width: 1px;
+	background-color: white;
+	margin: 0 auto;
+}
+.carousel-indicators li{
+	display:block; 
+	color: #FFFFFF; 
+	font-size: 1.4rem; 
+	margin-bottom:1.2vw; 
+	text-indent:0;
+	width: 21px;
+	height: 15px;
+	background-color: transparent;
+	border: 0px solid transparent;
+}
+.carousel-indicators li.active{
+	margin-bottom:1.2vw; 
+	font-size: 1.8rem; 
+	text-indent:0;
+	width: 21px;
+	height: 15px;
+	background-color: transparent;
+	border: 0px solid transparent;
+	color: #FFCC00;
 }
 
-.jssorb031 .i:hover .b {
-    fill: #fff;
-    fill-opacity: .7;
-    stroke: #000;
-    stroke-opacity: .5;
-}
-
-.jssorb031 .iav .b {
-    fill: #fff;
-    stroke: #000;
-    fill-opacity: 1;
-}
-
-.jssorb031 .i.idn {
-    opacity: .3;
-}
-
-.jssorb071 .i {
-    position: absolute;
-    color: #fff;
-    font-family: "Helvetica neue", Helvetica, Arial, sans-serif;
-    text-align: center;
-    cursor: pointer;
-    z-index: 0;
-}
-
-.jssorb071 .i .b {
-    fill: #000;
-    opacity: .2;
-}
-
-.jssorb071 .i:hover {
-    opacity: .7;
-}
-
-.jssorb071 .iav {
-    color: #000;
-}
-
-.jssorb071 .iav .b {
-    fill: #fff;
-    opacity: 1;
-}
-
-.jssorb071 .i.idn {
-    opacity: .3;
-}
 
 @keyframes fadein {
     from {
@@ -105,22 +105,20 @@
 
 .banner-title-div {
     position: absolute;
-    top: 63%;
+    bottom: 3.4vh;
     left: 0px;
     text-align: left;
     box-sizing: border-box;
     height: 23%;
     width: 45%;
     background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    flex-direction: column;
+    padding: 1.7% 2.7%;
 }
 
 .banner-title-div a {
     color: #FFFFFF;
     font-size: 42px;
     line-height: 40px;
-    margin: 34px 0 0 52px;
     font-weight: bolder;
 }
 
@@ -132,14 +130,14 @@
     color: #FFFFFF;
     font-size: 14px;
     line-height: 20px;
-    margin: 21px 50px;
+    margin: 2.4% 0;
 }
 
 .banner-more {
     height: 24px;
     width: 70px;
     border: 1px solid #FFFFFF;
-    margin: 0 50px;
+    margin: 0 0;
     text-align: center;
 }
 

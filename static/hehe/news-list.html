@@ -47,11 +47,11 @@
 	<div class="news-body-left">
 		<template v-for="(anew,index) in news">
 			<div class="each-cell" v-bind:style="{height:leftWidth+'px'}">
-				<a><div class="show" style="background-image: url(images/example1.jpg);" v-cloak></div></a> 
+				<a><div class="show" v-bind:style="{'background-image' : 'url('+'http://staging.hehefilm.com'+anew.ncover+')'}" v-cloak></div></a> 
 				<div class="each-cell-right" v-cloak>
-					<a>{{anew.title}} </a>
-					<p class="each-cell-time">{{anew.time}}</p>
-					<p class="each-cell-content">{{anew.content}}</p>
+					<a>{{anew.ntitle}} </a>
+					<p class="each-cell-time">{{anew.ndate.replace(new RegExp("-","gm"),'/')}}</p>
+					<p class="each-cell-content">{{anew.nsubtitle}}</p>
 				</div>
 			</div>
 		</template>
@@ -97,6 +97,7 @@
 <script src="js/jquery-1.11.3.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/nav.js"></script>
+<script type="text/javascript" src="js/axios.min.js"></script>
 <script type="text/javascript" src="js/news-list.js"></script>
 <script>
 	
