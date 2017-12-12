@@ -129,6 +129,10 @@
 	font-size: 4.2rem;
 	line-height: 100%;
 	margin-bottom: 1.3vw;
+	white-space: nowrap;
+}
+.left-align {
+	align-self: left;
 }
 .film-info-left > img {
 	width: 22.3vw;
@@ -182,19 +186,19 @@
 	flex-direction: column;
 	align-items: center;
 }
-.film-videos-head {
+.film-section-head {
 	width: 15.4vw;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
-.film-videos-head hr {
+.film-section-head hr {
 	height: 1px;
 	flex-grow: 1;
     border: 0;
     border-top: 1px solid white;
 }
-.film-videos-head > p {
+.film-section-head > p {
 	margin: 0 1.9vw;
 	font-size: 1.8rem;
 	line-height: 100%;
@@ -340,4 +344,53 @@
 }
 #movieThumbnail a img {
 	height: 1.2vw;
+}
+
+
+.fancybox-navigation button:before {
+    background: transparent !important;
+}
+
+.film-posters {
+	margin: 4.2vw 9vw 0 9vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.film-posters-carousel{
+	height: 27.92vw;
+	display: flex;
+}
+.film-posters-slides {
+	width: 81.35vw;
+	height: 100%;
+}
+.film-poster {
+	margin-right: 2.34vw;
+}
+.film-poster img {
+	height: 27.92vw;
+}
+.film-posters-arrow-left, .film-posters-arrow-right {
+	width: 9.32vw;
+	height: 100%;
+	display: flex;
+    align-items: center;
+}
+.film-posters-arrow-left:hover, .film-posters-arrow-right:hover {
+	background-color: rgba(0,0,0,0.2);
+	transition-duration: 0.2s;
+	cursor: pointer;
+}
+
+.film-posters-arrow-left img {
+	width: 1.35vw;
+	height: 2.92vw;
+	margin: auto 2.4vw auto auto;
+}
+
+.film-posters-arrow-right img {
+	width: 1.35vw;
+	height: 2.92vw;
+	margin: auto auto auto 2.4vw;
 }

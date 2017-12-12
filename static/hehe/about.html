@@ -26,8 +26,6 @@
     <link rel="stylesheet" href="css/reset.css"/>
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="css/news-detail.css"/>
-    <link rel="stylesheet" href="css/respond.css"/>
-    <link rel="stylesheet" href="css/about.css" />
     <link rel="shortcut icon" href="images/icon.png"/>
 
 </head>
@@ -40,7 +38,7 @@
 
 <div class="news">
     <div id="news-detail" class="news-container">
-		
+		<span v-html="newsdetail"></span>
     </div>
 </div>
 
@@ -51,10 +49,11 @@
 
 <!--JS-->
 <script src="js/vue.js"></script>
-<script src="js/jquery-1.11.3.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<!--<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>-->
 <script src="js/nav.js"></script>
 <script src="js/respond.js"></script>
+<script type="text/javascript" src="js/axios.min.js"></script>
 <script type="text/javascript" src="js/about.js"></script>
 <script>
 	

@@ -55,7 +55,7 @@ body {
 	background-color: #1A1C21;
 }
 body #my-nav {
-	height: 5.5vw;
+	height: 8.3vh;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -75,7 +75,7 @@ q:before, q:after {
 	content: none;
 }
 
-a { color: #9e1f24;}
+a { color: #9e1f24;cursor:pointer}
 a:hover,a:focus { color: rgb(102,187,245); text-decoration:none;}
 
 /*html {
