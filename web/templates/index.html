@@ -121,7 +121,6 @@
             <div class="hh-video-content-slide">
                 <div class="carousel-inner ">
                     <div v-for="(film,index) in films_li" v-bind:class="index==0?'item active':'item'">
-                        {{index}}
                         <div class="video-content-center row">
                             <div v-for="movie in film.movie_li">
                                 <a v-bind:href="'../../static/hehe/films-detail.html?movie_id='+movie.movie_id">
