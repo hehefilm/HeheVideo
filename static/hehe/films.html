@@ -83,7 +83,7 @@
             <div class="film-content-center row">
                 <div v-for="(film, index) of movie_li">
                     <a  v-bind:href="'films-detail.html?movie_id='+film.movie_id">
-                        <li class="hh-film-img-div col-md-3 col-sm-3 col-xs-3">
+                        <li class="hh-film-img-div col-md-3 col-sm-3 col-xs-3" v-cloak>
                             <div class="film-item-img">
                                 <img id="jlp"  class="film-item-img"  :src="'http://staging.hehefilm.com'+film.poster">
                                 <div class="film-item-shadow">
