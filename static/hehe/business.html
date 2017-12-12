@@ -52,7 +52,7 @@
 			<!-- 轮播（Carousel）项目 -->
 			<div class="carousel-inner" style="height: 100%;border: 1px solid rgba(255,255,255,0.5);">
 				<template v-for="(apro,index) in project">
-					<div class="item" v-bind:class='{active:index==0}'>
+					<div class="item" v-bind:class='{active:index==0}' v-on:click="toBusinessDetail(apro.project_id)">
 						<div class="show" v-bind:style="{'background-image' : 'url('+'http://staging.hehefilm.com'+apro.pcover+')'}">
 						
 						</div>
@@ -70,7 +70,7 @@
 			<template v-for="(apro,index) in project">
 				<div class="each-cell" v-bind:style="index == project.length-1 ? 'margin-bottom: 0' : ''">
 					<div class="each-cell-content" v-cloak>
-						<a>{{apro.ptitle}}</a>
+						<a v-bind:href="'business-detail.html?pid='+apro.project_id">{{apro.ptitle}}</a>
 						<p>{{apro.psubtitle}}</p>
 					</div>
 				</div>

@@ -17,6 +17,9 @@ new Vue({
 				console.log('请求失败：'+err.status+','+err.statusText);
 			});
 		},
+		toBusinessDetail(pid){
+			window.location.href = "business-detail.html?pid="+pid;
+		}
 	},
 });
 
