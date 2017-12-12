@@ -22,12 +22,11 @@
     <title>和和影业</title>
 
     <!--CSS-->
-    <link rel="stylesheet" href="css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css"/>
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="css/films.css"/>
-    <link rel="stylesheet" href="css/respond.css"/>
 
     <link rel="shortcut icon" href="images/icon.png"/>
 
@@ -80,14 +79,13 @@
             <div class="video-line-right"></div>
         </div>
 
-
         <div class="film-content">
             <div class="film-content-center row">
                 <div v-for="(film, index) of movie_li">
                     <a  v-bind:href="'films-detail.html?movie_id='+film.movie_id">
                         <li class="hh-film-img-div col-md-3 col-sm-3 col-xs-3">
                             <div class="film-item-img">
-                                <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
+                                <img id="jlp"  class="film-item-img"  :src="'http://staging.hehefilm.com'+film.poster">
                                 <div class="film-item-shadow">
                                     <p class="film-item-title">{{film.title}}</p>
                                 </div>
@@ -96,7 +94,6 @@
                     </a>
                 </div>
             </div>
-
         </div>
 
         <div class="film-more" v-if="more" v-on:click="initMore">
@@ -106,6 +103,7 @@
             </p>
             <!--</div>-->
         </div>
+
 
     </div>
 
@@ -119,18 +117,14 @@
 </div>
 
 <!--JS-->
-<script src="js/vue.js"></script>
-<script src="js/jquery-1.11.3.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/nav.js"></script>
-<script src="js/respond.js"></script>
-<script src="js/template-web.js"></script>
-<script type="text/javascript" src="js/videojs.min.js"></script>
 <script src="https://cdn.bootcss.com/vue/2.5.9/vue.min.js"></script>
-<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/vue-i18n/7.3.2/vue-i18n.min.js"></script>
 <script src="https://cdn.bootcss.com/axios/0.17.1/axios.min.js"></script>
-
- <script type="text/javascript" src="js/films.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/nav.js"></script>
+<script type="text/javascript" src="js/videojs.min.js"></script>
+<script type="text/javascript" src="js/films.js"></script>
 <script>
 
 

@@ -1,11 +1,9 @@
-var bannerHeight = $(document.body).height()*0.915;
 
 var banner = [];
 new Vue({
 	el:'#mysection',
 	data:{
 		banner:banner,
-		bannerHeight:bannerHeight
 	},
 	created: function() {
 		this.getBanner();
