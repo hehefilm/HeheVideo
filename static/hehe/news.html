@@ -42,7 +42,7 @@
 <div class="news-div">
 	<a class="news-more" href="news-list.html">更多 &raquo;</a>
 	<div class="news-left-right">
-		<div id="news-left" class="carousel slide">
+		<div id="news-left" class="news-left carousel slide">
 			<!-- 轮播（Carousel）指标 -->
 			<ol class="carousel-indicators">
 				<template v-for="(anew,index) in news">
@@ -66,7 +66,7 @@
 			</div>
 			
 		</div>
-		<div id="news-right">
+		<div id="news-right" class="news-right">
 			<template v-for="(anew,index) in news">
 				<div class="each-cell" v-bind:style="index == news.length-1 ? 'margin-bottom: 0' : ''">
 					<div class="each-cell-time" v-cloak>

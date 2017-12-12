@@ -1,9 +1,8 @@
 
-var news = [];
 new Vue({
 	el:'.news-left-right',
 	data:{
-		news:news,
+		news:[],
 	},
 	created: function() {
 		this.getNewsBypg(1);
