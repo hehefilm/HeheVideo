@@ -25,10 +25,10 @@ a {
 
 .news-head-div p {
 	width: 40%;
-	height: 17px;
 	color: #FFFFFF;
 	font-size: 1.7rem;
-	line-height: 17px;
+	line-height: 100%;
+	font-weight: bold;
 	background-color: #1A1C21;
 }
 
@@ -96,6 +96,7 @@ a {
 	color: #FFFFFF;	
 	font-size: 1.8rem;	
 	line-height: 1.8rem;
+	font-weight: bold;
 }
 
 .each-cell-right a:hover {
