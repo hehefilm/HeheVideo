@@ -16,20 +16,11 @@ new Vue({
 		getNewsDetail(newsid){
 			axios.get(`http://staging.hehefilm.com/resources/news/${newsid}`)
 			.then(resp => {
-				var jsonobj = $.parseJSON(rdata);
-				this.newsdetail = jsonobj;
-				console.log(resp.data);
+				this.newsdetail = resp.data.ndetail;
+				console.log(resp.data.ndetail);
 			}).catch(err => {
 				console.log('请求失败：'+err.status+','+err.statusText);
 			});
 		},
 	},
 });
-
-function getNewsDetail(newsid) {
-	$.get("https://shanxiaxuetang.com/resources/news/" + newsid,function(rdata, status){
-		var jsonobj = $.parseJSON(rdata);
-		$('#news-detail').prepend(jsonobj.cnt);
-		
-	});
-}

@@ -18,6 +18,9 @@ new Vue({
 				console.log('请求失败：'+err.status+','+err.statusText);
 			});
 		},
+		toNewsDetail(nid){
+			window.location.href = "news-detail.html?nid="+nid;
+		}
 	},
 });
 

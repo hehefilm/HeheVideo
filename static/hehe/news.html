@@ -52,7 +52,7 @@
 			<!-- 轮播（Carousel）项目 -->
 			<div class="carousel-inner" style="height: 100%;border: 1px solid rgba(255,255,255,0.5);">
 				<template v-for="(anew,index) in news">
-					<div class="item" v-bind:class='{active:index==0}'>
+					<div class="item" v-bind:class='{active:index==0}' v-on:click="toNewsDetail(anew.news_id)">
 						<div class="show" v-bind:style="{'background-image' : 'url('+'http://staging.hehefilm.com'+anew.ncover+')'}">
 						
 						</div>
@@ -75,7 +75,7 @@
 						<p class="each-cell-time-day">{{anew.ndate.split('-')[2]}}</p>
 					</div>
 					<div class="each-cell-content" v-cloak>
-						<a>{{anew.ntitle}}</a>
+						<a v-bind:href="'news-detail.html?nid='+anew.news_id">{{anew.ntitle}}</a>
 						<p>{{anew.nsubtitle}}</p>
 					</div>
 				</div>
