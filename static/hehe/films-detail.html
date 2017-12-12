@@ -134,7 +134,7 @@
         <div class="film-info-right">
             <table>
                 <tr v-if="director">
-                    <td>导演：</td>
+                    <td>{{$t('lang.director')}}：</td>
                     <td>{{director}}</td>
                 </tr>
                 <tr v-if="writer">
@@ -236,7 +236,7 @@
     </div>
 
     <div class="film-posters">
-        <div class="film-section-head">
+        <div class="film-section-head" style="margin-bottom: 2vw;">
             <hr>
             <p>海报</p>
             <hr>
@@ -269,7 +269,7 @@
     </div>
 
     <div class="film-posters" style="padding-bottom: 8.07vw;">
-        <div class="film-section-head">
+        <div class="film-section-head" style="margin-bottom: 2vw;">
             <hr>
             <p>剧照</p>
             <hr>
@@ -310,14 +310,17 @@
 
 <!--JS-->
 <script src="https://cdn.bootcss.com/vue/2.5.9/vue.min.js"></script>
+<script src="https://cdn.bootcss.com/vue-i18n/7.3.2/vue-i18n.min.js"></script>
+<script src="https://cdn.bootcss.com/axios/0.17.1/axios.min.js"></script>
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="https://cdn.bootcss.com/axios/0.17.1/axios.min.js"></script>
+<script src="https://cdn.bootcss.com/slick-carousel/1.8.1/slick.min.js"></script>
+<script src="https://cdn.bootcss.com/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+
 <script src="js/nav.js"></script>
 <script src="js/videojs.min.js"></script>
 <script src="js/films-detail.js"></script>
-<script src="https://cdn.bootcss.com/slick-carousel/1.8.1/slick.min.js"></script>
-<script src="https://cdn.bootcss.com/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+
 <script>
 
     $(document).ready(function(){
@@ -392,7 +395,27 @@
     if (!GetQueryString('movie_id')) {
         window.location = "index.html";
     }
+
+    // 建立翻译基础
+    const messages = {
+        en: {
+            lang: {
+                director: 'Director'
+            }
+        },
+        cn: {
+            lang: {
+                director: '导演'
+            }
+        }
+    };
+    //生成国际化插件实例
+    const i18n = new VueI18n({
+        locale: 'en', // set locale
+        messages, // set locale messages
+    });
     var vue = new Vue({
+        i18n,
         el: '#vue-page',
         data: {
             title: "《西游2伏妖篇西游2伏妖篇西游2伏妖篇》",

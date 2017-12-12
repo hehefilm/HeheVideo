@@ -2,40 +2,68 @@
  * 直接创建组件(推荐)
  */
 Vue.component('my-nav',{
-	template:'\
-			<div class="nav-wai">\
-				<a id="pcLogo" class="nav-brand" href="../../static/hehe/index.html#Slider">\
-					<img class="nav-brand" src="../../static/hehe/images/logo.png"/>\
-				</a>\
-				<ul class="nav-ul">\
-					<li>\
-						<a href="../../static/hehe/about.html" title="关于我们">关于我们</a>\
-					</li>\
-					<li>\
-						<a href="../../static/hehe/films.html" title="影视作品">影视作品</a>\
-					</li>\
-					<li>\
-						<a href="../../static/hehe/news.html" title="新闻资讯">新闻资讯</a>\
-					</li>\
-					<li>\
-						<a href="../../static/hehe/business.html" title="商业项目">商业项目</a>\
-					</li>\
-					<li>\
-						<a href="../../static/hehe/cooperation.html" title="合作伙伴">合作伙伴</a>\
-					</li>\
-					<li>\
-						<a href="../../static/hehe/contactus.html" title="联系我们">联系我们</a>\
-					</li>\
-				</ul>\
-				<div class="nav-search">\
-					<input placeholder="搜索" />\
-					<img src="../../static/hehe/images/search.png"/>\
-				</div>\
-			</div>'
+	template:`
+		<div class="nav-wai">
+			<a id="pcLogo" class="nav-brand" href="../../static/hehe/index.html#Slider">
+				<img class="nav-brand" src="../../static/hehe/images/logo.png"/>
+			</a>
+			<ul class="nav-ul">
+				<li>
+					<a href="../../static/hehe/about.html">{{ $t("lang.about") }}</a>
+				</li>
+				<li>
+					<a href="../../static/hehe/films.html">{{ $t("lang.films") }}</a>
+				</li>
+				<li>
+					<a href="../../static/hehe/news.html">{{ $t("lang.news") }}</a>
+				</li>
+				<li>
+					<a href="../../static/hehe/business.html">{{ $t("lang.business") }}</a>
+				</li>
+				<li>
+					<a href="../../static/hehe/cooperation.html">{{ $t("lang.cooperation") }}</a>
+				</li>
+				<li>
+					<a href="../../static/hehe/contactus.html">{{ $t("lang.contactus") }}</a>
+				</li>
+			</ul>
+			<div class="nav-search">
+				<input v-bind:placeholder="$t('lang.search_plc')" />
+				<img src="../../static/hehe/images/search.png"/>
+			</div>
+		</div>`
 });
 
+var nav_i18n = new VueI18n({
+    locale: 'en',
+    messages: {
+		en: {
+		    lang: {
+		        about: 'About',
+		        films: 'Films',
+		        news: 'News',
+		        business: 'Business',
+		        cooperation: 'Cooperation',
+		        contactus: 'Contact',
+		        search_plc: 'Search'
+		    }
+		},
+		cn: {
+		    lang: {
+		        about: '关于我们',
+		        films: '影视作品',
+		        news: '新闻资讯',
+		        business: '商业项目',
+		        cooperation: '合作伙伴',
+		        contactus: '联系我们',
+		        search_plc: '搜索'
+		    }
+		}
+	},
+});
 
-var vm=new Vue({ //这里的vm也是一个组件，称为根组件Root
+new Vue({
+	i18n: nav_i18n,
 	el:'#my-nav',
 	data:{
 		msg:'和和影业'
