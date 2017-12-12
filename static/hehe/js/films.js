@@ -20,7 +20,8 @@ var vue = new Vue({
     i18n,
     el: '#vue-page',
     data: {
-        more: false,
+        page:1,
+        more: true,
         movie_li: [
             {
                 // "movie_id": "movie_001",
@@ -44,7 +45,6 @@ var vue = new Vue({
 
         ]
 
-
     },
     created: function () {
         axios.get('http://staging.hehefilm.com/resources/movie?pg=1&num=16')
@@ -52,18 +52,26 @@ var vue = new Vue({
                 this.movie_li = resp.data.movie_li;
                 if (this.movie_li.length >= 16) {
                     this.more = true;
-                }        // console.log(resp.data);
+                }
+                console.log(resp.data);
             }).catch(err => {
             console.log('请求失败：' + err.status + ',' + err.statusText);
         })
         ;
     },
     methods: {
-        initData: function () {
-
-
-        },
-        initMore: function (page, number) {
+        initMore: function () {
+            this.page++;
+            axios.get('http://staging.hehefilm.com/resources/movie?pg='+this.page+'&num=16')
+                .then(resp => {
+                    this.movie_li=this.movie_li.concat(resp.data.movie_li);
+                    if (resp.data.movie_li.length >= 16) {
+                        this.more = true;
+                    }
+                    // console.log(resp.data);
+                }).catch(err => {
+                console.log('请求失败：' + err.status + ',' + err.statusText);
+            })
             this.more = false;
         }
     },

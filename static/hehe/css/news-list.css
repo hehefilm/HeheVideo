@@ -152,7 +152,7 @@ a {
 	border: 1px solid transparent;
 }
 
-.pagination > li > a:hover,.pagination > li > a:focus {
+.pagination > li > a:hover {
 	background-color: transparent;
 	border: 1px solid white;
 	color: white;
