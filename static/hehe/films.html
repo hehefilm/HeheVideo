@@ -80,14 +80,13 @@
             <div class="video-line-right"></div>
         </div>
 
-
         <div class="film-content">
             <div class="film-content-center row">
                 <div v-for="(film, index) of movie_li">
                     <a  v-bind:href="'films-detail.html?movie_id='+film.movie_id">
                         <li class="hh-film-img-div col-md-3 col-sm-3 col-xs-3">
                             <div class="film-item-img">
-                                <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
+                                <img id="jlp" :src="'http://staging.hehefilm.com'+film.poster">
                                 <div class="film-item-shadow">
                                     <p class="film-item-title">{{film.title}}</p>
                                 </div>
@@ -96,7 +95,6 @@
                     </a>
                 </div>
             </div>
-
         </div>
 
         <div class="film-more" v-if="more" v-on:click="initMore">
