@@ -19,7 +19,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#861519">
 
 
-    <title>新闻</title>
+    <title>新闻咨询</title>
 
     <!--CSS-->
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
@@ -43,47 +43,44 @@
 	<hr />
 </div>
 
-<div class="news-body">
-	<div class="news-body-left">
-		<template v-for="(anew,index) in news">
-			<div class="each-cell" v-bind:style="{height:leftWidth+'px'}">
-				<a><div class="show" v-bind:style="{'background-image' : 'url('+'http://staging.hehefilm.com'+anew.ncover+')'}" v-cloak></div></a> 
-				<div class="each-cell-right" v-cloak>
-					<a>{{anew.ntitle}} </a>
-					<p class="each-cell-time">{{anew.ndate.replace(new RegExp("-","gm"),'/')}}</p>
-					<p class="each-cell-content">{{anew.nsubtitle}}</p>
+<div id="mybody">
+	<div class="news-body">
+		<div class="news-body-left">
+			<template v-for="(anew,index) in news">
+				<div class="each-cell" v-bind:style="{height:leftWidth+'px'}">
+					<a><div class="show" v-bind:style="{'background-image' : 'url('+'http://staging.hehefilm.com'+anew.ncover+')'}" v-cloak></div></a> 
+					<div class="each-cell-right" v-cloak>
+						<a>{{anew.ntitle}} </a>
+						<p class="each-cell-time">{{anew.ndate.replace(new RegExp("-","gm"),'/')}}</p>
+						<p class="each-cell-content">{{anew.nsubtitle}}</p>
+					</div>
 				</div>
-			</div>
-		</template>
+			</template>
+		</div>
+		
+		<div class="news-body-right" v-cloak>
+			<img class="right-img" src="images/example1.jpg"/>
+			<div> <p class="news-body-right-p">导&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;演：</p><p class="news-body-right-span">{{rightDetail.director}}</p></div>
+			<div> <p class="news-body-right-p">主&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;演：</p><p class="news-body-right-span">{{rightDetail.stars}}</p></div>
+			<div> <p class="news-body-right-p">上映日期：</p><p class="news-body-right-span">{{rightDetail.release_date}}</p></div>
+			<div> <p class="news-body-right-p">类&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;型：</p><p class="news-body-right-span">{{rightDetail.genre}}</p></div>
+			<div> <p class="news-body-right-p">语&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;言：</p><p class="news-body-right-span">{{rightDetail.lang}}</p></div>
+			<div> <p class="news-body-right-p">片&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;长：</p><p class="news-body-right-span">{{rightDetail.duration}}</p></div>
+			<div> <p class="news-body-right-p">制作地区：</p><p class="news-body-right-span">{{rightDetail.country}}</p></div>
+			<div style="margin-bottom: 8%;"> <p class="news-body-right-p">版&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本：</p><p class="news-body-right-span">{{rightDetail.release_vision}}</p></div>
+		</div>
 	</div>
 	
-	<div class="news-body-right" v-cloak>
-		<img class="right-img" src="images/example1.jpg"/>
-		<div> <p class="news-body-right-p">导&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;演：</p><p class="news-body-right-span">{{rightDetail.director}}</p></div>
-		<div> <p class="news-body-right-p">主&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;演：</p><p class="news-body-right-span">{{rightDetail.stars}}</p></div>
-		<div> <p class="news-body-right-p">上映日期：</p><p class="news-body-right-span">{{rightDetail.release_date}}</p></div>
-		<div> <p class="news-body-right-p">类&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;型：</p><p class="news-body-right-span">{{rightDetail.genre}}</p></div>
-		<div> <p class="news-body-right-p">语&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;言：</p><p class="news-body-right-span">{{rightDetail.lang}}</p></div>
-		<div> <p class="news-body-right-p">片&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;长：</p><p class="news-body-right-span">{{rightDetail.duration}}</p></div>
-		<div> <p class="news-body-right-p">制作地区：</p><p class="news-body-right-span">{{rightDetail.country}}</p></div>
-		<div style="margin-bottom: 8%;"> <p class="news-body-right-p">版&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本：</p><p class="news-body-right-span">{{rightDetail.release_vision}}</p></div>
-	</div>
+	<ul class="pagination">
+		<template v-for="(value,index) in bottom">
+			<li>
+				<a v-on:click="toPage(value)" v-bind:style="value == nowNumber+'' ? 'border: 1px solid white; border-radius: 0' : ''">{{value}}</a>
+			</li>
+		</template>
+		
+	</ul>
 </div>
 
-<ul class="pagination">
-	<li><a>&laquo;</a></li>
-	<li><a>1</a></li>
-	<li><a>2</a></li>
-	<li><a>3</a></li>
-	<li><a>4</a></li>
-	<li><a>5</a></li>
-	<li><a>1</a></li>
-	<li><a>2</a></li>
-	<li><a>3</a></li>
-	<li><a>4</a></li>
-	<li><a>5</a></li>
-	<li><a>&raquo;</a></li>
-</ul>
 
 <!-- Footer -->
 <div id="my-footer">
