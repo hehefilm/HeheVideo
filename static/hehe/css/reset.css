@@ -1,18 +1,12 @@
-
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
 @font-face {
-    font-family: 'fzhei-b01regular';
-    src: url('_gbk-webfont.woff2') format('woff2'),
-         url('_gbk-webfont.woff') format('woff');
+    font-family: 'fzhtjw';
+    src: url('../fonts/fzhtjw.woff2') format('woff2'),
+         url('../fonts/fzhtjw.woff') format('woff'),
+         url('../fonts/fzhtjw.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
 }
-
 
 html, body, div, span, applet, object, iframe,
 /*h1, h2, h3, h4, h5, h6,*/ p, blockquote, pre,
@@ -30,11 +24,8 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	/*font-size: 100%;
-	font: inherit;*/
-	/*vertical-align: baseline;*/
 	list-style:none;
-	font-family: "fzhei-b01regular","PingFang SC","SF Pro SC","HanHei SC","SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","Helvetica Neue","Arial","Microsoft YaHei","SimHei",sans-serif;
+	font-family: "Helvetica Neue", Helvetica, Arial, "fzhtjw", "PingFang SC", "Noto Sans", Roboto, "Microsoft Yahei", sans-serif;
 	font-weight: 300;
 }
 /* HTML5 display-role reset for older browsers */
@@ -42,18 +33,12 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-html {
-	height: 100%;
-}
+
 body {
-	line-height: 1;
-	font-family: "fzhei-b01regular","PingFang SC","SF Pro SC","HanHei SC","SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","PingFang SC","Helvetica Neue","Arial","Microsoft YaHei","SimHei",sans-serif;
-	font-size:14px;
-	line-height:20px;
-	font-weight: 300;
 	height: 100%;
 	background-color: #1A1C21;
 }
+
 body #my-nav {
 	height: 5.5vw;
 	position: fixed;
@@ -87,16 +72,19 @@ a:hover,a:focus { color: rgb(102,187,245); text-decoration:none;}
 html {
     font-size: 5px;
     line-height: 5px;
+    height: 100%;
 }
 
 @media (min-width: 321px) and (max-width: 1920px) {
     html {
         font-size: calc(5px + 5 * ((100vw - 320px) / 1600));
+        line-height: calc(5px + 5 * ((100vw - 320px) / 1600));
     }
 }
 
 @media (min-width: 1920px) {
     html {
         font-size: 10px;
+        line-height: 10px;
     }
 }
