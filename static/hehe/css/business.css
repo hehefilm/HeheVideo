@@ -82,6 +82,7 @@ a {
 	color: #FFFFFF;	
 	font-size: 1.6rem;	
 	line-height: 1.6rem;
+	font-weight: bold;
 }
 
 .each-cell-content a:hover {

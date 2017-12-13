@@ -130,6 +130,7 @@
 	line-height: 100%;
 	margin-bottom: 1.3vw;
 	white-space: nowrap;
+	font-weight: bold;
 }
 .left-align {
 	align-self: left;
@@ -202,6 +203,7 @@
 	margin: 0 1.9vw;
 	font-size: 1.8rem;
 	line-height: 100%;
+	font-weight: bold;
 	color: white;
 }
 .film-videos-preview-title {

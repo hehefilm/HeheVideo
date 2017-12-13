@@ -21,224 +21,56 @@
 
     <title>和和影业</title>
 
-    <!--CSS-->
-    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!--CSS-->    
     <link rel="stylesheet" href="../../static/hehe/css/reset.css"/>
     <link rel="stylesheet" href="../../static/hehe/css/style.css"/>
-    <link rel="stylesheet" href="../../static/hehe/css/index.css"/>
+    <!-- <link rel="stylesheet" href="../../static/hehe/css/landing.css"/> -->
     <link rel="shortcut icon" href="../../static/hehe/images/icon.png"/>
-
-    <link rel="stylesheet" href="../../static/hehe/css/videojs.css">
-    <link rel="stylesheet" href="../../static/hehe/css/videojs-theme.css"/>
-    <!-- If you'd like to support IE8 -->
-    <script src="../../static/hehe/js/videojs-ie8.min.js"></script>
 </head>
 <body class="index-bg">
-<!--<div class="loading">
-    <img src="../../static/hehe/images/loading.png"/>
-</div>-->
-<!-- Navigation -->
+
 <div id="my-nav">
     <my-nav></my-nav>
 </div>
 
-	
-<!--Slider BEGIN-->	
-<section id="mysection" class="slide-wrapper">
-	<div class="container">
-		<div id="mybanner" class="carousel slide">
-			
-		  	<!-- Indicators -->
-		  	<div class="carousel-indicators-div">
-		  		<hr />
-		    	<ol class="carousel-indicators">
-		    		<template v-for="(bn,index) in banner">
-						<li data-target="#mybanner" v-bind:data-slide-to="index" v-bind:class='{active:index==0}'>{{index+1}}</li>
-					</template>
-		   	 	</ol>
-		  	</div>
-		  	
-		
-		    <!-- Wrapper for slides -->
-		    <div class="carousel-inner">
-		    	<template v-for="(bn,index) in banner">
-			        <div class="item" v-bind:class='{active:index==0}'>
-			        	<div class="fill" v-bind:style="{'background-image' : 'url('+'http://staging.hehefilm.com'+bn.bcover+')'}" v-cloak>
-			        		<div class="banner-title-div">
-				                <a>{{bn.btitle}}</a> <span>[ {{bn.bkey}} ]</span>
-				                <p class="banner-content">{{bn.bdesc}}</p>
-				                <div class="banner-more">
-				                    <p>更多 >></p>
-				                </div>
-				            </div>
-			        	</div>
-			        </div>
-		     </template>
-		    </div>
-		</div>
-	</div>
-</section>
-<!--Slider END-->
-
-
-<div class="fs-video-container" style="display:none;" onclick="hideVideo()">
-    <!-- <video class="fs-video-player" src="http://qnp.shanxiaxuetang.com/about.mp4" preload
-    " controls="controls"
-    onclick="pauseVideo()"></video> -->
-    <div class="fs-video-player" onclick="stopBubble()">
-        <video id="fs-videojs-player" class="video-js vjs-fluid" controls preload="auto"
-               data-setup="{}">
-            <source src="http://qnp.shanxiaxuetang.com/about.mp4" type='video/mp4'>
-            <p class="vjs-no-js">
-                要收看此视频，请开启JavaScript功能，或者升级您的浏览器至
-                <a href="http://videojs.com/html5-video-support/">支持HTML5视频标签的浏览器</a>
-            </p>
-        </video>
-    </div>
-    <img class="fs-video-close" src="../../static/hehe/images/close.png">
-</div>
-
-<!--hh video 影视作品-->
-<div class="hh-video">
-
-    <div class="video-top">
-        <div class="video-line-left"></div>
-        <div class="hh-video-title">影视作品</div>
-        <div class="video-line-right"></div>
-    </div>
-
-    <div class="video-content" id="vue-page">
-
-        <div id="myCarousel" class="carousel slide  index-video">
-            <!-- 轮播（Carousel）项目 -->
-            <a class="video-content-left" href="#myCarousel"
-               data-slide="prev">
-                <!--<div class="video-content-left">-->
-                <img class="arrow-left" src="../../static/hehe/images/arrow-left-hh.png">
-                <!--</div>-->
-            </a>
-            <div class="hh-video-content-slide">
-                <div class="carousel-inner ">
-                    <div v-for="(film,index) in films_li" v-bind:class="index==0?'item active':'item'">
-                        <div class="video-content-center row">
-                            <div v-for="movie in film.movie_li">
-                                <a v-bind:href="'../../static/hehe/films-detail.html?movie_id='+movie.movie_id">
-                                    <li class="hh-video-img-div col-md-3 col-sm-3 col-xs-3">
-                                        <div class="video-item-img">
-                                            <img id="jlp" class="video-item-img" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
-                                            <div class="index-course-item-shadow">
-                                            </div>
-                                        </div>
-                                    </li>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <a class="video-content-right" href="#myCarousel"
-               data-slide="next">
-                <img class="arrow-right" src="../../static/hehe/images/arrow-right-hh.png">
-            </a>
-
+<style type="text/css">
+.langSelect {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+.langSelect:hover {
+    color: #ffcc00;
+}
+</style>
+<div style="height: 100vh; width: 100vw; display: flex; align-items: center; justify-content: space-around;">
+    <div style="width: 314px;">
+        <img src="../../static/hehe/images/new-bak.png" style="width: 100%; margin-bottom: 48px;">
+        <div style="display: flex; color: white; text-align: center; font-size: 18px;">
+            <span style="width: 50%; border-right: 1px solid white;">
+                <a class="langSelect" onclick="siteLang('cn')">简体中文</a>
+            </span>
+            <span style="width: 50%;">
+                <a class="langSelect" onclick="siteLang('en')">English</a>
+            </span>
         </div>
-
     </div>
 
 </div>
-
-<!-- 合作伙伴-->
-<div class="hh-partners">
-    <div class="video-top">
-        <div class="video-line-left"></div>
-        <div class="hh-video-title">合作伙伴</div>
-        <div class="video-line-right"></div>
-    </div>
-    <div class="partners-icon-div">
-        <img class="partners-icon-left" src="../../static/hehe/images/icon-albb.png">
-        <img class="partners-icon-2" src="../../static/hehe/images/icon-2.png">
-        <img class="partners-icon-3" src="../../static/hehe/images/icon-3.png">
-        <img class="partners-icon-4" src="../../static/hehe/images/icon-4.png">
-        <img class="partners-icon-5" src="../../static/hehe/images/icon-5.png">
-        <img class="partners-icon-6" src="../../static/hehe/images/icon-6.png">
-        <img class="partners-icon-7" src="../../static/hehe/images/icon-7.png">
-        <img class="partners-icon-8" src="../../static/hehe/images/icon-8.png">
-        <img class="partners-icon-right" src="../../static/hehe/images/icon-9.png">
-
-
-    </div>
-</div>
-
-<!-- Footer -->
-<div id="my-footer">
-    <my-footer></my-footer>
-</div>
-
 
 <!--JS-->
 <script src="https://cdn.bootcss.com/vue/2.5.9/vue.min.js"></script>
 <script src="https://cdn.bootcss.com/vue-i18n/7.3.2/vue-i18n.min.js"></script>
-<script src="https://cdn.bootcss.com/axios/0.17.1/axios.min.js"></script>
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <script type="text/javascript" src="../../static/hehe/js/nav.js"></script>
-<script type="text/javascript" src="../../static/hehe/js/banner.js"></script>
-<script type="text/javascript" src="../../static/hehe/js/videojs.min.js"></script>
-
-<script src="https://cdn.bootcss.com/axios/0.17.1/axios.min.js"></script>
-
-<script type="text/javascript" src="../../static/hehe/js/index.js"></script>
 
 <script>
 
-    //    window.onload=function(){
-    //        // $(".loading").fadeOut(400,function() {
-    //            $(".loading").hide();
-    //            setTimeout(function () {
-    //                $('#Slider').carousel({
-    //                 interval: 2000
-    //             })
-    //             loadingEnd();
-    //            }, 200);
-
-    //        // });
-    //    }
-    //    var oldId = 'phoneAbout';
-
-    //    function showVideo(event) {
-    //        $(".fs-video-container").show();
-    //        stopBanner();
-    //        openMask();
-    //        var videoPlayer = videojs('fs-videojs-player');
-    //        videoPlayer.play();
-    //    }
-
-    // var height = $(window).height();
-
-    //    function hideVideo(event) {
-    //        $(".fs-video-container").hide();
-    //        var t = document.documentElement.scrollTop || document.body.scrollTop;
-    //        if (t < height) {
-    //        		resumeBanner();
-    //        }
-    //        closeMask();
-    //        var videoPlayer = videojs('fs-videojs-player');
-    //        videoPlayer.pause();
-    //        videoPlayer.currentTime(0);
-    //    }
-
-
-    //    window.onscroll = function () {
-    //        var t = document.documentElement.scrollTop || document.body.scrollTop;
-    //        if (t >= height) {
-    //            stopBanner();
-    //        } else {
-    //            resumeBanner();
-    //        }
-    //    }
+function siteLang(lang) {
+    document.cookie = "lang=" + lang;
+    window.location = "../../static/hehe/index.html";
+}
 
 </script>
 
