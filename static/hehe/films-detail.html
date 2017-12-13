@@ -29,63 +29,12 @@
 
     <link rel="shortcut icon" href="images/icon.png"/>
 
-    <link rel="stylesheet" href="css/videojs.css">
-    <link rel="stylesheet" href="css/videojs-theme.css"/>
-    <!-- <link rel="stylesheet" href="css/index.css"> -->
-
-    <!-- If you'd like to support IE8 -->
-    <script src="js/videojs-ie8.min.js"></script>
-
     <link href="https://cdn.bootcss.com/slick-carousel/1.8.1/slick.min.css" rel="stylesheet">
     <link href="https://cdn.bootcss.com/slick-carousel/1.8.1/slick-theme.min.css" rel="stylesheet">
 
     <link href="https://cdn.bootcss.com/fancybox/3.2.5/jquery.fancybox.min.css" rel="stylesheet">
 </head>
 <body class="index-bg">
-
-<!--浏览  大图-->
-
-<div class="mask" id="mask" onclick="maskDismiss()">
-    <div class="mask-video-content">
-
-        <div id="mask-myCarousel" class="carousel slide  mask-index-video">
-            <!-- 轮播（Carousel）项目 -->
-            <a class="mask-video-content-left" href="#mask-myCarousel"
-               data-slide="prev">
-                <img class="mask-arrow-left" src="images/arrow-left-hh.png">
-            </a>
-
-            <div class="mask-hh-video-content-slide">
-                <div class="carousel-inner ">
-                    <div class="item active">
-                        <li class="hh-video-img-div ">
-                            <div class="mask-item-img">
-                                <img src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
-                                <div class="index-course-item-shadow">
-                                </div>
-                            </div>
-                        </li>
-                    </div>
-                    <div class="item">
-
-                        <!--<img src="http://qnp.shanxiaxuetang.com/index-course-1.jpg" alt="Second slide">-->
-                        <li class="hh-video-img-div ">
-                            <div class="mask-item-img">
-                                <img id="jlp" src="images/example1.jpg">
-                                <div class="index-course-item-shadow">
-                                </div>
-                            </div>
-                        </li>
-                    </div>
-                </div>
-            </div>
-            <a class="mask-video-content-right" href="#mask-myCarousel"
-               data-slide="next" onclick="mmm()">
-                <img class="mask-arrow-right" src="../../static/hehe/images/arrow-right-hh.png">
-            </a>
-        </div>
-    </div>
-</div>
 
 <!-- Navigation -->
 <div id="my-nav">
@@ -119,16 +68,16 @@
 
 <div class="page" id="vue-page">
     <div class="page-bak">
-        <img src="images/films-cover-demo.jpg">
+        <img v-bind:src="poster">
         <div></div>
     </div>
 
-    <div class="film-info">
+    <div class="film-info" v-cloak>
         <div class="film-info-left">
             <p v-bind:class="title.length > 10 ? 'left-align':''">{{title}}</p>
             <img v-bind:src="poster">
             <a v-if="store" v-bind:href="store">
-                <p>购买周边</p>
+                <p>{{$t('lang.store')}}</p>
             </a>
         </div>
         <div class="film-info-right">
@@ -138,39 +87,39 @@
                     <td>{{director}}</td>
                 </tr>
                 <tr v-if="writer">
-                    <td>编剧：</td>
+                    <td>{{$t('lang.writer')}}：</td>
                     <td>{{writer}}</td>
                 </tr>
                 <tr v-if="stars">
-                    <td>主演：</td>
+                    <td>{{$t('lang.stars')}}：</td>
                     <td>{{stars}}</td>
                 </tr>
                 <tr v-if="release_date">
-                    <td>上映日期：</td>
+                    <td>{{$t('lang.release_date')}}：</td>
                     <td>{{release_date}}</td>
                 </tr>
                 <tr v-if="genre">
-                    <td>类型：</td>
+                    <td>{{$t('lang.genre')}}：</td>
                     <td>{{genre}}</td>
                 </tr>
                 <tr v-if="lang">
-                    <td>语言：</td>
+                    <td>{{$t('lang.lang')}}：</td>
                     <td>{{lang}}</td>
                 </tr>
                 <tr v-if="duration">
-                    <td>片长：</td>
+                    <td>{{$t('lang.duration')}}：</td>
                     <td>{{duration}}分钟</td>
                 </tr>
                 <tr v-if="country">
-                    <td>制片地区：</td>
+                    <td>{{$t('lang.country')}}：</td>
                     <td>{{country}}</td>
                 </tr>
                 <tr v-if="release_vision">
-                    <td>版本：</td>
+                    <td>{{$t('lang.release_vision')}}：</td>
                     <td>{{release_vision}}</td>
                 </tr>
                 <tr v-if="description">
-                    <td>故事梗概：</td>
+                    <td>{{$t('lang.description')}}：</td>
                     <td>{{description}}</td>
                 </tr>
             </table>
@@ -180,7 +129,7 @@
     <div class="film-videos">
         <div class="film-section-head">
             <hr>
-            <p>预告片</p>
+            <p>{{$t('lang.trailer')}}</p>
             <hr>
         </div>
         <div class="film-videos-preview-title">
@@ -238,7 +187,7 @@
     <div class="film-posters">
         <div class="film-section-head" style="margin-bottom: 2vw;">
             <hr>
-            <p>海报</p>
+            <p>{{$t('lang.poster')}}</p>
             <hr>
         </div>
         <div class="film-posters-carousel">
@@ -271,7 +220,7 @@
     <div class="film-posters" style="padding-bottom: 8.07vw;">
         <div class="film-section-head" style="margin-bottom: 2vw;">
             <hr>
-            <p>剧照</p>
+            <p>{{$t('lang.photo')}}</p>
             <hr>
         </div>
         <div class="film-posters-carousel">
@@ -279,19 +228,9 @@
                 <img src="../../static/hehe/images/arrow-left-hh.png">
             </a>
             <div class="film-posters-slides" id="film-images-slides">
-                <div class="film-poster">
-                    <a data-fancybox="film-images" href="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
-                        <img src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
-                    </a>
-                </div>
-                <div class="film-poster">
-                    <a data-fancybox="film-images" href="images/films-cover-demo.jpg">
-                        <img src="images/films-cover-demo.jpg">
-                    </a>
-                </div>
-                <div class="film-poster">
-                    <a data-fancybox="film-images" href="http://qnp.shanxiaxuetang.com/index-course-3.jpg">
-                        <img src="http://qnp.shanxiaxuetang.com/index-course-3.jpg">
+                <div class="film-poster" v-for="clip in clips">
+                    <a data-fancybox="film-images" :href="'http://staging.hehefilm.com/' + clip">
+                        <img :src="'http://staging.hehefilm.com/' + clip">
                     </a>
                 </div>
             </div>
@@ -318,202 +257,11 @@
 <script src="https://cdn.bootcss.com/fancybox/3.2.5/jquery.fancybox.min.js"></script>
 
 <script src="js/nav.js"></script>
-<script src="js/videojs.min.js"></script>
 <script src="js/films-detail.js"></script>
 
 <script>
 
-    $(document).ready(function(){
-        $('#film-posters-slides').slick({
-            // dots: true,
-            infinite: false,
-            // slidesToShow: 4,
-            variableWidth: true,
-            arrows: true,
-            prevArrow: $("#film-posters-left"),
-            nextArrow: $("#film-posters-right"),
-            // centerPadding: '40px',
-            // centerMode: true,
-        });
-        $('#film-images-slides').slick({
-            // dots: true,
-            infinite: false,
-            // slidesToShow: 4,
-            variableWidth: true,
-            arrows: true,
-            prevArrow: $("#film-images-left"),
-            nextArrow: $("#film-images-right"),
-            // centerPadding: '40px',
-            // centerMode: true,
-        });
 
-        $('[data-fancybox]').fancybox({
-            infobar: false,
-            toolbar: false,
-            idleTime: 0,
-            btnTpl: {
-                arrowLeft: '<button data-fancybox-prev class="fancybox-button fancybox-button--arrow_left" title="{{PREV}}">' +
-                        '<img src="../../static/hehe/images/arrow-left-hh.png">' +
-                      '</button>',
-                arrowRight: '<button data-fancybox-next class="fancybox-button fancybox-button--arrow_right" title="{{NEXT}}">' +
-                        '<img src="../../static/hehe/images/arrow-right-hh.png">' +
-                      '</button>',
-            }
-        })
-    });
-
-    function GetQueryString(name) {  
-        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");  
-        var r = window.location.search.substr(1).match(reg);  //获取url中"?"符后的字符串并正则匹配
-        var context = "";  
-        if (r != null)  
-             context = r[2];  
-        reg = null;  
-        r = null;  
-        return context == null || context == "" || context == "undefined" ? "" : context;  
-    }
-
-    var navHeight = $(window).width() * 0.055;
-
-    var t = document.documentElement.scrollTop || document.body.scrollTop;
-    if (t >= navHeight) {
-        $("#my-nav").css('background-color', '#1A1C21');
-    } else {
-        $("#my-nav").css('background-color', 'transparent');
-    }
-
-    window.onscroll = function () {
-        var t = document.documentElement.scrollTop || document.body.scrollTop;
-        if (t >= navHeight) {
-            $("#my-nav").css('background-color', '#1A1C21');
-            $("#my-nav").css('transition-duration', '0.25s');
-        } else {
-            $("#my-nav").css('background-color', 'transparent');
-        }
-    }
-
-    if (!GetQueryString('movie_id')) {
-        window.location = "index.html";
-    }
-
-    // 建立翻译基础
-    const messages = {
-        en: {
-            lang: {
-                director: 'Director'
-            }
-        },
-        cn: {
-            lang: {
-                director: '导演'
-            }
-        }
-    };
-    //生成国际化插件实例
-    const i18n = new VueI18n({
-        locale: 'en', // set locale
-        messages, // set locale messages
-    });
-    var vue = new Vue({
-        i18n,
-        el: '#vue-page',
-        data: {
-            title: "《西游2伏妖篇西游2伏妖篇西游2伏妖篇》",
-            poster: "images/films-cover-demo.jpg",
-            store: "https://www.taobao.com/",
-            director: "徐克", //导演
-            writer: "周星驰", //编剧
-            release_date: "2017-01-01", //上映日期
-            genre: "魔幻/喜剧", //类型
-            duration: 120, //片长
-            description: "作为《西游降魔篇》的后继故事，唐三藏在上集感化了杀死段小姐的齐天大圣，并收其为徒后，带着孙悟空、猪八戒及沙僧，一行\
-人《西游降魔篇》的后继故事，唐三藏在上集感化了杀死段小姐的齐天大圣，并收其为徒后，带着孙悟空、猪八戒及沙僧，一行四\
-踏上西天取经之旅，路途凶险，除魔伏妖，师徒四人并收其为徒后，带着孙悟空。", //简介
-            stars: "吴亦凡 / 皮尔斯·布鲁斯南 / 欧拉·布拉迪 / 德莫·克劳利 / 吴亦凡 / 吴亦凡", //主演，演员
-            clips: ["http://hh.com/1.jpg", "http://hh.com/2.jpg"], //剧照
-            videos: [{
-                title: "终极预告片1",
-                time: "01:23",
-                url: "",
-                img: "images/img/001.jpg"
-            },
-                {
-                    title: "终极预告片2",
-                    time: "02:23",
-                    url: "",
-                    img: "images/img/002.jpg"
-                },
-                {
-                    title: "终极预告片3",
-                    time: "03:23",
-                    url: "",
-                    img: "images/img/003.jpg"
-                },
-                {
-                    title: "终极预告片4",
-                    time: "04:23",
-                    url: "",
-                    img: "images/img/004.jpg"
-                },
-                {
-                    title: "终极预告片5",
-                    time: "05:23",
-                    url: "",
-                    img: "images/img/005.jpg"
-                },
-            ], //宣传视频
-            lang: "普通话", //语言
-            release_vision: "2D/IMAX3D", //荧幕类型
-            country: "中国大陆", //制作国家
-            mknown: "小海怪/Mermaid", //又名
-            currentPreviewTitle: "",
-            currentPreviewIndex: 0,
-            currentThumbnailIndex: 0,
-        },
-        created: function () {
-            axios.get('http://staging.hehefilm.com/resources/movie/' + GetQueryString('movie_id'))
-            .then(resp => {
-                console.log(resp.data);
-            }).catch(err => {
-                console.log('请求失败：'+err.status+','+err.statusText);
-            });
-        },
-        mounted: function () {
-            this.currentPreviewTitle = this.videos[0].title;
-            document.title = '和和影业 - ' + this.title;
-        },
-        methods: {
-            sliceVideos: function (n) {
-                return this.videos.slice((n - 1) * 3, n * 3);
-            },
-            thumbnailClick: function (index) {
-                this.currentPreviewTitle = this.videos[index].title;
-                this.currentPreviewIndex = index;
-                this.currentThumbnailIndex = Math.floor(index / 3);
-                if (lastSelectedThumbnailIndex != index) {
-                    $("#moviePreview").carousel(index);
-                    $("#movieThumbnail").carousel(Math.floor(index / 3));
-                    lastSelectedThumbnailIndex = index;
-                }
-            },
-        }
-    })
-
-    var lastSelectedThumbnailIndex = 0;
-
-    $('#movieThumbnail').on('slid.bs.carousel', function () {
-        index = $('#movieThumbnail > .carousel-inner > div.active').index();
-        vue.currentThumbnailIndex = index;
-    });
-    $('#moviePreview').on('slid.bs.carousel', function () {
-        index = $('#moviePreview > .carousel-inner > div.active').index();
-        vue.currentPreviewIndex = index;
-        vue.currentThumbnailIndex = Math.floor(index / 3);
-        if (lastSelectedThumbnailIndex != index) {
-            $("#movieThumbnail").carousel(Math.floor(index / 3));
-            lastSelectedThumbnailIndex = index;
-        }
-    });
 </script>
 
 

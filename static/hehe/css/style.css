@@ -20,6 +20,9 @@
     background-color: #1A1C21;
     /*transition-duration: 0.25s;*/
 }
+#my-nav a {
+    text-decoration: none;
+}
 .navbar-inverse {
     background-color: transparent !important;
     border-color: transparent;
@@ -78,7 +81,7 @@
 	display:block;
 	color:#fff;
 	font-size: 1.8rem;
-	font-weight: 300;
+	font-weight: bold;
     line-height: 4.5vw;
 	border-radius: 0;
 	position: relative;

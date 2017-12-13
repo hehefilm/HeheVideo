@@ -269,10 +269,10 @@
 }
 
 .hh-video-title {
-    height: 17px;
     color: #FFFFFF;
-    font-family: FZLanTingHei-B-GBK;
-    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 100%;
+    font-weight: bold;
 }
 
 .video-top {

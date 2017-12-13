@@ -1,10 +1,38 @@
+function GetQueryString(name) {  
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");  
+    var r = window.location.search.substr(1).match(reg);  //获取url中"?"符后的字符串并正则匹配
+    var context = "";  
+    if (r != null)  
+         context = r[2];  
+    reg = null;  
+    r = null;  
+    return context == null || context == "" || context == "undefined" ? "" : context;  
+}
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    if (cname == "lang") {
+    	return "cn";
+    }
+    return "";
+}
 /**
  * 直接创建组件(推荐)
  */
 Vue.component('my-nav',{
 	template:`
 		<div class="nav-wai">
-			<a id="pcLogo" class="nav-brand" href="../../web/templates/index.html#Slider">
+			<a id="pcLogo" class="nav-brand" href="../../static/hehe/index.html">
 				<img class="nav-brand" src="../../static/hehe/images/logo.png"/>
 			</a>
 			<ul class="nav-ul">
@@ -21,21 +49,23 @@ Vue.component('my-nav',{
 					<a href="../../static/hehe/business.html">{{ $t("lang.business") }}</a>
 				</li>
 				<li>
-					<a href="../../static/hehe/cooperation.html">{{ $t("lang.cooperation") }}</a>
+					<a href="../../static/hehe/partners.html">{{ $t("lang.cooperation") }}</a>
 				</li>
 				<li>
 					<a href="../../static/hehe/contactus.html">{{ $t("lang.contactus") }}</a>
 				</li>
 			</ul>
 			<div class="nav-search">
-				<input v-bind:placeholder="$t('lang.search_plc')" />
+				<form>
+					<input id="bdcsMain" v-bind:placeholder="$t('lang.search_plc')" />
+				</form>
 				<img src="../../static/hehe/images/search.png"/>
 			</div>
 		</div>`
 });
 
 var nav_i18n = new VueI18n({
-    locale: 'en',
+    locale: getCookie('lang'),
     messages: {
 		en: {
 		    lang: {

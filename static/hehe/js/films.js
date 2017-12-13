@@ -1,4 +1,23 @@
+// 建立翻译基础
+var messages = {
+    en: {
+        lang: {
+            films: 'Films',
+        }
+    },
+    cn: {
+        lang: {
+            films: '影视作品',
+        }
+    }
+};
+//生成国际化插件实例
+const i18n = new VueI18n({
+    locale: getCookie('lang'), // set locale
+    messages, // set locale messages
+});
 var vue = new Vue({
+    i18n,
     el: '#vue-page',
     data: {
         page:1,

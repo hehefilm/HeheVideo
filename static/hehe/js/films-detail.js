@@ -1,94 +1,224 @@
-/**
- * Determine the mobile operating system.
- * This function either returns 'iOS', 'Android' or 'unknown'
- *
- * @returns {String}
- */
-//  function iOSversion() {
-//   if (/iP(hone|od|ad)/.test(navigator.platform)) {
-//     // supports iOS 2.0 and later: <http://bit.ly/TJjs1V>
-//     var v = (navigator.appVersion).match(/OS (\d+)_(\d+)_?(\d+)?/);
-//     return [parseInt(v[1], 10), parseInt(v[2], 10), parseInt(v[3] || 0, 10)];
-//   }
-// }
-// function getMobileOperatingSystem() {
-//     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+$(document).ready(function(){
+    $('#film-posters-slides').slick({
+        // dots: true,
+        infinite: false,
+        // slidesToShow: 4,
+        variableWidth: true,
+        arrows: true,
+        prevArrow: $("#film-posters-left"),
+        nextArrow: $("#film-posters-right"),
+        // centerPadding: '40px',
+        // centerMode: true,
+    });
+    $('#film-images-slides').slick({
+        // dots: true,
+        infinite: false,
+        // slidesToShow: 4,
+        variableWidth: true,
+        arrows: true,
+        prevArrow: $("#film-images-left"),
+        nextArrow: $("#film-images-right"),
+        // centerPadding: '40px',
+        // centerMode: true,
+    });
 
-//     if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i) || userAgent.match(/iPod/i)) {
-//         // if (iOSversion()[0] >= 11) {
-//         // 	return 'iOS11';
-//         // } else {
-//         return 'iOS';
-//         // }
+    $('[data-fancybox]').fancybox({
+        infobar: false,
+        toolbar: false,
+        idleTime: 0,
+        btnTpl: {
+            arrowLeft: '<button data-fancybox-prev class="fancybox-button fancybox-button--arrow_left" title="{{PREV}}">' +
+                    '<img src="../../static/hehe/images/arrow-left-hh.png">' +
+                  '</button>',
+            arrowRight: '<button data-fancybox-next class="fancybox-button fancybox-button--arrow_right" title="{{NEXT}}">' +
+                    '<img src="../../static/hehe/images/arrow-right-hh.png">' +
+                  '</button>',
+        }
+    })
+});
 
-//     }
-//     else if (userAgent.match(/Android/i)) {
+var navHeight = $(window).width() * 0.055;
 
-//         return 'Android';
-//     }
-//     else {
-//         return 'unknown';
-//     }
-// }
+var t = document.documentElement.scrollTop || document.body.scrollTop;
+if (t >= navHeight) {
+    $("#my-nav").css('background-color', '#1A1C21');
+} else {
+    $("#my-nav").css('background-color', 'transparent');
+}
 
-// //page data
-// var data = {list: []};
-// var videosPageCur = 1;
+window.onscroll = function () {
+    var t = document.documentElement.scrollTop || document.body.scrollTop;
+    if (t >= navHeight) {
+        $("#my-nav").css('background-color', '#1A1C21');
+        $("#my-nav").css('transition-duration', '0.25s');
+    } else {
+        $("#my-nav").css('background-color', 'transparent');
+    }
+}
 
-// function getVideos(page) {
-//     $.get("https://shanxiaxuetang.com/resources/videos?num=3&pg=" + page, function (rdata, status) {
-//         var moreData = {
-//             // list : [
-//             // 	{
-//             // 		title : '视频1',
-//             // 		time : '2017.2.2',
-//             // 		image : 'images/videos-item-thumbnail.jpg',
-//             // 		url : 'videos/sample.mp4'
-//             // 	},
-//             // 	{
-//             // 		title : '视频2',
-//             // 		time : '2017.2.2',
-//             // 		image : 'images/videos-item-thumbnail.jpg',
-//             // 		url : 'videos/sample.mp4'
-//             // 	},
-//             // 	{
-//             // 		title : '视频3',
-//             // 		time : '2017.2.2',
-//             // 		image : 'images/videos-item-thumbnail.jpg',
-//             // 		url : 'videos/sample.mp4'
-//             // 	},
-//             // ]
-//         };
-//         // rdata = '[{"url": "https://odffqu1hn.qnssl.com/small.mp4", "thumb_url":"http://qnp.shanxiaxuetang.com/o_1bs5l9ngf14hg1cif12e22e31l6rk.png", "video_id": "video_1505815457", "created": 1505815457, "title": "\u60ef\u770b\u79cb\u6708\u6625\u98ce"}, {"url": "https://odffqu1hn.qnssl.com/small.mp4", "video_id": "video_1505792385", "created": 1505792385, "title": "\u767d\u53d1\u6e14\u6a35\u6c5f\u6e1a\u4e0a"}, {"url": "https://odffqu1hn.qnssl.com/small.mp4", "video_id": "video_1505792356", "created": 1505792356, "title": "\u4e0d\u5c3d\u957f\u6c5f\u6eda\u6eda\u6d41"}]';
-//         moreData.list = jQuery.parseJSON(rdata);
-//         moreData.platform = getMobileOperatingSystem();
-//         if (getMobileOperatingSystem() == 'iOS') {
-//             moreData.controls = 'controls';
-//         } else {
-//             moreData.controls = '';
-//         }
-//         if (moreData.list.length > 0) {
-//             for (var i = moreData.list.length - 1; i >= 0; i--) {
-//                 var iDate = new Date(moreData.list[i].created * 1000);
-//                 moreData.list[i].time = iDate.getFullYear() + '.' + (iDate.getMonth() + 1) + '.' + iDate.getDate();
-//             }
-//             // data.list.concat(moreData.list);
-//             Array.prototype.push.apply(data.list, moreData.list);
+if (!GetQueryString('movie_id')) {
+    window.location = "index.html";
+}
 
-//             var html = template('tpl-video-item', moreData);
-//             document.getElementById('videos-list').insertAdjacentHTML('beforeend', html);
-//         } else {
-//             $(".videos-more").css('visibility', 'hidden');
-//         }
-//     });
-// }
+// 建立翻译基础
+var messages = {
+    en: {
+        lang: {
+            director: 'Directors',
+            writer: 'Writers',
+            stars: 'Stars',
+            release_date: 'Release Date',
+            genre: 'Genre',
+            lang: 'Language',
+            duration: 'Duration',
+            country: 'Country',
+            release_vision: 'Version',
+            description: 'Description',
+            store: 'Buy Products',
+            trailer: 'Trailer',
+            poster: 'Poster',
+            photo: 'Photo'
+        }
+    },
+    cn: {
+        lang: {
+            director: '导演',
+            writer: '编剧',
+            stars: '主演',
+            release_date: '上映日期',
+            genre: '类型',
+            lang: '语言',
+            duration: '片长',
+            country: '制片地区',
+            release_vision: '版本',
+            description: '故事梗概',
+            store: '购买周边',
+            trailer: '预告片',
+            poster: '海报',
+            photo: '剧照'
+        }
+    }
+};
+//生成国际化插件实例
+const i18n = new VueI18n({
+    locale: getCookie('lang'), // set locale
+    messages, // set locale messages
+});
+var vue = new Vue({
+    i18n,
+    el: '#vue-page',
+    data: {
+        title: "《西游2伏妖篇西游2伏妖篇西游2伏妖篇》",
+        poster: "images/films-cover-demo.jpg",
+        store: "https://www.taobao.com/",
+        director: "徐克", //导演
+        writer: "周星驰", //编剧
+        release_date: "2017-01-01", //上映日期
+        genre: "魔幻/喜剧", //类型
+        duration: 120, //片长
+        description: "作为《西游降魔篇》的后继故事，唐三藏在上集感化了杀死段小姐的齐天大圣，并收其为徒后，带着孙悟空、猪八戒及沙僧，一行\
+人《西游降魔篇》的后继故事，唐三藏在上集感化了杀死段小姐的齐天大圣，并收其为徒后，带着孙悟空、猪八戒及沙僧，一行四\
+踏上西天取经之旅，路途凶险，除魔伏妖，师徒四人并收其为徒后，带着孙悟空。", //简介
+        stars: "吴亦凡 / 皮尔斯·布鲁斯南 / 欧拉·布拉迪 / 德莫·克劳利 / 吴亦凡 / 吴亦凡", //主演，演员
+        clips: ["http://hh.com/1.jpg", "http://hh.com/2.jpg"], //剧照
+        videos: [{
+            title: "终极预告片1",
+            time: "01:23",
+            url: "",
+            img: "images/img/001.jpg"
+        },
+            {
+                title: "终极预告片2",
+                time: "02:23",
+                url: "",
+                img: "images/img/002.jpg"
+            },
+            {
+                title: "终极预告片3",
+                time: "03:23",
+                url: "",
+                img: "images/img/003.jpg"
+            },
+            {
+                title: "终极预告片4",
+                time: "04:23",
+                url: "",
+                img: "images/img/004.jpg"
+            },
+            {
+                title: "终极预告片5",
+                time: "05:23",
+                url: "",
+                img: "images/img/005.jpg"
+            },
+        ], //宣传视频
+        lang: "普通话", //语言
+        release_vision: "2D/IMAX3D", //荧幕类型
+        country: "中国大陆", //制作国家
+        mknown: "小海怪/Mermaid", //又名
+        currentPreviewTitle: "",
+        currentPreviewIndex: 0,
+        currentThumbnailIndex: 0,
+    },
+    created: function () {
+        axios.get('http://staging.hehefilm.com/resources/movie/' + GetQueryString('movie_id'))
+        .then(resp => {
+            this.title = resp.data.title;
+            this.poster = 'http://staging.hehefilm.com/' + resp.data.poster;
+            this.store = resp.data.store;
+            this.director = resp.data.director;
+            this.writer = resp.data.writer;
+            this.release_date = resp.data.release_date;
+            this.genre = resp.data.genre;
+            this.duration = resp.data.duration;
+            this.description = resp.data.description;
+            this.stars = resp.data.stars;
+            this.clips = resp.data.clips;
+            this.videos = resp.data.videos;
+            this.lang = resp.data.lang;
+            this.release_vision = resp.data.release_vision;
+            this.country = resp.data.country;
+            this.mknown = resp.data.mknown;
+        }).catch(err => {
+            console.log('请求失败：'+err.status+','+err.statusText);
+        });
+    },
+    mounted: function () {
+        this.currentPreviewTitle = this.videos[0].title;
+        document.title = '和和影业 - ' + this.title;
+    },
+    methods: {
+        sliceVideos: function (n) {
+            return this.videos.slice((n - 1) * 3, n * 3);
+        },
+        thumbnailClick: function (index) {
+            this.currentPreviewTitle = this.videos[index].title;
+            this.currentPreviewIndex = index;
+            this.currentThumbnailIndex = Math.floor(index / 3);
+            if (lastSelectedThumbnailIndex != index) {
+                $("#moviePreview").carousel(index);
+                $("#movieThumbnail").carousel(Math.floor(index / 3));
+                lastSelectedThumbnailIndex = index;
+            }
+        },
+    }
+})
 
-// getVideos(videosPageCur);
+var lastSelectedThumbnailIndex = 0;
 
-// function moreVideos(event) {
-//     videosPageCur++;
-//     getVideos(videosPageCur);
-// }
+$('#movieThumbnail').on('slid.bs.carousel', function () {
+    index = $('#movieThumbnail > .carousel-inner > div.active').index();
+    vue.currentThumbnailIndex = index;
+});
+$('#moviePreview').on('slid.bs.carousel', function () {
+    index = $('#moviePreview > .carousel-inner > div.active').index();
+    vue.currentPreviewIndex = index;
+    vue.currentThumbnailIndex = Math.floor(index / 3);
+    if (lastSelectedThumbnailIndex != index) {
+        $("#movieThumbnail").carousel(Math.floor(index / 3));
+        lastSelectedThumbnailIndex = index;
+    }
+});
 
 
 //full screen video play
