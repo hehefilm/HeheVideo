@@ -36,50 +36,6 @@
 </head>
 <body class="index-bg">
 
-<!--浏览  大图-->
-
-<div class="mask" id="mask" onclick="maskDismiss()">
-    <div class="mask-video-content">
-
-        <div id="mask-myCarousel" class="carousel slide  mask-index-video">
-            <!-- 轮播（Carousel）项目 -->
-            <a class="mask-video-content-left" href="#mask-myCarousel"
-               data-slide="prev">
-                <img class="mask-arrow-left" src="images/arrow-left-hh.png">
-            </a>
-
-            <div class="mask-hh-video-content-slide">
-                <div class="carousel-inner ">
-                    <div class="item active">
-                        <li class="hh-video-img-div ">
-                            <div class="mask-item-img">
-                                <img src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
-                                <div class="index-course-item-shadow">
-                                </div>
-                            </div>
-                        </li>
-                    </div>
-                    <div class="item">
-
-                        <!--<img src="http://qnp.shanxiaxuetang.com/index-course-1.jpg" alt="Second slide">-->
-                        <li class="hh-video-img-div ">
-                            <div class="mask-item-img">
-                                <img id="jlp" src="images/example1.jpg">
-                                <div class="index-course-item-shadow">
-                                </div>
-                            </div>
-                        </li>
-                    </div>
-                </div>
-            </div>
-            <a class="mask-video-content-right" href="#mask-myCarousel"
-               data-slide="next" onclick="mmm()">
-                <img class="mask-arrow-right" src="../../static/hehe/images/arrow-right-hh.png">
-            </a>
-        </div>
-    </div>
-</div>
-
 <!-- Navigation -->
 <div id="my-nav">
     <my-nav></my-nav>
@@ -112,7 +68,7 @@
 
 <div class="page" id="vue-page">
     <div class="page-bak">
-        <img src="images/films-cover-demo.jpg">
+        <img v-bind:src="poster">
         <div></div>
     </div>
 
@@ -272,19 +228,9 @@
                 <img src="../../static/hehe/images/arrow-left-hh.png">
             </a>
             <div class="film-posters-slides" id="film-images-slides">
-                <div class="film-poster">
-                    <a data-fancybox="film-images" href="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
-                        <img src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
-                    </a>
-                </div>
-                <div class="film-poster">
-                    <a data-fancybox="film-images" href="images/films-cover-demo.jpg">
-                        <img src="images/films-cover-demo.jpg">
-                    </a>
-                </div>
-                <div class="film-poster">
-                    <a data-fancybox="film-images" href="http://qnp.shanxiaxuetang.com/index-course-3.jpg">
-                        <img src="http://qnp.shanxiaxuetang.com/index-course-3.jpg">
+                <div class="film-poster" v-for="clip in clips">
+                    <a data-fancybox="film-images" :href="'http://staging.hehefilm.com/' + clip">
+                        <img :src="'http://staging.hehefilm.com/' + clip">
                     </a>
                 </div>
             </div>

@@ -163,7 +163,22 @@ var vue = new Vue({
     created: function () {
         axios.get('http://staging.hehefilm.com/resources/movie/' + GetQueryString('movie_id'))
         .then(resp => {
-            console.log(resp.data);
+            this.title = resp.data.title;
+            this.poster = 'http://staging.hehefilm.com/' + resp.data.poster;
+            this.store = resp.data.store;
+            this.director = resp.data.director;
+            this.writer = resp.data.writer;
+            this.release_date = resp.data.release_date;
+            this.genre = resp.data.genre;
+            this.duration = resp.data.duration;
+            this.description = resp.data.description;
+            this.stars = resp.data.stars;
+            this.clips = resp.data.clips;
+            this.videos = resp.data.videos;
+            this.lang = resp.data.lang;
+            this.release_vision = resp.data.release_vision;
+            this.country = resp.data.country;
+            this.mknown = resp.data.mknown;
         }).catch(err => {
             console.log('请求失败：'+err.status+','+err.statusText);
         });
