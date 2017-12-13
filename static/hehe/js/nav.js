@@ -32,7 +32,7 @@ function getCookie(cname) {
 Vue.component('my-nav',{
 	template:`
 		<div class="nav-wai">
-			<a id="pcLogo" class="nav-brand" href="../../web/templates/index.html#Slider">
+			<a id="pcLogo" class="nav-brand" href="../../static/hehe/index.html">
 				<img class="nav-brand" src="../../static/hehe/images/logo.png"/>
 			</a>
 			<ul class="nav-ul">
