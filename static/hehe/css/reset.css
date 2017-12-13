@@ -6,8 +6,9 @@
 
 @font-face {
     font-family: 'fzhei-b01regular';
-    src: url('_gbk-webfont.woff2') format('woff2'),
-         url('_gbk-webfont.woff') format('woff');
+    src: url(../fonts/_gbk-webfont.woff2) format('woff2'),
+    	 url(../fonts/_gbk-webfont.ttf) format('truetype'),
+         url(../fonts/_gbk-webfont.woff) format('woff');
     font-weight: normal;
     font-style: normal;
 
