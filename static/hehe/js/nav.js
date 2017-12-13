@@ -56,7 +56,9 @@ Vue.component('my-nav',{
 				</li>
 			</ul>
 			<div class="nav-search">
-				<input v-bind:placeholder="$t('lang.search_plc')" />
+				<form>
+					<input id="bdcsMain" v-bind:placeholder="$t('lang.search_plc')" />
+				</form>
 				<img src="../../static/hehe/images/search.png"/>
 			</div>
 		</div>`

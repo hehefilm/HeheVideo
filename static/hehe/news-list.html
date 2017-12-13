@@ -60,7 +60,7 @@
 		</div>
 		
 		<div class="news-body-right" v-cloak>
-			<img class="right-img" src="images/example1.jpg"/>
+			<img class="right-img" v-bind:src="'http://staging.hehefilm.com' + rightDetail.poster"/>
 			<div> <p class="news-body-right-p">导&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;演：</p><p class="news-body-right-span">{{rightDetail.director}}</p></div>
 			<div> <p class="news-body-right-p">主&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;演：</p><p class="news-body-right-span">{{rightDetail.stars}}</p></div>
 			<div> <p class="news-body-right-p">上映日期：</p><p class="news-body-right-span">{{rightDetail.release_date}}</p></div>
