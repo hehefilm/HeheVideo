@@ -27,7 +27,7 @@
     background-color: transparent !important;
     border-color: transparent;
     margin-bottom: 0px;
-    height: 5.5vw;
+    height: 4.5vw;
     max-height: 106px;
 }
 
@@ -82,7 +82,7 @@
 	color:#fff;
 	font-size: 1.8rem;
 	font-weight: bold;
-    line-height: 4.5vw;
+    line-height: 3.5vw;
 	border-radius: 0;
 	position: relative;
     white-space: nowrap;
