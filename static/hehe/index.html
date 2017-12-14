@@ -55,15 +55,14 @@
 		   	 	</ol>
 		  	</div>
 		  	
-		
 		    <!-- Wrapper for slides -->
 		    <div class="carousel-inner">
 		    	<template v-for="(bn,index) in banner">
 			        <div class="item" v-bind:class='{active:index==0}'>
-			        	<div class="fill" v-bind:style="{'background-image' : 'url('+'http://staging.hehefilm.com'+bn.bcover+')'}" v-cloak>
+			        	<div class="fill" v-bind:style="{'background-image' : 'url('+'http://staging.hehefilm.com'+bn.mcover+')'}" v-cloak>
 			        		<div class="banner-title-div">
-				                <a>{{bn.btitle}}</a> <span>[ {{bn.bkey}} ]</span>
-				                <p class="banner-content">{{bn.bdesc}}</p>
+				                <a>{{bn.title}}</a> <span>[ {{bn.director}}导演& {{bn.writer}}监制]</span>
+				                <p class="banner-content">{{bn.description}}</p>
 				                <div class="banner-more">
 				                    <p>更多 >></p>
 				                </div>
