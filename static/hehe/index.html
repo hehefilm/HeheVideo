@@ -39,114 +39,141 @@
     <my-nav></my-nav>
 </div>
 
-	
-<!--Slider BEGIN-->	
+
+<!--Slider BEGIN-->
 <section id="mysection" class="slide-wrapper">
-	<div class="container">
-		<div id="mybanner" class="carousel slide">
-			
-		  	<!-- Indicators -->
-		  	<div class="carousel-indicators-div">
-		  		<hr />
-		    	<ol class="carousel-indicators">
-		    		<template v-for="(bn,index) in banner">
-						<li data-target="#mybanner" v-bind:data-slide-to="index" v-bind:class='{active:index==0}'>{{index+1}}</li>
-					</template>
-		   	 	</ol>
-		  	</div>
-		  	
-		    <!-- Wrapper for slides -->
-		    <div class="carousel-inner">
-		    	<template v-for="(bn,index) in banner">
-			        <div class="item" v-bind:class='{active:index==0}'>
-			        	<div class="fill" v-bind:style="{'background-image' : 'url('+'http://staging.hehefilm.com'+bn.mcover+')'}" v-cloak>
-			        		<div class="banner-title-div">
-				                <a>{{bn.title}}</a> <span>[ {{bn.director}}导演& {{bn.writer}}监制]</span>
-				                <p class="banner-content">{{bn.description}}</p>
-				                <div class="banner-more">
-				                    <p>更多 >></p>
-				                </div>
-				            </div>
-			        	</div>
-			        </div>
-		     </template>
-		    </div>
-		</div>
-	</div>
+
+    <div class="container">
+        <div id="mybanner" class="carousel slide">
+
+            <!-- Indicators -->
+            <div class="carousel-indicators-div">
+                <hr/>
+                <ol class="carousel-indicators">
+                    <template v-for="(bn,index) in banner">
+                        <li data-target="#mybanner" v-bind:data-slide-to="index" v-bind:class='{active:index==0}'>
+                            {{index+1}}
+                        </li>
+                    </template>
+                </ol>
+            </div>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <template v-for="(bn,index) in banner">
+                    <div class="item" v-bind:class='{active:index==0}'>
+                        <div class="fill"
+                             v-bind:style="{'background-image' : 'url('+'http://staging.hehefilm.com'+bn.mcover+')'}"
+                             v-cloak>
+                            <div class="banner-title-div">
+                                <a>{{bn.title}}</a> <span>[ {{bn.director}}导演& {{bn.writer}}监制]</span>
+                                <p class="banner-content">{{bn.description}}</p>
+                                <div class="banner-more">
+                                    <p>更多 >></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
 </section>
 <!--Slider END-->
 
-<div id="vue-page">
-<!--hh video 影视作品-->
-<div class="hh-video">
+<div>
+    <!--hh video 影视作品-->
+    <div class="hh-video" id="vue-page">
 
-    <div class="video-top">
-        <div class="video-line-left"></div>
-        <div class="hh-video-title">{{$t('lang.films')}}</div>
-        <div class="video-line-right"></div>
-    </div>
+        <div class="video-top">
+            <div class="video-line-left"></div>
+            <div class="hh-video-title">{{$t('lang.films')}}</div>
+            <div class="video-line-right"></div>
+        </div>
 
-    <div class="video-content">
+        <div class="video-content">
 
-        <div id="myCarousel" class="carousel slide  index-video">
-            <!-- 轮播（Carousel）项目 -->
-            <!-- 轮播（Carousel）导航 -->
-            <a class="video-content-left" href="#myCarousel"
-               data-slide="prev">
-                <!--<div class="video-content-left">-->
-                <img class="arrow-left" src="../../static/hehe/images/arrow-left-hh.png">
-                <!--</div>-->
-            </a>
-            <div class="hh-video-content-slide">
-                <div class="carousel-inner ">
-                    <div v-for="(film,index) in films_li" v-bind:class="index==0?'item active':'item'">
-                        <div class="video-content-center row">
-                            <div v-for="movie in film.movie_li">
-                                <a v-bind:href="'../../static/hehe/films-detail.html?movie_id='+movie.movie_id">
-                                    <li class="hh-video-img-div col-md-3 col-sm-3 col-xs-3">
-                                        <div class="index-course-item-img">
-                                            <img id="jlp" src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
-                                            <div class="index-course-item-shadow">
+            <div id="myCarousel" class="carousel slide  index-video">
+                <!-- 轮播（Carousel）项目 -->
+                <!-- 轮播（Carousel）导航 -->
+                <a class="video-content-left" href="#myCarousel"
+                   data-slide="prev">
+                    <!--<div class="video-content-left">-->
+                    <img class="arrow-left" src="../../static/hehe/images/arrow-left-hh.png">
+                    <!--</div>-->
+                </a>
+                <div class="hh-video-content-slide">
+                    <div class="carousel-inner ">
+                        <div v-for="(film,index) in films_li" :class="index==0?'item active':'item'">
+                            <div class="video-content-center row">
+                                <div v-for="movie in film.movie_li">
+                                    <a :href="'../../static/hehe/films-detail.html?movie_id='+movie.movie_id">
+                                        <li class="hh-video-img-div col-md-3 col-sm-3 col-xs-3">
+                                            <div class="movie-item-img">
+                                                <img id="jlp" :src="'http://staging.hehefilm.com'+movie.mcover">
+                                                <div class="index-course-item-shadow">
+                                                </div>
                                             </div>
-                                        </div>
-                                    </li>
-                                </a>
+                                        </li>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <a class="video-content-right" href="#myCarousel"
-               data-slide="next">
-                <img class="arrow-right" src="../../static/hehe/images/arrow-right-hh.png">
-            </a>
+                <a class="video-content-right" href="#myCarousel"
+                   data-slide="next">
+                    <img class="arrow-right" src="../../static/hehe/images/arrow-right-hh.png">
+                </a>
+
+            </div>
 
         </div>
 
     </div>
 
-</div>
+    <!-- 合作伙伴-->
+    <div class="hh-partners" id="vue-partners">
+        <div class="video-top">
+            <div class="video-line-left"></div>
+            <div class="hh-video-title">{{$t('lang.cooperation')}}</div>
+            <div class="video-line-right"></div>
+        </div>
+        <div class="partners-icon-div">
 
-<!-- 合作伙伴-->
-<div class="hh-partners">
-    <div class="video-top">
-        <div class="video-line-left"></div>
-        <div class="hh-video-title">{{$t('lang.cooperation')}}</div>
-        <div class="video-line-right"></div>
+            <div id="myPartner" class="carousel slide  index-video">
+                <!--<a class="video-content-left" href="#myPartner"-->
+                <!--data-slide="prev">-->
+                <!--<img class="arrow-left" src="images/arrow-left-hh.png">-->
+                <!--</a>-->
+                <div class="hh-video-content-slide">
+                    <div class="carousel-inner">
+                        <div class="item active ">
+                            <div class="friend-div">
+                                <a v-for="(partner, index) of friend_li" :href="partner.rlink">
+                                    <div class="hh-partners-div">
+                                        <div class="partners-img-div">
+                                            <img class="partners-img-icon"
+                                                 :src="'http://staging.hehefilm.com'+partner.rlogo">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--<a class="video-content-right" href="#myPartner"-->
+                <!--data-slide="next">-->
+                <!--<img class="arrow-right" src="../../static/hehe/images/arrow-right-hh.png">-->
+                <!--</a>-->
+
+            </div>
+
+
+        </div>
     </div>
-    <div class="partners-icon-div">
-        <img class="partners-icon-left" src="../../static/hehe/images/icon-albb.png">
-        <img class="partners-icon-2" src="../../static/hehe/images/icon-2.png">
-        <img class="partners-icon-3" src="../../static/hehe/images/icon-3.png">
-        <img class="partners-icon-4" src="../../static/hehe/images/icon-4.png">
-        <img class="partners-icon-5" src="../../static/hehe/images/icon-5.png">
-        <img class="partners-icon-6" src="../../static/hehe/images/icon-6.png">
-        <img class="partners-icon-7" src="../../static/hehe/images/icon-7.png">
-        <img class="partners-icon-8" src="../../static/hehe/images/icon-8.png">
-        <img class="partners-icon-right" src="../../static/hehe/images/icon-9.png">
-    </div>
-</div>
 </div>
 
 <!-- Footer -->
@@ -169,9 +196,16 @@
 
 <script type="text/javascript" src="../../static/hehe/js/index.js"></script>
 <script type="text/javascript">
-    (function(){document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E'));var bdcs = document.createElement('script');bdcs.type = 'text/javascript';bdcs.async = true;bdcs.src = 'http://znsv.baidu.com/customer_search/api/js?sid=7972134502849772219' + '&plate_url=' + encodeURIComponent(window.location.href) + '&t=' + Math.ceil(new Date()/3600000);var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(bdcs, s);})();
+    (function () {
+        document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E'));
+        var bdcs = document.createElement('script');
+        bdcs.type = 'text/javascript';
+        bdcs.async = true;
+        bdcs.src = 'http://znsv.baidu.com/customer_search/api/js?sid=7972134502849772219' + '&plate_url=' + encodeURIComponent(window.location.href) + '&t=' + Math.ceil(new Date() / 3600000);
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(bdcs, s);
+    })();
 </script>
-
 
 
 </body>
