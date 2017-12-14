@@ -49,7 +49,7 @@ Vue.component('my-nav',{
 					<a href="../../static/hehe/business.html">{{ $t("lang.business") }}</a>
 				</li>
 				<li>
-					<a href="../../static/hehe/cooperation.html">{{ $t("lang.cooperation") }}</a>
+					<a href="../../static/hehe/partners.html">{{ $t("lang.cooperation") }}</a>
 				</li>
 				<li>
 					<a href="../../static/hehe/contactus.html">{{ $t("lang.contactus") }}</a>
