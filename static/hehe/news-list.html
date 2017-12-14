@@ -38,13 +38,12 @@
 	<my-nav></my-nav>
 </div>
 
-<div class="news-head-div">
-	<hr />
-	<p>新闻</p>
-	<hr />
-</div>
-
 <div id="mybody">
+	<div class="news-head-div">
+		<hr />
+		<p>{{$t('lang.news')}}</p>
+		<hr />
+	</div>
 	<div class="news-body">
 		<div class="news-body-left">
 			<template v-for="(anew,index) in news">

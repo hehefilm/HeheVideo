@@ -1,7 +1,27 @@
 
+// 建立翻译基础
+var messages = {
+    en: {
+        lang: {
+            news: 'NEWS'
+        }
+    },
+    cn: {
+        lang: {
+            news: '新闻'
+        }
+    }
+};
+//生成国际化插件实例
+const i18n = new VueI18n({
+    locale: getCookie('lang'), // set locale
+    messages, // set locale messages
+});
+
 var leftWidth = $('.news-body-left').width()/6.57;
 
 new Vue({
+	i18n,
 	el:'#mybody',
 	data:{
 		news:[],
