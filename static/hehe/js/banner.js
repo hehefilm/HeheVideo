@@ -13,10 +13,10 @@ new Vue({
 			axios.get(`http://staging.hehefilm.com/resources/banner?pg=1&num=10`)
 			.then(resp => {
 				var banner = resp.data.banner_li;
-				banner.push(banner[0]);
-				banner.push(banner[0]);
-				banner.push(banner[0]);
-				banner.push(banner[0]);
+//				banner.push(banner[0]);
+//				banner.push(banner[0]);
+//				banner.push(banner[0]);
+//				banner.push(banner[0]);
 				this.banner = banner;
 				console.log(resp.data);
 			}).catch(err => {
