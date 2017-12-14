@@ -374,6 +374,8 @@
     display: flex;
     align-items: center;
     margin: 3.4375% auto 8.23% auto;
+    width: 81.57vw;
+    background-color: #8a6d3b;
 }
 
 .partners-icon {
@@ -433,4 +435,18 @@
 .hh-video-img-div{
     padding: 0px;
     display: flex;
+}
+.hh-partners-div{
+
+}
+.partners-img-div{
+    width: 5.625vw;
+    height: 5.625vw;
+    display: flex;
+    background-color:#bce8f1;
+    margin-right: 3.958vw;
+}
+.partners-img-icon{
+    width: 100%;
+    margin: auto;
 }
