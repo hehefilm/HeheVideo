@@ -24,26 +24,3 @@ var vue = new Vue({
     ,
 
 });
-
-// var data = {list: []};
-// var videosPageCur = 1;
-//
-// function getNews(page) {
-//     $.get("http://staging.hehefilm.com/resources/movie?pg=1&num=16",
-//         function (rdata, status) {
-//             var moreData = {};
-//             moreData.list = jQuery.parseJSON(rdata);
-//             if (moreData.list.length > 0) {
-//             } else {
-//                 $(".news-more").css('visibility', 'hidden');
-//             }
-//         });
-// }
-//
-// getNews(videosPageCur);
-//
-// function moreNews(event) {
-//     videosPageCur++;
-//     getNews(videosPageCur);
-// }
-

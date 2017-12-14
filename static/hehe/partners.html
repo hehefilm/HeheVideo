@@ -80,12 +80,10 @@
             <div v-for="(partner, index) of friend_li">
                 <a :href="partner.rlink">
                 <div :class="(index+1)%5!=0&&index!=friend_li.length-1?'hh-partners-div':'hh-partners-div-right'">
-                    <!--<li class="hh-partners-div">-->
                     <div class="partners-img-div">
                         <img class="partners-img-icon" :src="'http://staging.hehefilm.com'+partner.rlogo">
                     </div>
                     <div class="partners-line" v-if="(index+1)%5!=0&&index!=friend_li.length-1"></div>
-                    <!--</li>-->
                 </div>
                 </a>
             </div>

@@ -109,7 +109,8 @@ var vue = new Vue({
     el: '#vue-page',
     data: {
         title: "《西游2伏妖篇西游2伏妖篇西游2伏妖篇》",
-        poster: "images/films-cover-demo.jpg",
+        posters: ["images/films-cover-demo.jpg"],
+        mcover: "images/films-cover-demo.jpg",
         store: "https://www.taobao.com/",
         director: "徐克", //导演
         writer: "周星驰", //编剧
@@ -122,41 +123,24 @@ var vue = new Vue({
         stars: "吴亦凡 / 皮尔斯·布鲁斯南 / 欧拉·布拉迪 / 德莫·克劳利 / 吴亦凡 / 吴亦凡", //主演，演员
         clips: ["http://hh.com/1.jpg", "http://hh.com/2.jpg"], //剧照
         videos: [{
-            title: "终极预告片1",
-            time: "01:23",
-            url: "",
-            img: "images/img/001.jpg"
-        },
-            {
-                title: "终极预告片2",
-                time: "02:23",
-                url: "",
-                img: "images/img/002.jpg"
+                vlink: "www.baidu.com",
+                vcover: "images/img/001.jpg"
             },
             {
-                title: "终极预告片3",
-                time: "03:23",
-                url: "",
-                img: "images/img/003.jpg"
+                vlink: "www.163.com",
+                vcover: "images/img/002.jpg"
             },
             {
-                title: "终极预告片4",
-                time: "04:23",
-                url: "",
-                img: "images/img/004.jpg"
+                vlink: "www.sina.com.cn",
+                vcover: "images/img/003.jpg"
             },
-            {
-                title: "终极预告片5",
-                time: "05:23",
-                url: "",
-                img: "images/img/005.jpg"
-            },
+
         ], //宣传视频
         lang: "普通话", //语言
         release_vision: "2D/IMAX3D", //荧幕类型
         country: "中国大陆", //制作国家
         mknown: "小海怪/Mermaid", //又名
-        currentPreviewTitle: "",
+        // currentPreviewTitle: "",
         currentPreviewIndex: 0,
         currentThumbnailIndex: 0,
     },
@@ -164,7 +148,8 @@ var vue = new Vue({
         axios.get('http://staging.hehefilm.com/resources/movie/' + GetQueryString('movie_id'))
         .then(resp => {
             this.title = resp.data.title;
-            this.poster = 'http://staging.hehefilm.com/' + resp.data.poster;
+            this.mcover = resp.data.mcover;
+            this.posters = resp.data.posters;
             this.store = resp.data.store;
             this.director = resp.data.director;
             this.writer = resp.data.writer;
@@ -184,7 +169,7 @@ var vue = new Vue({
         });
     },
     mounted: function () {
-        this.currentPreviewTitle = this.videos[0].title;
+        // this.currentPreviewTitle = this.videos[0].title;
         document.title = '和和影业 - ' + this.title;
     },
     methods: {
@@ -192,7 +177,7 @@ var vue = new Vue({
             return this.videos.slice((n - 1) * 3, n * 3);
         },
         thumbnailClick: function (index) {
-            this.currentPreviewTitle = this.videos[index].title;
+            // this.currentPreviewTitle = this.videos[index].title;
             this.currentPreviewIndex = index;
             this.currentThumbnailIndex = Math.floor(index / 3);
             if (lastSelectedThumbnailIndex != index) {

@@ -27,8 +27,8 @@
     background-color: transparent !important;
     border-color: transparent;
     margin-bottom: 0px;
-    height: 5.5vw;
-    max-height: 106px;
+    height: 8vh;
+    /*max-height: 106px;*/
 }
 
 .nav-brand {
@@ -82,7 +82,7 @@
 	color:#fff;
 	font-size: 1.8rem;
 	font-weight: bold;
-    line-height: 4.5vw;
+    line-height: 7vh;
 	border-radius: 0;
 	position: relative;
     white-space: nowrap;
