@@ -68,15 +68,15 @@
 
 <div class="page" id="vue-page">
     <div class="page-bak">
-        <img v-bind:src="poster">
+        <img :src="'http://staging.hehefilm.com/' + mcover">
         <div></div>
     </div>
 
     <div class="film-info" v-cloak>
         <div class="film-info-left">
-            <p v-bind:class="title.length > 10 ? 'left-align':''">{{title}}</p>
-            <img v-bind:src="poster">
-            <a v-if="store" v-bind:href="store">
+            <p :class="title.length > 10 ? 'left-align':''">{{title}}</p>
+            <img :src="'http://staging.hehefilm.com/' + posters[0]">
+            <a v-if="store" :href="store">
                 <p>{{$t('lang.store')}}</p>
             </a>
         </div>
@@ -126,31 +126,33 @@
         </div>
     </div>
 
-    <div class="film-videos">
+    <div class="film-videos" v:if="videos">
         <div class="film-section-head">
             <hr>
             <p>{{$t('lang.trailer')}}</p>
             <hr>
         </div>
         <div class="film-videos-preview-title">
-            <p>{{currentPreviewTitle}}</p>
+            <p>{{'预告片' + (currentPreviewIndex + 1)}}</p>
         </div>
         <div class="film-videos-preview">
             <div id="moviePreview" class="carousel slide" data-ride="carousel" data-wrap="false"
                  data-interval="false">
                 <div class="carousel-inner">
                     <div v-for="(video, index) of videos"
-                         v-bind:class="index==0?'item active':'item'">
-                        <img v-bind:src="video.img">
-                        <img class="play-icon" src="images/video-play.png">
+                         :class="index==0?'item active':'item'">
+                        <a :href="video.vlink" target="_blank">
+                            <img :src="'http://staging.hehefilm.com/' + video.vcover">
+                            <img class="play-icon" src="images/video-play.png">
+                        </a>
                     </div>
                 </div>
 
-                <a v-bind:class="currentPreviewIndex==0?'disable':''"
+                <a :class="currentPreviewIndex==0?'disable':''"
                    class="left carousel-control" href="#moviePreview" data-slide="prev">
                     <img src="../../static/hehe/images/arrow-left-hh.png">
                 </a>
-                <a v-bind:class="currentPreviewIndex==videos.length - 1?'disable':''"
+                <a :class="currentPreviewIndex==videos.length - 1?'disable':''"
                    class="right carousel-control" href="#moviePreview" data-slide="next">
                     <img src="../../static/hehe/images/arrow-right-hh.png">
                 </a>
@@ -158,21 +160,21 @@
             <div id="movieThumbnail" class="carousel slide" data-ride="carousel"
                  data-wrap="false" data-interval="false">
                 <div class="carousel-inner">
-                    <div v-for="n in Math.ceil(videos.length/3)" v-bind:class="n==1?'item active':'item'">
-                        <div v-for="(video, index) of sliceVideos(n)" class="item-thumbnail" v-bind:class="index + (n-1)*3 == currentPreviewIndex?'selected':''" v-on:click="thumbnailClick(index + (n-1)*3)">
-                            <img v-bind:src="video.img">
-                            <p class="time">{{video.time}}</p>
-                            <p class="title">{{video.title}}</p>
+                    <div v-for="n in Math.ceil(videos.length/3)" :class="n==1?'item active':'item'">
+                        <div v-for="(video, index) of sliceVideos(n)" class="item-thumbnail" :class="index + (n-1)*3 == currentPreviewIndex?'selected':''" v-on:click="thumbnailClick(index + (n-1)*3)">
+                            <img :src="'http://staging.hehefilm.com/' + video.vcover">
+                            <!-- <p class="time">{{video.time}}</p> -->
+                            <p class="title">{{'预告片' + (index + 1)}}</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="arrow">
-                    <a v-bind:class="currentThumbnailIndex==0?'disable':''" class="left"
+                    <a :class="currentThumbnailIndex==0?'disable':''" class="left"
                        href="#movieThumbnail" data-slide="prev">
                         <img src="images/films-thumbnail-left-active.png">
                     </a>
-                    <a v-bind:class="currentThumbnailIndex==Math.floor(videos.length/3)?'disable':''"
+                    <a :class="currentThumbnailIndex==Math.floor(videos.length/3)?'disable':''"
                        class="right" href="#movieThumbnail" data-slide="next">
                         <img src="images/films-thumbnail-right-active.png">
                     </a>
@@ -184,7 +186,7 @@
 
     </div>
 
-    <div class="film-posters">
+    <div class="film-posters" v:if="posters">
         <div class="film-section-head" style="margin-bottom: 2vw;">
             <hr>
             <p>{{$t('lang.poster')}}</p>
@@ -195,19 +197,9 @@
                 <img src="../../static/hehe/images/arrow-left-hh.png">
             </a>
             <div class="film-posters-slides" id="film-posters-slides">
-                <div class="film-poster">
-                    <a data-fancybox="film-poster" href="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
-                        <img src="http://qnp.shanxiaxuetang.com/index-course-1.jpg">
-                    </a>
-                </div>
-                <div class="film-poster">
-                    <a data-fancybox="film-poster" href="images/films-cover-demo.jpg">
-                        <img src="images/films-cover-demo.jpg">
-                    </a>
-                </div>
-                <div class="film-poster">
-                    <a data-fancybox="film-poster" href="http://qnp.shanxiaxuetang.com/index-course-3.jpg">
-                        <img src="http://qnp.shanxiaxuetang.com/index-course-3.jpg">
+                <div class="film-poster" v-for="poster in posters">
+                    <a data-fancybox="film-poster" :href="'http://staging.hehefilm.com/' + poster">
+                        <img :src="'http://staging.hehefilm.com/' + poster">
                     </a>
                 </div>
             </div>
@@ -217,7 +209,7 @@
         </div>
     </div>
 
-    <div class="film-posters" style="padding-bottom: 8.07vw;">
+    <div class="film-posters" v:if="clips" style="padding-bottom: 8.07vw;">
         <div class="film-section-head" style="margin-bottom: 2vw;">
             <hr>
             <p>{{$t('lang.photo')}}</p>
