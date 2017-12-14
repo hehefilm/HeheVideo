@@ -456,6 +456,16 @@
     padding: 0px;
     display: flex;
 }
+.movie-item-img{
+    width: 20.41vw;
+    height: 13.75vw;
+    -webkit-transition-duration: 300ms;
+    transition-duration: 300ms;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
 .hh-partners-div{
     width: 9.53vw;
     height: 5.625vw;
