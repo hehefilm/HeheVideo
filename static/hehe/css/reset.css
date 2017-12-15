@@ -39,15 +39,6 @@ body {
 	background-color: #1A1C21;
 }
 
-body #my-nav {
-	height: 70px;
-	width: 100%;
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-}
-
 ol, ul {
 	list-style: none;
 }
