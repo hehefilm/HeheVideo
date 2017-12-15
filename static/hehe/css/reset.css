@@ -70,12 +70,12 @@ a:hover,a:focus { color: rgb(102,187,245); text-decoration:none;}
 
 
 html {
-    font-size: 5px;
-    line-height: 5px;
+    font-size: 8px;
+    line-height: 8px;
     height: 100%;
 }
 
-@media (min-width: 321px) and (max-width: 1920px) {
+/*@media (min-width: 321px) and (max-width: 1920px) {
     html {
         font-size: calc(5px + 5 * ((100vw - 320px) / 1600));
         line-height: calc(5px + 5 * ((100vw - 320px) / 1600));
@@ -87,4 +87,4 @@ html {
         font-size: 10px;
         line-height: 10px;
     }
-}
+}*/

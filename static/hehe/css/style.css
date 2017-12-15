@@ -197,6 +197,7 @@ footer {
     font-size: 1.4rem;
     color: #CCCCCC;
     text-decoration: none;
+    white-space: nowrap;
 }
 .footer-link a:visited { 
     font-size: 1.4rem;
