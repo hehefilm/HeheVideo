@@ -17,9 +17,8 @@
 }
 .partners {
     background-color: #1a1c21;
-    max-width: 1920px;
 }
-.partners-img-div{
+.partners-img-div-hh{
     width: 6.927vw;
     height: 6.927vw;
     display: flex;
@@ -36,6 +35,7 @@
     flex-direction: row;
     margin-bottom: 5.15vw;
     width: 14.11vw;
+    /*background-color: #9e1f24;*/
 }
 .hh-partners-div-right{
     padding: 0px;
@@ -48,8 +48,7 @@
     height: 2.7vw;
     /*height: 52px;*/
     width: 1px;
-    /*border: 1px solid #363942;*/
+    border: 1px solid #363942;
     background-color: #363942;
-    /*background-color: red;*/
     margin: auto 3.59vw auto 3.59vw;
 }
