@@ -32,14 +32,14 @@
 }
 
 .nav-brand {
-    width: 10%;
+    width: 100px;
     display: flex;
-    margin: auto;
+    margin: auto 140px auto 0;
     max-width: 100px;
 }
 
 .nav-brand img {
-	width: 100%;
+	width: 100px;
 	margin: auto 0;
 }
 
@@ -47,14 +47,15 @@
 
 .nav-wai {
     background-color: transparent;
-    height: 100%;
     display: flex;
-    width: 100%;
+    height: 100%;
+	max-width: 1280px;
+    margin: auto auto;
     justify-content: space-around;
 }
 
 .nav-ul {
-	width: 60%;
+	width: 820px;
 	/*margin: auto 0;*/
     display: flex;
     justify-content: space-between;
@@ -70,7 +71,6 @@
 
 .nav-ul > li {
     /*margin: auto 6.77vw auto 0;*/
-    height: 80%;
     margin: 0;
     float: left;
     border-radius: 0;
@@ -82,9 +82,9 @@
     height: 100%;
 	display:block;
 	color:#fff;
-	font-size: 1.8rem;
+	font-size: 14px;
 	font-weight: bold;
-    line-height: 6.5vh;
+    line-height: 70px;
 	border-radius: 0;
 	position: relative;
     white-space: nowrap;
@@ -122,21 +122,22 @@
 }
 
 .nav-search {
-	height: 4vh;
+	height: 20px;
 	/*max-height: 30px;*/
-	width: 10%;	
+	width: 127px;	
 	border: 1px solid #FFFFFF;	
-	border-radius: 15vh;
-	margin: auto;
+	border-radius: 10px;
+	margin: auto 0 auto 93px;
 	display: flex;
 }
 
 .nav-search input {
-	width: calc(10vw - 2.5vh - 3vh);
-	margin: 0 1vh 0 1vh;
+	width: 94px;
+	height: 20px;
+	margin: 0 0 0 10px;
 	background-color: transparent;
-	font-size: 1.6rem;
-	line-height: 3.5vh;
+	font-size: 14px;
+	line-height: 14px;
 	border: 0px solid transparent;
 	color: white;
 }
@@ -146,7 +147,7 @@
 }
 
 .nav-search img {
-	width: 2.5vh;
+	width: 13px;
 	margin: auto 0 auto 0;
 }
 
