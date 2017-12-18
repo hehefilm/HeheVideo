@@ -37,6 +37,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	height: 100%;
 	background-color: #1A1C21;
+	min-width: 1280px;
 }
 
 ol, ul {
