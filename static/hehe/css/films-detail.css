@@ -96,7 +96,13 @@
 .film-info-right > table td:first-child {
 	white-space: nowrap;
 	vertical-align: top;
-	text-align: justify;
+	text-align:justify;
+	text-justify:distribute-all-lines;
+	text-align-last:justify
+}
+
+.film-info-right > table td:nth-child(2) {
+	width: 20px;
 }
 
 .film-videos {
