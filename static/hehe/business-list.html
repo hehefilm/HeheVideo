@@ -19,14 +19,14 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#861519">
 
 
-    <title>新闻咨询</title>
+    <title>商业项目</title>
 
     <!--CSS-->
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css"/>
     <link rel="stylesheet" href="css/style.css"/>
-    <link rel="stylesheet" href="css/news-list.css"/>
+    <link rel="stylesheet" href="css/business-list.css"/>
     <link rel="shortcut icon" href="images/icon.png"/>
 
 
@@ -41,34 +41,23 @@
 <div id="mybody">
 	<div class="news-head-div">
 		<hr />
-		<p>{{$t('lang.news')}}</p>
+		<p>{{$t('lang.business')}}</p>
 		<hr />
 	</div>
 	<div class="news-body">
 		<div class="news-body-left">
-			<template v-for="(anew,index) in news">
+			<template v-for="(anew,index) in project">
 				<div class="each-cell">
-					<a><div class="show" v-bind:style="{'background-image' : 'url('+'http://staging.hehefilm.com'+anew.ncover+')'}" v-cloak></div></a> 
+					<a><div class="show" v-bind:style="{'background-image' : 'url('+'http://staging.hehefilm.com'+anew.pcover+')'}" v-cloak></div></a> 
 					<div class="each-cell-right" v-cloak>
-						<a v-bind:href="'news-detail.html?nid='+anew.news_id">{{anew.ntitle}} </a>
-						<p class="each-cell-time">{{anew.ndate.replace(new RegExp("-","gm"),'/')}}</p>
-						<p class="each-cell-content">{{anew.nsubtitle}}</p>
+						<a v-bind:href="'business-detail.html?pid='+anew.project_id">{{anew.ptitle}} </a>
+						<!--<p class="each-cell-time">{{anew.pdate.replace(new RegExp("-","gm"),'/')}}</p>-->
+						<p class="each-cell-content">{{anew.psubtitle}}</p>
 					</div>
 				</div>
 			</template>
 		</div>
 		
-		<div class="news-body-right" v-cloak>
-			<img class="right-img" v-bind:src="'http://staging.hehefilm.com' + rightDetail.poster"/>
-			<div> <p class="news-body-right-p">导&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;演：</p><p class="news-body-right-span">{{rightDetail.director}}</p></div>
-			<div> <p class="news-body-right-p">主&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;演：</p><p class="news-body-right-span">{{rightDetail.stars}}</p></div>
-			<div> <p class="news-body-right-p">上映日期：</p><p class="news-body-right-span">{{rightDetail.release_date}}</p></div>
-			<div> <p class="news-body-right-p">类&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;型：</p><p class="news-body-right-span">{{rightDetail.genre}}</p></div>
-			<div> <p class="news-body-right-p">语&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;言：</p><p class="news-body-right-span">{{rightDetail.lang}}</p></div>
-			<div> <p class="news-body-right-p">片&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;长：</p><p class="news-body-right-span">{{rightDetail.duration}}</p></div>
-			<div> <p class="news-body-right-p">制作地区：</p><p class="news-body-right-span">{{rightDetail.country}}</p></div>
-			<div style="margin-bottom: 8%;"> <p class="news-body-right-p">版&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本：</p><p class="news-body-right-span">{{rightDetail.release_vision}}</p></div>
-		</div>
 	</div>
 	
 	<ul class="pagination">
@@ -96,7 +85,7 @@
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="js/nav.js"></script>
-<script type="text/javascript" src="js/news-list.js"></script>
+<script type="text/javascript" src="js/business-list.js"></script>
 <script>
 	
     
