@@ -18,15 +18,12 @@ const i18n = new VueI18n({
     messages, // set locale messages
 });
 
-var leftWidth = $('.news-body-left').width()/6.57;
-
 new Vue({
 	i18n,
 	el:'#mybody',
 	data:{
 		news:[],
 		rightDetail:{},
-		leftWidth:leftWidth,
 		allPage:0,
 		nowNumber:1,
 		bottom:[]

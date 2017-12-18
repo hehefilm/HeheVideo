@@ -66,11 +66,9 @@
                              v-bind:style="{'background-image' : 'url('+'http://staging.hehefilm.com'+bn.mcover+')'}"
                              v-cloak>
                             <div class="banner-title-div">
-                                <a>{{bn.title}}</a> <span>[ {{bn.director}}导演& {{bn.writer}}监制]</span>
+                                <a id="title" :href="'films-detail.html?movie_id='+bn.movie_id">{{bn.title}}</a> <span>[ {{bn.director}}导演& {{bn.writer}}监制]</span>
                                 <p class="banner-content">{{bn.description}}</p>
-                                <div class="banner-more">
-                                    <p>更多 >></p>
-                                </div>
+                                <a class="banner-more">更多</a>
                             </div>
                         </div>
                     </div>
@@ -105,14 +103,14 @@
                 <div class="hh-video-content-slide">
                     <div class="carousel-inner ">
                         <div v-for="(film,index) in films_li" :class="index==0?'item active':'item'">
-                            <div class="video-content-center">
+                            <div class="video-content-center" v-cloak>
                                 <div v-for="movie in film.movie_li">
                                     <a :href="'../../static/hehe/films-detail.html?movie_id='+movie.movie_id">
                                         <!--<li class="hh-video-img-div">-->
-                                            <div class="movie-item-img" :style="{'background-image' : 'url('+'http://staging.hehefilm.com'+movie.mcover+')'}">
+                                            <div class="movie-item-img" :style="{'background-image' : 'url('+'http://staging.hehefilm.com'+movie.mcover+')'}" >
                                                 <!--<img id="jlp"  :src="'http://staging.hehefilm.com'+movie.mcover">-->
                                                 <div class="video-item-shadow">
-                                                    <p class="video-item-title">是试试</p>
+                                                    <p class="video-item-title">{{movie.title}}</p>
                                                 </div>
                                             </div>
                                         <!--</li>-->

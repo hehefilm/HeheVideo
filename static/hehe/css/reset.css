@@ -37,15 +37,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	height: 100%;
 	background-color: #1A1C21;
-}
-
-body #my-nav {
-	height: 70px;
-	width: 100%;
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
+	min-width: 1280px;
 }
 
 ol, ul {

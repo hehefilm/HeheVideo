@@ -14,11 +14,15 @@
 /*-------------------------------------
 *               $HEADER
 *------------------------------------*/
-
 #my-nav {
+	height: 70px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
     z-index: 1030;
     background-color: #1A1C21;
-    /*transition-duration: 0.25s;*/
 }
 #my-nav a {
     text-decoration: none;
@@ -30,7 +34,14 @@
     height: 8vh;
     /*max-height: 106px;*/
 }
-
+.nav-wai {
+    background-color: transparent;
+    display: flex;
+    height: 100%;
+	width: 1280px;
+    margin: auto auto;
+    justify-content: space-around;
+}
 .nav-brand {
     width: 100px;
     display: flex;
@@ -45,14 +56,7 @@
 
 /*a, a:hover, a:active, a:visited { text-decoration: none; }*/ 
 
-.nav-wai {
-    background-color: transparent;
-    display: flex;
-    height: 100%;
-	max-width: 1280px;
-    margin: auto auto;
-    justify-content: space-around;
-}
+
 
 .nav-ul {
 	width: 820px;
@@ -102,7 +106,7 @@
 }
 
 .nav-ul>li a:after{
-	border-bottom: 0.15vw solid #FFCC00;
+	border-bottom: 3px solid #FFCC00;
 	content: '';
     display: block;
     position: absolute;
@@ -122,24 +126,25 @@
 }
 
 .nav-search {
-	height: 20px;
-	/*max-height: 30px;*/
+	height: 24px;
 	width: 127px;	
 	border: 1px solid #FFFFFF;	
 	border-radius: 10px;
 	margin: auto 0 auto 93px;
 	display: flex;
+	box-sizing: border-box;
 }
 
 .nav-search input {
 	width: 94px;
-	height: 20px;
+	height: 21px;
 	margin: 0 0 0 10px;
 	background-color: transparent;
-	font-size: 14px;
-	line-height: 14px;
+	font-size: 12px;
+	line-height: 12px;
 	border: 0px solid transparent;
 	color: white;
+	padding: 0;
 }
 
 .nav-search input:focus {
@@ -167,6 +172,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-top: 1px dashed #363942;
 }
 .footer-container {
     /*margin: 0 107px 75px 107px;*/
@@ -180,43 +186,46 @@ footer {
 }
 .footer-content {
     /*margin: 77px 69px 0 69px;*/
-  	margin: 51px 117px 49px 117px;
+  	margin: 51px 78px 49px 78px;
     display: flex;
     justify-content: space-between;
 }
 .footer-info {
     width: 303px;
-    font-size: 1.4rem;
+    font-size: 10px;
     line-height: 200%;
     color: #CCCCCC;
 }
 .footer-link {
-    width: 260px;
-    font-size: 1.4rem;
+    width: 303px;
+    font-size: 10px;
     line-height: 200%;
     color: #CCCCCC;
 }
-.footer-link a:link { 
-    font-size: 1.4rem;
+.footer-link a {
+	margin-right: 16px;
+}
+.footer-link a:link {
+    font-size: 10px;
     color: #CCCCCC;
     text-decoration: none;
     white-space: nowrap;
 }
-.footer-link a:visited { 
-    font-size: 1.4rem;
+.footer-link a:visited {
+    font-size: 10px;
     color: #CCCCCC;
     text-decoration: none;
 }
 .footer-link a:hover {
-    font-size: 1.4rem;
+    font-size: 10px;
     color: #CCCCCC;
     text-decoration: underline;
 }
 .footer-qr {
-    width: 275px;
+    width: 292px;
 }
 .footer-qr > img {
-    width: 112px;
+    width: 120px;
 }
 .footer-qr > img:last-child {
     float: right;

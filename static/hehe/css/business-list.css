@@ -1,0 +1,127 @@
+body {
+	background-color: #1A1C21;
+}
+
+a {
+	cursor:pointer;
+}
+
+.news-head-div {
+	width: 245px;
+	height: 17px;
+	text-align: center;
+	display: flex;
+	margin: 150px auto 0 auto;
+}
+
+.news-head-div hr{
+	width: 30%;
+	height: 1px;
+	margin: auto 0;
+	background-color: white;
+	border: 0px solid transparent;
+}
+
+.news-head-div p {
+	width: 40%;
+	color: #FFFFFF;
+	font-size: 1.7rem;
+	line-height: 100%;
+	font-weight: bold;
+	background-color: #1A1C21;
+}
+
+.news-body {
+	display: flex;
+	width: 844px;
+	margin: 49px auto 0 auto;
+	
+}
+
+.news-body-left {
+	margin:0 196px 0 0;
+	width: 844px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.each-cell {
+	display: flex;
+	margin-bottom: 61px;
+	height: 103px;
+}
+
+.each-cell>a {
+	width: 174px;
+	height: 103px;
+}
+
+.each-cell>a:hover {
+    border: 1px solid rgba(255,255,255,0.5);
+}
+
+.show {
+	width: 100%;
+	height: 100%;
+    -webkit-transition-duration: 300ms;
+    transition-duration: 300ms;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.each-cell-right {
+	margin: 0 0 0 28px;
+	width: 642px;
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+}
+
+.each-cell-right a {
+	color: #FFFFFF;	
+	font-size: 14px;	
+	line-height: 14px;
+	font-weight: bold;
+}
+
+.each-cell-right a:hover {
+	color: #FFCC00;;
+}
+
+.each-cell-content {
+	color: #FFFFFF;	
+	font-size: 12px;
+	line-height: 20px;	
+	margin-top: 34px;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	overflow: hidden;
+}
+
+.pagination {
+	margin: 106px auto 132px auto;
+	height: 27px;
+}
+
+.pagination > li > a {
+	background-color: transparent;
+	color: white;
+	border: 1px solid transparent;
+}
+
+.pagination > li > a:hover {
+	background-color: transparent;
+	border: 1px solid white;
+	color: white;
+}
+
+.pagination > li:first-child > a:hover,.pagination > li:last-child > a:hover {
+	border: 1px solid transparent;
+	background-color: rgba(255,255,255,0.05);
+	border-radius: 0;
+	
+}

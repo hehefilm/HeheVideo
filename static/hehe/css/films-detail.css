@@ -1,6 +1,3 @@
-body {
-	min-width: 1280px;
-}
 .page-bak {
 	position: fixed;
 	left: 0;
@@ -59,7 +56,6 @@ body {
 }
 .film-info-left > img {
 	width: 312px;
-	/*height: 33.6vw;*/
 	border: 1px solid rgba(0,0,0,0.49);
 	box-shadow: 0 8px 24px 1px rgba(0,0,0,0.57);
 	/*object-fit: contain;*/
@@ -100,7 +96,13 @@ body {
 .film-info-right > table td:first-child {
 	white-space: nowrap;
 	vertical-align: top;
-	text-align: justify;
+	text-align:justify;
+	text-justify:distribute-all-lines;
+	text-align-last:justify
+}
+
+.film-info-right > table td:nth-child(2) {
+	width: 20px;
 }
 
 .film-videos {
@@ -112,9 +114,11 @@ body {
 }
 .film-section-head {
 	width: 217px;
+	height: 14px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	margin-bottom: 50px;
 }
 .film-section-head hr {
 	height: 1px;
@@ -308,4 +312,13 @@ body {
 	width: 18px;
 	height: 37px;
 	margin: auto;
+}
+
+.fancybox-navigation button {
+	height: 600px !important;
+	margin: -300px 0 0 !important;
+}
+.fancybox-navigation button:hover {
+	background-color: rgba(0,0,0,0.51);
+	transition-duration: 0.25s;
 }
