@@ -106,7 +106,7 @@
 }
 
 .nav-ul>li a:after{
-	border-bottom: 0.15vw solid #FFCC00;
+	border-bottom: 3px solid #FFCC00;
 	content: '';
     display: block;
     position: absolute;
