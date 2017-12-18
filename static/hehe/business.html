@@ -38,10 +38,13 @@
 	<my-nav></my-nav>
 </div>
 
-<img class="new-bak" src="images/new-bak.png" />
+
 <div class="news-div">
-	<a class="news-more">{{$t('lang.more')}} &raquo;</a>
+	<div class="news-more">
+		<a href="news-list.html">{{$t('lang.more')}} &raquo;</a>
+	</div>
 	<div class="news-left-right">
+		<img class="new-bak" src="images/new-bak.png" />
 		<div id="news-left" class="news-left carousel slide">
 			<!-- 轮播（Carousel）指标 -->
 			<ol class="carousel-indicators">
@@ -94,7 +97,6 @@
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="js/nav.js"></script>
-<script type="text/javascript" src="js/axios.min.js"></script>
 <script type="text/javascript" src="js/business.js"></script>
 
 <script>
