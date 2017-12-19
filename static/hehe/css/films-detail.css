@@ -103,6 +103,7 @@
 
 .film-info-right > table td:nth-child(2) {
 	width: 20px;
+	vertical-align: top;
 }
 
 .film-videos {
