@@ -189,43 +189,38 @@ footer {
   	margin: 51px 0 49px 0;
     display: flex;
     justify-content: space-between;
+    font-size: 12px;
+    line-height: 180%;
+    color: #CCCCCC;
 }
 .footer-info {
     width: 350px;
-    font-size: 12px;
-    line-height: 200%;
-    color: #CCCCCC;
 }
 .footer-link {
     width: 350px;
-    font-size: 12px;
-    line-height: 200%;
-    color: #CCCCCC;
 }
 .footer-link a {
 	margin-right: 16px;
 }
 .footer-link a:link {
-    font-size: 12px;
     color: #CCCCCC;
     text-decoration: none;
     white-space: nowrap;
 }
 .footer-link a:visited {
-    font-size: 12px;
     color: #CCCCCC;
     text-decoration: none;
 }
 .footer-link a:hover {
-    font-size: 12px;
     color: #CCCCCC;
     text-decoration: underline;
 }
 .footer-qr {
-    width: 350px;
+    width: 300px;
 }
 .footer-qr > img {
-    width: 144px;
+    width: 120px;
+    background-color: white;
 }
 .footer-qr > img:last-child {
     float: right;
