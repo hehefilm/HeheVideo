@@ -66,7 +66,8 @@
                              v-bind:style="{'background-image' : 'url('+'http://staging.hehefilm.com'+bn.mcover+')'}"
                              v-cloak>
                             <div class="banner-title-div">
-                                <a id="title" :href="'films-detail.html?movie_id='+bn.movie_id">{{bn.title}}</a> <span>[ {{bn.director}}导演& {{bn.writer}}监制]</span>
+                                <a id="title" :href="'films-detail.html?movie_id='+bn.movie_id">{{bn.title}}</a> 
+                                <span>[ {{bn.director}}导演& {{bn.producer}}监制]</span>
                                 <p class="banner-content">{{bn.description}}</p>
                                 <a class="banner-more">更多</a>
                             </div>
