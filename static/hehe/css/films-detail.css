@@ -35,7 +35,7 @@
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
-	align-items: flex-end;
+	/*align-items: flex-end;*/
 }
 .film-info-left {
 	margin-top: -143px;
@@ -90,7 +90,7 @@
 .film-info-right {
 	width: 790px;
 	color: white;
-	/*margin-top: 50px;*/
+	margin-top: 50px;
 	font-size: 14px;
 	line-height: 32px;
 	margin-bottom: 43px;
