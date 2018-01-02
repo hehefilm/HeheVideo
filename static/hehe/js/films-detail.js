@@ -18,7 +18,7 @@ window.onscroll = function () {
 }
 
 if (!GetQueryString('movie_id')) {
-    window.location = "index.html";
+    window.location = "films.html";
 }
 
 // 建立翻译基础
