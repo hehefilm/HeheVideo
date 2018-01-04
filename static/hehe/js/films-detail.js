@@ -124,8 +124,23 @@ var vue = new Vue({
             console.log('请求失败：'+err.status+','+err.statusText);
         });
     },
-    updated: function () {
-        // this.currentPreviewTitle = this.videos[0].title;
+    updated: function() {
+    		// this.currentPreviewTitle = this.videos[0].title;
+
+    		$('#movieThumbnail').on('slid.bs.carousel', function() {
+    			index = $('#movieThumbnail > .carousel-inner > div.active').index();
+    			vue.currentThumbnailIndex = index;
+    		});
+    		$('#moviePreview').on('slid.bs.carousel', function() {
+    			index = $('#moviePreview > .carousel-inner > div.active').index();
+    			vue.currentPreviewIndex = index;
+    			vue.currentThumbnailIndex = Math.floor(index / 3);
+    			if(lastSelectedThumbnailIndex != index) {
+    				$("#movieThumbnail").carousel(Math.floor(index / 3));
+    				lastSelectedThumbnailIndex = index;
+    			}
+    		});
+
         document.title = '和和影业 - ' + this.title;
         $('#film-posters-slides').slick({
 	        // dots: true,
@@ -182,20 +197,6 @@ var vue = new Vue({
 })
 
 var lastSelectedThumbnailIndex = 0;
-
-$('#movieThumbnail').on('slid.bs.carousel', function () {
-    index = $('#movieThumbnail > .carousel-inner > div.active').index();
-    vue.currentThumbnailIndex = index;
-});
-$('#moviePreview').on('slid.bs.carousel', function () {
-    index = $('#moviePreview > .carousel-inner > div.active').index();
-    vue.currentPreviewIndex = index;
-    vue.currentThumbnailIndex = Math.floor(index / 3);
-    if (lastSelectedThumbnailIndex != index) {
-        $("#movieThumbnail").carousel(Math.floor(index / 3));
-        lastSelectedThumbnailIndex = index;
-    }
-});
 
 
 //full screen video play
