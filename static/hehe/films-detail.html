@@ -126,8 +126,54 @@
             </table>
         </div>
     </div>
+    
+    <div class="film-posters" v-if="posters.length > 0">
+        <div class="film-section-head">
+            <hr>
+            <p>{{$t('lang.poster')}}</p>
+            <hr>
+        </div>
+        <div class="film-posters-carousel">
+            <a class="film-posters-arrow-left" id="film-posters-left">
+                <img src="../../static/hehe/images/arrow-left-hh.png">
+            </a>
+            <div class="film-posters-slides" id="film-posters-slides">
+                <div class="film-poster" v-for="poster in posters">
+                    <a data-fancybox="film-poster" :href="'http://staging.hehefilm.com/' + poster">
+                        <img :src="'http://staging.hehefilm.com/' + poster">
+                    </a>
+                </div>
+            </div>
+            <a class="film-posters-arrow-right" id="film-posters-right">
+                <img src="../../static/hehe/images/arrow-right-hh.png">
+            </a>
+        </div>
+    </div>
 
-    <div class="film-videos" v-if="videos.length > 0">
+    <div class="film-posters" v-if="clips.length > 0">
+        <div class="film-section-head">
+            <hr>
+            <p>{{$t('lang.photo')}}</p>
+            <hr>
+        </div>
+        <div class="film-posters-carousel">
+            <a class="film-posters-arrow-left" id="film-images-left">
+                <img src="../../static/hehe/images/arrow-left-hh.png">
+            </a>
+            <div class="film-posters-slides" id="film-images-slides">
+                <div class="film-poster" v-for="clip in clips">
+                    <a data-fancybox="film-images" :href="'http://staging.hehefilm.com/' + clip">
+                        <img :src="'http://staging.hehefilm.com/' + clip">
+                    </a>
+                </div>
+            </div>
+            <a class="film-posters-arrow-right" id="film-images-right">
+                <img src="../../static/hehe/images/arrow-right-hh.png">
+            </a>
+        </div>
+    </div>
+    
+        <div class="film-videos" v-if="videos.length > 0" style="padding-bottom: 90px;">
         <div class="film-section-head">
             <hr>
             <p>{{$t('lang.trailer')}}</p>
@@ -187,51 +233,6 @@
 
     </div>
 
-    <div class="film-posters" v-if="posters.length > 0">
-        <div class="film-section-head">
-            <hr>
-            <p>{{$t('lang.poster')}}</p>
-            <hr>
-        </div>
-        <div class="film-posters-carousel">
-            <a class="film-posters-arrow-left" id="film-posters-left">
-                <img src="../../static/hehe/images/arrow-left-hh.png">
-            </a>
-            <div class="film-posters-slides" id="film-posters-slides">
-                <div class="film-poster" v-for="poster in posters">
-                    <a data-fancybox="film-poster" :href="'http://staging.hehefilm.com/' + poster">
-                        <img :src="'http://staging.hehefilm.com/' + poster">
-                    </a>
-                </div>
-            </div>
-            <a class="film-posters-arrow-right" id="film-posters-right">
-                <img src="../../static/hehe/images/arrow-right-hh.png">
-            </a>
-        </div>
-    </div>
-
-    <div class="film-posters" v-if="clips.length > 0" style="padding-bottom: 90px;">
-        <div class="film-section-head">
-            <hr>
-            <p>{{$t('lang.photo')}}</p>
-            <hr>
-        </div>
-        <div class="film-posters-carousel">
-            <a class="film-posters-arrow-left" id="film-images-left">
-                <img src="../../static/hehe/images/arrow-left-hh.png">
-            </a>
-            <div class="film-posters-slides" id="film-images-slides">
-                <div class="film-poster" v-for="clip in clips">
-                    <a data-fancybox="film-images" :href="'http://staging.hehefilm.com/' + clip">
-                        <img :src="'http://staging.hehefilm.com/' + clip">
-                    </a>
-                </div>
-            </div>
-            <a class="film-posters-arrow-right" id="film-images-right">
-                <img src="../../static/hehe/images/arrow-right-hh.png">
-            </a>
-        </div>
-    </div>
     </div>
 </div>
 
