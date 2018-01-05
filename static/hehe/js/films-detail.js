@@ -115,6 +115,27 @@ var vue = new Vue({
             this.stars = resp.data.stars;
             this.clips = resp.data.clips;
             this.videos = resp.data.videos;
+//			this.videos = [{
+//				'vcover':"/static/uploads/covers/video/20171226/FuYrokdwSd.jpg",
+//				'vlink':"http://v.youku.com/v_show/id_XMjc5Mjk0OTQ0NA==.html?spm=a2h1n.8261147.around_2.5~5!7~5~5~A",
+//				"vtitle":"宣传片一"},
+//				{
+//				'vcover':"/static/uploads/covers/video/20171226/FuYrokdwSd.jpg",
+//				'vlink':"http://v.youku.com/v_show/id_XMjc5Mjk0OTQ0NA==.html?spm=a2h1n.8261147.around_2.5~5!7~5~5~A",
+//				"vtitle":"宣传片2"},
+//				{
+//				'vcover':"/static/uploads/covers/video/20171226/FuYrokdwSd.jpg",
+//				'vlink':"http://v.youku.com/v_show/id_XMjc5Mjk0OTQ0NA==.html?spm=a2h1n.8261147.around_2.5~5!7~5~5~A",
+//				"vtitle":"宣传片3"},
+//				{
+//				'vcover':"/static/uploads/covers/video/20171226/FuYrokdwSd.jpg",
+//				'vlink':"http://v.youku.com/v_show/id_XMjc5Mjk0OTQ0NA==.html?spm=a2h1n.8261147.around_2.5~5!7~5~5~A",
+//				"vtitle":"宣传片4"},
+//				{
+//				'vcover':"/static/uploads/covers/video/20171226/FuYrokdwSd.jpg",
+//				'vlink':"http://v.youku.com/v_show/id_XMjc5Mjk0OTQ0NA==.html?spm=a2h1n.8261147.around_2.5~5!7~5~5~A",
+//				"vtitle":"宣传片5"}
+//			],
             this.lang = resp.data.lang;
             this.release_vision = resp.data.release_vision;
             this.country = resp.data.country;
@@ -134,9 +155,9 @@ var vue = new Vue({
     		$('#moviePreview').on('slid.bs.carousel', function() {
     			index = $('#moviePreview > .carousel-inner > div.active').index();
     			vue.currentPreviewIndex = index;
-    			vue.currentThumbnailIndex = Math.floor(index / 3);
+    			vue.currentThumbnailIndex = Math.floor(index / 2);
     			if(lastSelectedThumbnailIndex != index) {
-    				$("#movieThumbnail").carousel(Math.floor(index / 3));
+    				$("#movieThumbnail").carousel(Math.floor(index / 2));
     				lastSelectedThumbnailIndex = index;
     			}
     		});
@@ -181,15 +202,15 @@ var vue = new Vue({
     },
     methods: {
         sliceVideos: function (n) {
-            return this.videos.slice((n - 1) * 3, n * 3);
+            return this.videos.slice((n - 1) * 2, n * 2);
         },
         thumbnailClick: function (index) {
             // this.currentPreviewTitle = this.videos[index].title;
             this.currentPreviewIndex = index;
-            this.currentThumbnailIndex = Math.floor(index / 3);
+            this.currentThumbnailIndex = Math.floor(index / 2);
             if (lastSelectedThumbnailIndex != index) {
                 $("#moviePreview").carousel(index);
-                $("#movieThumbnail").carousel(Math.floor(index / 3));
+                $("#movieThumbnail").carousel(Math.floor(index / 2));
                 lastSelectedThumbnailIndex = index;
             }
         },
